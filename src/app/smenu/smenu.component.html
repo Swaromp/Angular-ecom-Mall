@@ -1,0 +1,311 @@
+<div class="container">
+  <div class="row g-0" class="bcrumb">
+    <div class="col-md-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Smartphones</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="row g-1">
+    <div class="col-md-3">
+
+      <!-- ****Accordion Menu Component**** -->
+      <app-vmenu></app-vmenu>
+    </div>
+    <div class="col-md-9">
+      <div class="col-md-9" style="margin-top: -3px;">
+        <p><b>Smartphones</b> | 5 Products</p>
+      </div>
+      <p class="txt">Smartphones have become such a fundamental aspect of our lives that we cannot imagine a single day
+        without their services.
+        They are no longer a simple mode of communication but an ocean of opportunities and possibilities. And the best
+        part is, they are inclusive there is something for every budget group.
+        You will come across handsets that cost a trifle but cater to the daily requirements without any hassle.
+      </p>
+      <div class="row g-1">
+        <div class="col-md-9">
+          <ul class="sort">
+            <li class="sort1"><a>sort by</a></li>
+            <li class="sort1"><a href="#">relevance</a></li>
+            <li class="sort1"><a href="#">price high to low</a></li>
+            <li class="sort1"><a href="#">price low to high</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="row g-1">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3">
+              <a (click)="changeView()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="23" height="23">
+                  <path d="M2 6h20v2H2zM2 12h20v2H2zM2 18h20v2H2z" />
+                </svg>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a (click)="changeView1()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-grid"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                </svg>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <button class="compare">Compare</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <!-- *****LIST VIEW***** -->
+      <div class="mview1" *ngIf="lview">
+        <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html"
+          class="a">
+          <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of prices | pricefilter:h :l">
+            <div class="row g-0">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+                <img src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/april-22/plp-header/Zero-DP.svg" style="padding-top: 5%; padding-left: 5%;">
+              </div>
+              <div class="col-md-4">
+                <img src="../assets/fav.svg" width="20px" height="20px" style="float: right; margin: 5px;">
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start">
+              </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <h5 class="card-title">{{x.n}}</h5>
+                  <div class="card-text" class="txt">{{x.text}}<br><br>
+                    <ul>
+                      <li>Operating System: Android 11</li>
+                      <li>Processor: Qualcomm Snapdragon 680 Processor</li>
+                      <li>Primary Camera: 64 MP + 2 MP + 2 MP</li>
+                      <li>Secondary Camera: 32 MP</li>
+                      <li>Display Size: 6.43 inch</li>
+                      <li>Battery Capacity: 4500 mAh</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row g-1">
+                  <div class="card-body">
+                    <h5 class="card-title">Price</h5>
+                    <p class="card-text"><b>₹{{x.price}}</b></p>
+                  </div>
+                </div>
+                <div class="row g-1">
+                  <div class="card-body">
+                    <div class="col-md-3">
+                      <p class="card-text txt">No cost EMI</p>
+                    </div>
+                    <div class="col-md-4">
+                      <p class="card-text txt" style="color:grey;">Starting from</p>
+                    </div>
+                    <div class="col-md-5">
+                      <b style="font-size: 22px;">₹{{x.price/9 | number: '1.0-0'}}</b><div class="txt">/month</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);">
+                  Delivery in 4-5 days
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+
+
+
+        <!-- **LOGIN MESSAGE** -->
+        <div class="card mb-3" style="max-width: 70rem; background-color: #daf6e4;">
+          <div class="row g-0">
+            <div class="col-md-2">
+              <span class="wave green-hand-img ">👋</span>
+            </div>
+            <div class="col-md-7">
+              <p class="msg"><b>Hello! Login to get assured cashback of up to ₹5,000 on purchase</b></p>
+            </div>
+            <div class="col-md-3">
+              <button type="button" class="login">Log in</button>
+            </div>
+          </div>
+        </div>
+        <div class="row g1">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="more">View More</button>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <!-- *****GRID VIEW***** -->
+      <div class="mview1" *ngIf="gview">
+              <div class="row g-1">
+              <div class="col-md-3">
+                <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html" class="a">
+                  <div class="card mb-3" style="max-width: 70rem;">
+                    
+                      <div class="row g-0">
+                          <img src="../assets/{{prices[0].im}}.jpeg" class="img-fluid rounded-start">
+                          <div class="card-body">
+                            <h5 class="card-title">{{prices[0].n}}</h5>
+                                               
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Price</h5>
+                            <p class="card-text"><b>₹{{prices[0].price}}</b></p>
+                          </div>    
+                      </div>
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-md-3">
+                <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html" class="a">
+
+                  <div class="card mb-3" style="max-width: 70rem;">
+                    
+                      <div class="row g-0">
+                          <img src="../assets/{{prices[1].im}}.jpeg" class="img-fluid rounded-start">
+                          <div class="card-body">
+                            <h5 class="card-title">{{prices[1].n}}</h5>
+                                               
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Price</h5>
+                            <p class="card-text"><b>₹{{prices[1].price}}</b></p>
+                          </div>    
+                      </div>
+                    </div>
+                    </a>
+              </div>
+
+              <div class="col-md-3">
+                <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html" class="a">
+                  <div class="card mb-3" style="max-width: 70rem;">
+                    
+                      <div class="row g-0">
+                          <img src="../assets/{{prices[2].im}}.jpeg" class="img-fluid rounded-start">
+                          <div class="card-body">
+                            <h5 class="card-title">{{prices[2].n}}</h5>
+                                               
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Price</h5>
+                            <p class="card-text"><b>₹{{prices[2].price}}</b></p>
+                          </div>    
+                      </div>
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-md-3">
+                <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html" class="a">
+                  <div class="card mb-3" style="max-width: 70rem;">
+                    
+                      <div class="row g-0">
+                          <img src="../assets/{{prices[3].im}}.jpeg" class="img-fluid rounded-start">
+                          <div class="card-body">
+                            <h5 class="card-title">{{prices[3].n}}</h5>
+                                               
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Price</h5>
+                            <p class="card-text"><b>₹{{prices[3].price}}</b></p>
+                          </div>    
+                      </div>
+                    </div>
+                  </a>
+              </div>
+              
+              </div>
+              <div class="row g-1">
+                <div class="col-md-3">
+                  <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html" class="a">
+                    <div class="card mb-3" style="max-width: 70rem;">
+                      
+                        <div class="row g-0">
+                            <img src="../assets/{{prices[4].im}}.jpeg" class="img-fluid rounded-start">
+                            <div class="card-body">
+                              <h5 class="card-title">{{prices[4].n}}</h5>
+                                                 
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Price</h5>
+                              <p class="card-text"><b>₹{{prices[4].price}}</b></p>
+                            </div>    
+                        </div>
+                      </div>
+                    </a>
+                </div>
+
+              </div>
+
+              <div class="card mb-3" style="max-width: 70rem; background-color: #daf6e4;">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <p class="wave" width="40px" height="40px">👋</p>
+                  </div>
+                  <div class="col-md-7">
+                  <p class="msg"><b>Hello! Login to get assured cashback of up to ₹5,000 on purchase</b></p>
+                </div>
+                <div class="col-md-3">
+                  <button type="button" class="login">Log in</button>
+                </div>
+                  
+                </div>
+              </div>
+
+              <div class="row g1">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                  <button type="button" class="more">View More</button>
+
+                </div>
+                <div class="col-md-4">
+                  
+                </div>
+              </div>
+
+
+
+            </div>
+
+      <br>
+    </div>
+
+
+    <!-- **Info Component** -->
+    <app-info></app-info>
+
+    <!-- **FAQ Component** -->
+    <app-faq></app-faq>
+
+
+  </div>
+  </div>

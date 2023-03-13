@@ -1,0 +1,29 @@
+#accordionFlushExample {
+    /* position: fixed; */
+    padding-right: 5%;
+    overflow: hidden;
+}
+
+button {
+    font-size: 15px;
+}
+
+
+
+.smphone {
+    font-size: 13px;
+}
+
+.in {
+    color: rgb(141, 141, 141);
+}
+
+.txt {
+    font-size: 12px;
+}
+
+.checkpad {
+    padding: 2%;
+    font-size: 12px;
+
+}

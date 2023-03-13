@@ -1,0 +1,290 @@
+<div class="outer">
+<div class="row g-1">
+    <div class="row g-0">
+        <div class="col-md-9">
+          <p class="smphone" class="text-muted"><b>category:</b> smartphones </p>
+        </div>
+        <div class="col-md-3" style="color:red;">
+            <a (click)="clear()">
+                <p>clear all</p>
+            </a>
+        </div>
+      </div>
+</div>
+    
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <form [formGroup]="f1">
+
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            EMI
+            </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="row g-1">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="fa3" size="12" class="in" [(ngModel)]="sliderValue">
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <input type="text" formControlName="fa2" size="12" class="in" style="float: right;">
+                    </div> -->
+                </div>
+                <br>
+                <div class="row g-1">
+                    <input type="range" formControlName="fa3" max="10000" min="1000" [(ngModel)]="sliderValue">
+                <div class="col-md-6">
+                    <label class="checkpad">1000</label>
+                </div>
+                <div class="col-md-6">
+                    <label class="checkpad" style="float: right;">10000</label>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Price range
+            </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="row g-1">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="fa1" size="12" class="in" [(ngModel)]="sliderValue1" onchange="setValue()">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" formControlName="fa2" size="12" class="in" style="float: right;">
+                    </div>
+                </div>
+                <br>
+                <div class="row g-1">
+                    <input type="range" min="20000" max="60000" formControlName="fa3" [(ngModel)]="sliderValue1">
+                    <div class="col-md-6">
+                        <label class="checkpad">20,000</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="checkpad" style="float: right;">60,000</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Offers
+            </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Zero Downpayment</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Offers</label>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                Delivery type
+            </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Express Delivery</label>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                Availability
+            </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Exclude Out of Stock</label>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                Battery
+            </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">5000 mAh and Above</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">4000 to 4999 mAh</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">3000 to 3999 mAh</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">1000 to 1999 mAh</label>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                Brand
+            </button>
+            </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Vivo</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Samsung</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Apple</label><br>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                Color
+            </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Black</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Gold</label>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingNine">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                Operating System
+            </button>
+            </h2>
+            <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Android</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Funtouch OS 12</label><br>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                Internal Storage
+            </button>
+            </h2>
+            <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">64 GB</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">128 GB</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">256 GB</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">512 GB</label><br>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingEleven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                Screen size
+            </button>
+            </h2>
+            <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">6 inch and Above</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">5.2 to 5.4 mAh</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">5.0 to 5.1 mAh</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">5.7 to 5.9 mAh</label>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwelve">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                Processor Brand
+            </button>
+            </h2>
+            <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Qualcom</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Intel</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">MediaTek</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">Apple</label><br>
+            </div>
+            </div>
+        </div>
+
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThirteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseThirteen">
+                Camera
+            </button>
+            </h2>
+            <div id="flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <input type="checkbox">
+                <label class="txt" class="checkpad">64 MP</label><br>
+                <input type="checkbox">
+                <label class="txt" class="checkpad">72 MP</label>
+            </div>
+            </div>
+    </div>
+    </form>
+</div>
