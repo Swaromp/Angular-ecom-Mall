@@ -1,0 +1,14 @@
+/* #carouselExampleControls{
+    height: 200px;
+}
+#carousel-inner1{
+    height: 200px;
+} */
+
+
+@media (max-width: 700px) { 
+    img {
+      /* height: 720px; */
+      width: 700px !important;
+    }
+}

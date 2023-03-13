@@ -1,0 +1,13 @@
+img{
+    width: 100%;
+    /* height: 100%; */
+}
+.griddiv{
+    margin-top: 5%;
+}
+@media (max-width: 768px)  { 
+    #mobilehidden{
+        visibility:collapse;
+        margin-bottom: -90%;
+    }
+}
