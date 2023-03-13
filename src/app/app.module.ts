@@ -16,10 +16,13 @@ import { FAQComponent } from './faq/faq.component';
 import { InfoComponent } from './info/info.component';
 import { VmenuComponent } from './vmenu/vmenu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PricefilterPipe } from './pipes/pricefilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    
+    PricefilterPipe,
     SMenuComponent,
     VmenuComponent,
     FAQComponent,

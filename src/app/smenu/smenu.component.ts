@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { ShareService } from '../share.service';
-import { Input } from '@angular/core';
-import { receiveMessageOnPort } from 'worker_threads';
+
 
 @Component({
   selector: 'app-smenu',
@@ -47,7 +46,7 @@ export class SMenuComponent implements OnInit {
   }
 
 }
-function receive() {
-  throw new Error('Function not implemented.');
-}
+// function receive() {
+//   throw new Error('Function not implemented.');
+// }
 
