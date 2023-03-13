@@ -11,10 +11,19 @@ import { ScrollmenuComponent } from './scrollmenu/scrollmenu.component';
 import { ProductgridComponent } from './productgrid/productgrid.component';
 import { CarouselInternalComponent } from './carousel-internal/carousel-internal.component';
 import { Card1Component } from './card1/card1.component';
+import { SMenuComponent } from './smenu/smenu.component';
+import { FAQComponent } from './faq/faq.component';
+import { InfoComponent } from './info/info.component';
+import { VmenuComponent } from './vmenu/vmenu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SMenuComponent,
+    VmenuComponent,
+    FAQComponent,
+    InfoComponent,
     NavbarComponent,
     CarouselComponent,
     FloatingMenuComponent,
@@ -28,6 +37,8 @@ import { Card1Component } from './card1/card1.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     // FontAwesomeModule
   ],
   providers: [],

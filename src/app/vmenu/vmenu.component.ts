@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/forms';
-import { ShareService } from '../share.service';
+// import { ShareService } from '../share.service';
 
 
 
@@ -10,14 +10,14 @@ import { ShareService } from '../share.service';
   styleUrls: ['./vmenu.component.css']
 })
 
-export class VmenuComponent implements OnInit, OnChanges {
+export class VmenuComponent implements OnInit {
 
   f1!: FormGroup;
   sliderValue: any;
   sliderValue1: any;
 
 
-  constructor(private fb: FormBuilder, private shareService: ShareService) {
+  constructor(private fb: FormBuilder) {
     this.createForm();
   }
 
@@ -44,9 +44,7 @@ export class VmenuComponent implements OnInit, OnChanges {
   ngOnInit(): void {
   }
 
-  ngOnChanges(){
-    this.shareService.send(this.f1.value.fa1,this.f1.value.fa2)
-  }
+  
 
 
 }

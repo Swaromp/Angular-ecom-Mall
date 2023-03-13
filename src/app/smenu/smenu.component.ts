@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ShareService } from '../share.service';
+// import { ShareService } from '../share.service';
 import { Input } from '@angular/core';
 import { receiveMessageOnPort } from 'worker_threads';
 
@@ -23,7 +23,7 @@ export class SMenuComponent implements OnInit {
             {im:'vivo8',n:'Vivo Y01A', price:41999, text:'The newly launched Vivo Y01A runs on Android 11 (Go Edition) with a layer of Funtouch OS 11.1 on top, out of the box. The OS on the smartphone, therefore, is fairly old compared to others in the same segment. Even the processor on the latest Y-series model from Vivo is comparatively old with the device housing a MediaTek Helio P35 SoC under the hood.'}
             ];
 
-  constructor(private shareService: ShareService) { }
+  constructor() { }
 
 // getValue() {
 //   this.h=this.shareService.Higher;
