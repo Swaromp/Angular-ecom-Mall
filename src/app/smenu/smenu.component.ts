@@ -11,8 +11,8 @@ export class SMenuComponent implements OnInit {
   lview: boolean = true;
   gview: boolean = false;
   
-  h: any= 40000;
-  l: any = 30000;
+  h: any= 50000;
+  l: any = 0;
 
   prices = [
             {im:'vivo2',n:'Vivo V23 5G', price:24999, text:'The Vivo V23 5G runs Funtouch OS 12 is based on Android 12 and packs 128GB, 256GB of inbuilt storage. The Vivo V23 5G is a dual-SIM (GSM and GSM) mobile that accepts Nano-SIM and Nano-SIM cards. The Vivo V23 5G measures 157.20 x 72.42 x 7.39mm (height x width x thickness) and weighs 179.00 grams. '},

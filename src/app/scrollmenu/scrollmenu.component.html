@@ -235,6 +235,7 @@
     <section *ngFor="let list of sections" >
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item">
+            <a [routerLink]="['/home']" routerLinkActive="router-link-active" >
           <div>
             <div>
               <span>{{ list.title }}</span>
@@ -251,8 +252,8 @@
               </div>
             </div>
           </div>
+        </a>
         </li>
       </ul>
     </section>
   </div>
-  
