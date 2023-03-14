@@ -33,10 +33,10 @@
 
   <div class="col-md-6">
     <div><br>
-      <span style="font-weight: 600">vivo V23 5G 128 GB Storage Stardust Black (8 GB RAM)</span><br>
+      <span style="font-weight: 600">{{device_id[0].name}}</span><br>
       <span style="color:orange; font-weight: 600;" class="fontsize">Only 2 left in stock!</span><br>
       <span>
-        <span class="fontsizeMRP">MRP:</span><span class="fontsizeprice">₹29,990</span>
+        <span class="fontsizeMRP">MRP:</span><span class="fontsizeprice">₹{{device_id[0].price}}</span>
         <!-- <h4 style="color: rgb(98, 98, 98);">MRP:</h4><h5>₹29,990</h5> -->
       </span>
       <h6>Inclusive of all taxes</h6>
@@ -75,8 +75,8 @@
         <div>
           <div>
             <div><img style="margin-right:1%;" src="../assets/space.png" class="icons"> INTERNAL STORAGE </div><br>
-            <div><button type="button" class="btn btn-warning" style="margin-right: 2em;">256GB</button><button
-                type="button" class="btn btn-warning">128GB</button></div>
+            <div><button type="button" class="btn btn-warning" style="margin-right: 2em;">{{device_id[0].storage2}}GB</button><button
+                type="button" class="btn btn-warning">{{device_id[0].storage1}}GB</button></div>
           </div><br>
           <div>
             <div> <img style="margin-right:9px;" src="../assets/paint-bucket.png" class="icons"> COLOR </div><br>
@@ -169,19 +169,19 @@
             <p>Operating System: Android 12</p>
           </li>
           <li>
-            <p>Processor: Mediatek Dimensity 920 Processor</p>
+            <p>Processor: {{device_id[0].processor}} Processor</p>
           </li>
           <li>
-            <p>Primary Camera: 64 MP + 8 MP + 2 MP</p>
+            <p>Primary Camera: {{device_id[0].camera1}}</p>
           </li>
           <li>
-            <p>Secondary Camera: 50 MP + 8 MP</p>
+            <p>Secondary Camera: {{device_id[0].camera2}}</p>
           </li>
           <li>
-            <p>Display Size: 6.44 inch</p>
+            <p>Display Size: {{device_id[0].Display}}</p>
           </li>
           <li>
-            <p>Battery Capacity: 4200 mAh</p>
+            <p>Battery Capacity: {{device_id[0].battery}}</p>
           </li>
         </ul>
         <div>

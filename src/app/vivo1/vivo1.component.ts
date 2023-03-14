@@ -44,6 +44,9 @@ export class Vivo1Component {
   selectImage(image: string) {
     this.selectedImage = image;
   }
+
+
+  device_id=[{name:'Vivo V23 5G',price:24999,storage1:'128',storage2:'256',processor:'Qualcomm snapdragon 680',camera1:'64 MP + 2 MP + 2 MP', camera2:'32 MP', Display:'6.43 inch',battery:'4500 mAh'}]
 }
 
 
