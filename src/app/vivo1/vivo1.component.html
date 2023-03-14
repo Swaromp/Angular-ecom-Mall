@@ -1,0 +1,379 @@
+<div class="row justify-content-center" style="padding: 2%;" >
+
+<div class="col-md-1"></div>
+  <div class="col-md-4 ">
+
+
+    <div class="sticky-top">
+      <br>
+      <div class="maindisplay">
+        <div class="displaydiv ; border shadow-lg" *ngIf="selectedImage">
+          <img [src]="selectedImage" alt="Selected Image">
+        </div>
+        <br>
+          <div class="imgdiv ;  border shadow-lg" >
+            <img *ngFor="let image of images" [src]="image" (click)="selectImage(image)" class="imgd img-fluid">
+          </div>
+      </div>
+
+
+      <!-- <div class="card" style="width:80% ; margin-left:10%;" class="image-container border shadow-lg">
+        <img src="https://www.bajajmall.in/emistore/media/catalog/product/4/_/4_89.jpeg" class="card-img-top">
+        <button style="border: transparent"><img src="../assets/heart.png" width="25px" class="overlay"></button>
+        <div class="card"></div>
+      </div> -->
+
+      <div style=" margin: 5%;">
+        <button type="button" style="margin-right:4%; width: 48%;" class="btn btn-outline-warning">Add To
+          Cart</button><button type="button" style=" width: 48%;" class="btn btn-warning">Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-6">
+    <div><br>
+      <span style="font-weight: 600">vivo V23 5G 128 GB Storage Stardust Black (8 GB RAM)</span><br>
+      <span style="color:orange; font-weight: 600;" class="fontsize">Only 2 left in stock!</span><br>
+      <span>
+        <span class="fontsizeMRP">MRP:</span><span class="fontsizeprice">₹29,990</span>
+        <!-- <h4 style="color: rgb(98, 98, 98);">MRP:</h4><h5>₹29,990</h5> -->
+      </span>
+      <h6>Inclusive of all taxes</h6>
+    </div>
+    <hr>
+    <div>
+      <div>
+        <div>
+
+          <div>
+            <span style="color:orange; font-weight: 600;" class="fontsize">No Cost EMI<img style="margin-left:5px;"
+                src="../assets/info.png" class="icons"></span>
+          </div>
+          <div>
+            <span class="fontsizeMRP">₹1,688/m + ₹3,376</span>
+            <h6>For 06 months</h6>
+            <h6>Down payment<img style="margin-left:5px;" src="../assets/info.png" class="icons"></h6>
+          </div>
+        </div>
+
+        <hr>
+
+        <div>
+          <div><img style="margin-right:1%;" src="../assets/discount.png" class="icons"><span>offers for you</span></div>
+          <div class="offers-box">
+            <img src="../assets/tag.png" class="icons" style="margin-right:2%;">
+            <span class="fontsize">Offer: Get cashback worth Rs.2000 Apply Promocode HOLI atcheckout. </span>
+            <span></span>
+          </div>
+        </div>
+
+
+        <hr>
+
+
+        <div>
+          <div>
+            <div><img style="margin-right:1%;" src="../assets/space.png" class="icons"> INTERNAL STORAGE </div><br>
+            <div><button type="button" class="btn btn-warning" style="margin-right: 2em;">256GB</button><button
+                type="button" class="btn btn-warning">128GB</button></div>
+          </div><br>
+          <div>
+            <div> <img style="margin-right:9px;" src="../assets/paint-bucket.png" class="icons"> COLOR </div><br>
+          </div>
+          <table>
+            <tr class="table-ligth">
+
+              <td>
+                 <div class="flex">
+                <div class="phone-select"><button class="phone-select ; btn btn-outline-warning"><img
+                      src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gstardustblack_base_1.jpeg"
+                      class="select-color"> Stardust Black</button></div>
+                    </div>
+              </td>
+
+              <td>
+                <div><button class="phone-select ; btn btn-outline-warning"><img
+                      src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gsunshinegold_base.jpeg"
+                      class="select-color">Sunshine Gold</button></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div>
+      <div><img style="margin-right:1%;" src="../assets/fast-delivery.png" class="icons"><span>DELIVERY MODE &
+          SELLER</span></div><br>
+
+      <div class="delivery-btn">
+        <button class="btn btn-outline-warning" style="margin-right: 2em;">Home Delivery</button> <button
+          class="btn btn-outline-warning">Pick Up From Store</button>
+      </div><br>
+      <div class="delivery-info"><img style="margin-right:1%;" src="../assets/express-delivery.png" class="icons"> Free
+        Home Delivery by 4 th
+        March</div>
+      <p class="fontsize" style="color: rgb(143, 143, 143);"><i>Delivery mode selection may change as per the
+          availability and selection of seller.</i></p>
+    </div>
+
+
+    <div class="col-md-7" style="padding: 0;">
+      <h5>CHECK AVAILABILITY</h5>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter Pincode">
+        <button class="btn btn-outline-warning" type="button" id="button-addon2">Button</button>
+      </div>
+    </div>
+    <div>
+      <h5>SELLER INFORMATION</h5>
+      <div class="card" style="width:58%;">
+        <div class="card-body">
+          <p class="fw-lighter; fontsize;">You are buying from:</p>
+          <h6 class="card-title">SS COMMUNICATION AND SERVICES PRIVATE LIMITED _RAJGURUNAGAR_BPES RDP_149003</h6>
+          <p class="fontsize">PUNE NASHIK HIGHWAY ROAD NEAR BUS STANDF,RAJGURUNAGAR TAL KHED,INDIA,PUNE</p>
+        </div>
+      </div>
+    </div>
+    <p class="fontsize"><i>Product price may vary basis the selected seller</i></p>
+    <div class="col-md-7">
+      <p class="text-end" style="color: rgb(42, 42, 246);">View more sellers from ₹ 13,499</p>
+    </div>
+
+
+    <hr>
+
+    <div>
+      <div>
+        <h6>CANCELLATION AND SHIPPING POLICY</h6>
+      </div>
+      <div class="fontsize">
+        No cancellation charges*
+      </div>
+      <p class="text-end" style="color: rgb(42, 42, 246);">View more details</p>
+    </div>
+
+    <hr>
+
+    <div>
+      <h6>
+        <div><img style="margin-right:1%;"
+            src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/pdppage/star.png" class="icons">HIGHLIGHTS</div>
+      </h6>
+      <div class="fontsize1">
+        <ul>
+          <li>
+            <p>Operating System: Android 12</p>
+          </li>
+          <li>
+            <p>Processor: Mediatek Dimensity 920 Processor</p>
+          </li>
+          <li>
+            <p>Primary Camera: 64 MP + 8 MP + 2 MP</p>
+          </li>
+          <li>
+            <p>Secondary Camera: 50 MP + 8 MP</p>
+          </li>
+          <li>
+            <p>Display Size: 6.44 inch</p>
+          </li>
+          <li>
+            <p>Battery Capacity: 4200 mAh</p>
+          </li>
+        </ul>
+        <div>
+          <p><img src="https://www.bajajmall.in/emistore/media/deliveryiconimages/Untitled-11551291478.png"
+              style="width: 5%;"> 1 Year Manufacturer Warranty on this Product</p>
+        </div>
+        <div>view details</div>
+      </div>
+
+      <hr>
+
+      <div>
+        <div>
+          <h6><span><img style="margin-right:1%;" src="../assets/processor.png" class="icons"></span>SPECIFICATIONS</h6>
+        </div>
+
+        <div>
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <td class="fontsize2">General </td>
+                <td class="fontsize1">Brand</td>
+                <td class="fontsize">vivo</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Processor Name</td>
+                <td class="fontsize">Mediatek Helio P35</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Color</td>
+                <td class="fontsize">Diamond Glow</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Connectivity</td>
+                <td class="fontsize">Network Type-4G, 3G, 2G,Supported Networks,5G, 4G LTE, WCDMA, GSM,Internet
+                  Connectivity-4G, 3G,
+                  Wi-Fi, GPRS,EDGE,GPRS-Yes,Bluetooth Support-Yes,Bluetooth Version-v5.0,Wi-Fi-Yes</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Other Features</td>
+                <td class="fontsize">18W Fastcharge (9V/2A)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Operating System</td>
+                <td class="fontsize">Android 11</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">In The Box</td>
+                <td class="fontsize">Handset, Charger, USB Cable, SIM Ejector Pin, Protective Case, Protective Film
+                  (Applied),
+                  Documentation</td>
+              </tr><br>
+            </tbody>
+            <thead>
+              <tr>
+                <td class="fontsize2">DISPLAY FEATURES</td>
+                <td class="fontsize1">Screen Size</td>
+                <td class="fontsize">6.51 inch</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Display Resolution</td>
+                <td class="fontsize">1600 x 720 pixels</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Bluetooth Version</td>
+                <td class="fontsize">v5.0</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Connectivity</td>
+                <td class="fontsize">Network Type-4G, 3G, 2G,Supported Networks,5G, 4G LTE, WCDMA, GSM,Internet
+                  Connectivity-4G, 3G,
+                  Wi-Fi, GPRS,EDGE,GPRS-Yes,Bluetooth Support-Yes,Bluetooth Version-v5.0,Wi-Fi-Yes</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="fontsize1">Other Features</td>
+                <td class="fontsize">18W Fastcharge (9V/2A)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+
+      <div class="COMPARE-SIMILAR-PRODUCTS">
+        <span><img style ="margin-right:1%;" src="../assets/compare.png" class="icons">COMPARE SIMILAR PRODUCTS</span><br>
+        <span><img
+            src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/emi-mall-dam/sep-22/compare-product-dam/top-selling.svg" class="icons1"></span>
+        <div>
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td><span><img
+                      src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy22starlitblue_base.jpeg"
+                      class="table-img"></span></td>
+                <td><span><img
+                      src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy22starlitblue_base.jpeg"
+                      class="table-img"></span></td>
+                <td><span><img
+                      src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy22metaversegreen_base.jpeg"
+                      class="table-img"></span></td>
+
+              </tr>
+              <tr class="compare-details; fontsize-table-mob-name">
+                <td><span>vivo Y21G 64 GB Storage Diamond Glow (4 GB RAM)</span></td>
+                <td><span>vivo Y22 128 GB Storage Starlit Blue (6 GB RAM)</span></td>
+                <td><span>vivo Y22 128 GB Storage Metaverse Green (6 GB RAM)</span></td>
+              </tr>
+              <tr class="compare-details">
+                <td><span><button type="button" class="btn btn-warning">buy now</button></span></td>
+                <td><span><button type="button" class="btn btn-warning">buy now</button></span></td>
+                <td><span><button type="button" class="btn btn-warning">buy now</button></span></td>
+              </tr>
+              <tr>
+                <td class="compare-info ; fontsize2"><span>price</span></td>
+              </tr>
+              <tr class="fontsize1 ; compare-details">
+                <td><span>₹13,499</span></td>
+                <td><span>₹13,499</span></td>
+                <td><span>₹13,499</span></td>
+              </tr>
+              <tr>
+                <td class="compare-info ; fontsize2"><span>EMI</span></td>
+              </tr>
+              <tr class="fontsize1 ; compare-details">
+                <td><span>5000 mAh</span></td>
+                <td><span>5000 mAh</span></td>
+                <td><span>5000 mAh</span></td>
+              </tr>
+              <tr>
+                <td class="compare-info ; fontsize2"><span>Primary Camera</span></td>
+              </tr>
+              <tr class="fontsize1 ; compare-details">
+                <td><span>13 MP + 2 MP</span></td>
+                <td><span>13 MP + 2 MP</span></td>
+                <td><span>13 MP + 2 MP</span></td>
+              </tr>
+              <tr>
+                <td class="compare-info ; fontsize2"><span>Secondary Camera</span></td>
+              </tr>
+              <tr class="fontsize1 ; compare-details">
+                <td><span>8 MP</span></td>
+                <td><span>8 MP</span></td>
+                <td><span>8 MP</span></td>
+              </tr>
+              <tr>
+                <td class="compare-info ; fontsize2"><span>RAM</span></td>
+              </tr>
+              <tr class="fontsize1 ; compare-details">
+                <td><span>4 GB</span></td>
+                <td><span>4 GB</span></td>
+                <td><span>4 GB</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- <div>
+  <div><img src="../assets/space.png"> INTERNAL STORAGE </div>
+  <div><button>256GB</button><button>128GB</button></div>
+</div> -->
+    </div>
+
+  </div>
+<div class="col-md-1"></div>
+
+</div>
+
+<div class="container" style="padding-bottom:1%; padding-top: 1%; ">
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+      <h5 class="card-title">vivo Y21G Overview :</h5>
+      <p>
+        {{(showMore) ? text : text | slice:0:300}} <span *ngIf="!showMore">...</span>
+        <a href="javascript:;" *ngIf="!showMore" (click)="showMore=true">[Show More]</a>
+      </p>
+    </div>
+  </div>
+</div>

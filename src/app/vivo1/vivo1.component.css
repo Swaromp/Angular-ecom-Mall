@@ -1,0 +1,222 @@
+.fontsize{
+  font-size:11px;
+}
+.fontsize1{
+  font-size:13px;
+}
+.fontsize2{
+  font-size:13px;
+}
+
+.fontsizeMRP{
+  font-size:180%;
+  color: rgb(98, 98, 98);
+}
+
+.fontsizeprice{
+  font-size: 180%;
+}
+.fontsize-table-mob-name{
+  font-size: 80%;
+}
+.fontsize-table-mob-spec{
+  font-size: 80%;
+}
+
+.imgd{
+  height: 60px;
+  width: 60.52px;
+
+}
+/* .imgdiv{
+  width: max-content;
+} */
+img , svg{
+  width: 100%;
+  align-self: center;
+
+}
+
+.icons{
+  width: 17px;
+}
+
+.icons1{
+  width: 80px;
+}
+
+.select-color{
+  width:70px;
+  height:100px;
+}
+
+/* .table{
+  flex-wrap: auto;
+} */
+
+.table-img{
+  width:80px;
+}
+.offers-box{
+  width: 60%;
+  border: 1px ;
+  padding: 01%;
+  border-radius: 40px;
+  text-align: center;
+  background-color: rgba(132, 249, 134, 0.537);
+}
+.image-container {
+  position: relative;
+  box-shadow: black;
+
+}
+
+.overlay {
+  position: relative;
+  bottom: 80%;
+  right: -85%;
+}
+
+
+ .phone-select{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.delivery-btn{
+  margin: 0%;
+}
+.delivery-info{
+  width: 80%;
+  padding: 10px;
+  border: 1px ;
+  margin: 0;
+  border-radius:10px;
+  background-color: rgb(153, 239, 247);
+}
+
+
+.COMPARE-SIMILAR-PRODUCTS {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.COMPARE-SIMILAR-PRODUCTS{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.COMPARE-SIMILAR-PRODUCTS img {
+  vertical-align: middle;
+}
+
+.COMPARE-SIMILAR-PRODUCTS table {
+  width: 100%;
+  margin-top: 1rem;
+
+}
+
+.COMPARE-SIMILAR-PRODUCTS td {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+
+}
+
+
+
+.COMPARE-SIMILAR-PRODUCTS button {
+  background-color: #ffc107;
+  border: none;
+  color: 201, 201, 201;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.COMPARE-SIMILAR-PRODUCTS button:hover {
+  background-color: #ff9800;
+}
+
+.COMPARE-SIMILAR-PRODUCTS span.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #f44336;
+}
+
+
+.compare-info{
+  background-color: rgb(185, 235, 243);
+}
+
+.compare-details{
+  background-color: rgba(237, 237, 237, 0.739);
+}
+
+
+
+.showmore{
+
+  padding-bottom: 10%;
+}
+
+ul{
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: orange;
+  font-weight: 900;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  position:absolute;
+}
+
+
+
+button{
+  height: max-content;
+}
+
+
+
+
+.carousel {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+
+@media  (max-width:768px) {
+  .imgd{
+    height: 60px;
+    width: 60.52px;
+
+  }
+}
