@@ -68,9 +68,9 @@
 
       <!-- *****LIST VIEW***** -->
       <div class="mview1" *ngIf="lview">
-        <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" 
-          class="a">
-          <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of prices | pricefilter:h :l">
+          <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of prices1 | pricefilter:h :l; let i = index" click>
+            <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" onclick="keytransfer()" class="a">
+            <!-- {{'#id : '+x.im}} -->
             <div class="row g-0">
               <div class="col-md-4">
               </div>
@@ -125,8 +125,9 @@
                 </div>
               </div>
             </div>
+          </a>
           </div>
-        </a>
+        
 
 
 
@@ -163,7 +164,7 @@
 
       <!-- *****GRID VIEW***** -->
       <div class="mview1" *ngIf="gview">
-              <div class="row g-1">
+              <!-- <div class="row g-1">
               <div class="col-md-3">
                 <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html" class="a">
                   <div class="card mb-3" style="max-width: 70rem;">
@@ -262,7 +263,7 @@
                     </a>
                 </div>
 
-              </div>
+              </div> -->
 
               <div class="card mb-3" style="max-width: 70rem; background-color: #daf6e4;">
                 <div class="row g-0">

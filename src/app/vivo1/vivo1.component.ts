@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './vivo1.component.html',
   styleUrls: ['./vivo1.component.css']
 })
-export class Vivo1Component {
+export class Vivo1Component implements OnInit {
+
+
   name = 'Angular';
   showMore = false;
   text = `vivo Y21G is one of the most popular vivo's Y series smartphones. It features a powerful processor and extended RAM that lets users easily play heavy games and run multiple apps. With this device, you can expect a top-notch clarity display and exceptional camera functions. Besides this, the phone flaunts attractive colours and stylish designs while being slim and sleek. The vivo Y21G price is another reason it is the perfect choice for those looking for a budget-friendly smartphone without compromising build quality and functions. Whether you love watching videos, browsing social media, or playing games, this smartphone can be your best companion.
@@ -45,6 +47,9 @@ export class Vivo1Component {
     this.selectedImage = image;
   }
 
+  ngOnInit(): void {
+
+  }
 
   device_id=[{name:'Vivo V23 5G',price:24999,storage1:'128',storage2:'256',processor:'Qualcomm snapdragon 680',camera1:'64 MP + 2 MP + 2 MP', camera2:'32 MP', Display:'6.43 inch',battery:'4500 mAh'}]
 }

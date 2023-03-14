@@ -11,8 +11,11 @@ export class SMenuComponent implements OnInit {
   lview: boolean = true;
   gview: boolean = false;
   
-  h: any= 50000;
+  h: any= 200000;
   l: any = 0;
+  sel: any;
+
+  key: any;
 
   prices = [
             {im:'vivo2',n:'Vivo V23 5G', price:24999, text:'The Vivo V23 5G runs Funtouch OS 12 is based on Android 12 and packs 128GB, 256GB of inbuilt storage. The Vivo V23 5G is a dual-SIM (GSM and GSM) mobile that accepts Nano-SIM and Nano-SIM cards. The Vivo V23 5G measures 157.20 x 72.42 x 7.39mm (height x width x thickness) and weighs 179.00 grams. '},
@@ -22,13 +25,23 @@ export class SMenuComponent implements OnInit {
             {im:'vivo8',n:'Vivo Y01A', price:41999, text:'The newly launched Vivo Y01A runs on Android 11 (Go Edition) with a layer of Funtouch OS 11.1 on top, out of the box. The OS on the smartphone, therefore, is fairly old compared to others in the same segment. Even the processor on the latest Y-series model from Vivo is comparatively old with the device housing a MediaTek Helio P35 SoC under the hood.'}
             ];
 
-  constructor() { }
 
-// getValue() {
-//   this.h=this.shareService.Higher;
-//   this.l=this.shareService.Lower;
-//   console.log(this.h, this.l)
-// }
+  prices1 = [
+            {im:'iphone13',n:'Apple Iphone 13', price:62790, text:'Boasts an advanced dual-camera system that allows you to click mesmerising pictures with immaculate clarity. Furthermore, the lightning-fast A15 Bionic chip allows for seamless multitasking, elevating your performance to a new dimension. A big leap in battery life, a durable design, and a bright Super Retina XDR display facilitate boosting your user experience.'},
+            {im:'iphone14',n:'Apple Iphone 14', price:72990, text:'Experience the majestic powerful smartphone when you purchase the Apple iPhone 14.  The name says it all. Embraced with a beautifully aerospace-grade aluminum design and ceramic shield front, which is tougher than any other smartphone glass, giving you the holding feeling ever. Flaunt its Vibrant super retina XDR display which is majestically big with a 6.1-inch display.'},
+            {im:'iphone12promax',n:'Apple Iphone 12 Pro Max', price:113990, text:'The iPhone 12 Pro Max is Apples most ambitious iPhone yet, and naturally commands a steep premium too. In my iPhone 12 Pro review, I mentioned that even though the smaller Pro model is a superb offering, its probably not the smartest choice. If you are thinking of going all-out on your iPhone purchase this year, then you should probably look at spending a bit more and getting the iPhone 12 Pro Max instead. After using it for a week, I think I was right in making that assumption. '},
+            {im:'iphone13promax',n:'Apple Iphone 13 Pro Max', price:136590, text:'Apple iPhone 13 Pro Max is worth all hype with its robust spec sheet. The brand is offering triple cameras on the backside, equipped with multifaceted features and a 12MP selfie lens. This IP68 water-resistant smartphone gets a standard battery with Fast Charging and Wireless Charging support. However, it does not have a fingerprint sensor and FM radio. '},
+            {im:'iphone14promax',n:'Apple Iphone 14 Pro Max', price:149990, text:'The Apple iPhone 14 Pro Max is the most expensive iPhone from the company. The phone is ideal for those who want to experience the best of Apple features. The latest iPhone is equipped with a large 6.7-inch display that makes it a great device to watch videos and play graphics-intensive games. The model is powered by the ultra-fast Apple A16 Bionic CPU, which is one of the best chipsets in the industry. '},
+            ];
+  
+
+  constructor() { }
+  
+
+  keytransfer() {
+
+  }
+
 
 
   changeView() {
@@ -46,7 +59,5 @@ export class SMenuComponent implements OnInit {
   }
 
 }
-// function receive() {
-//   throw new Error('Function not implemented.');
-// }
+
 
