@@ -7,3 +7,9 @@ footer{
 a{
     text-decoration: none;
 }
+img{
+   height: 30px;
+   width:30px;
+   margin-right: 10%;
+   margin-bottom: 10%;
+}
