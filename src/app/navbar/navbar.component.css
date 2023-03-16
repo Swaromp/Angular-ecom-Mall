@@ -7,6 +7,9 @@
     z-index: 100; */
 
 }
+  
+  
+
 nav{
     background: linear-gradient(280deg,#1a1004 -190.68%,#2099f1 296.61%,#0074c9 296.61%);
 }
@@ -15,33 +18,61 @@ nav{
     grid-template-columns:100%;
     width: 100%;
     align-items:stretch;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .d2{
-    /* display: table-column-group; */
     align-items: stretch;
-    display: inline-flex;
-   
+    /* display: inline; */
+}
+.d3{
+    position: relative;
+    display: inline-block;
     
 }
+/* .d4{
+float: left;
+} */
+.d5{
+   padding-right: 4%;
+    float: right;
+}
+.d6{
+    margin-left: 10%;
+    
+   
+} 
 .sd1{
     width: 40vw;
    align-self: center;
    /* border-radius: 5rem; */
    
 }
+.row2 li{
+    margin-right: 10%;
+    font-weight: bolder;
+   
+}
+.row2 a{
+    color: #ffffff;
+}
+.logo{
+    background: url(https://www.bajajmall.in/etc.clientlibs/emistoremarketplace/clientlibs-emistoremarketplace/clientlibs-common/resources/icons/Bajaj_Mall_Logo_White.svg) no-repeat;
+    width: 10rem;
+    height: 30px;
+    display: inline-block;
+    background-position: bottom;
+    background-size: contain;
+    
+}
 .icons{
     border-right: solid 1px #e6e6ee;
 }
-.iconright>li{
+
+.iconright ul li{
     margin-inline: 5px;
 }
-.iconright{
-  
-    /* position: relative; */
-    float: right;
-    justify-self: right;
-    /* left: 32rem; */
-}
+
 .tognav{
    margin-right: 3%;
    margin-left: 0%;
@@ -64,11 +95,50 @@ nav{
     display: flex;
 }
 
-@media (max-width: 800px) { 
+@media (max-width: 992px) { 
 
 
-.searchdiv{
-    margin-top: 4%;
+.d6{
+    /* margin-top: 4%; */
     margin-bottom: 0%;
+}
+.sd1{
+    width: 20rem;
+    margin-right: 50px;
+
+}
+.iconright{
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.icons{
+    border-right: 0;
+}
+
+.iconright ul li{
+    margin-inline: 1px;
+}
+}
+@media (max-width: 776px) {
+    .sd1{
+        width: 100%;
+        
+    }
+    .d6{
+        width: 90vw;
+        margin-left: 0;
+    }
+   
+}
+@media (max-width: 400px) {
+.logo{
+    background: url(https://www.bajajmall.in/etc.clientlibs/emistoremarketplace/clientlibs-emistoremarketplace/clientlibs-common/resources/icons/Bajaj_Mall_Logo_White.svg) no-repeat;
+    width: 6rem;
+    height: 20px;
+    display: inline-block;
+    background-position: bottom;
+    background-size: contain;
+    
 }
 }
