@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="row g-1">
-    <div class="col-md-3">
+    <div class="col-md-3 ">
 
       <!-- ****Accordion Menu Component**** -->
       <app-vmenu></app-vmenu>
@@ -68,7 +68,7 @@
 
       <!-- *****LIST VIEW***** -->
       <div class="mview1" *ngIf="lview">
-          <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l;" >
+          <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l;" >
             <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" class="a">
             <!-- {{'#id : '+x.im}} -->
             <div class="row g-0">
@@ -133,7 +133,7 @@
 
 
         <!-- **LOGIN MESSAGE** -->
-        <div class="card mb-3" style="max-width: 70rem; background-color: #daf6e4;">
+        <div class="card mb-3 " style="max-width: 70rem; background-color: #daf6e4;">
           <div class="row g-0">
             <div class="col-md-2">
               <span class="wave green-hand-img ">👋</span>

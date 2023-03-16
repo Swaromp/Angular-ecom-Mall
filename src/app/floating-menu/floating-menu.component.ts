@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-floating-menu',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FloatingMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToSmenu(id: number) {
+    this.router.navigate(['/smenu', id]);
   }
 
 }
