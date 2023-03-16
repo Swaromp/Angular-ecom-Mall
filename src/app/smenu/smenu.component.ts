@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 // import { ShareService } from '../share.service';
 
 
@@ -11,11 +13,14 @@ export class SMenuComponent implements OnInit {
   lview: boolean = true;
   gview: boolean = false;
   
-  h: any= 200000;
-  l: any = 0;
-  sel: any;
 
   key: any;
+  sel: any[] = [];
+  h: any= 200000;
+  l: any = 0;
+
+  constructor(private route: ActivatedRoute) { }
+
 
   prices = [
             {im:'vivo2',n:'Vivo V23 5G', price:24999, text:'The Vivo V23 5G runs Funtouch OS 12 is based on Android 12 and packs 128GB, 256GB of inbuilt storage. The Vivo V23 5G is a dual-SIM (GSM and GSM) mobile that accepts Nano-SIM and Nano-SIM cards. The Vivo V23 5G measures 157.20 x 72.42 x 7.39mm (height x width x thickness) and weighs 179.00 grams. '},
@@ -33,15 +38,13 @@ export class SMenuComponent implements OnInit {
             {im:'iphone13promax',n:'Apple Iphone 13 Pro Max', price:136590, text:'Apple iPhone 13 Pro Max is worth all hype with its robust spec sheet. The brand is offering triple cameras on the backside, equipped with multifaceted features and a 12MP selfie lens. This IP68 water-resistant smartphone gets a standard battery with Fast Charging and Wireless Charging support. However, it does not have a fingerprint sensor and FM radio. '},
             {im:'iphone14promax',n:'Apple Iphone 14 Pro Max', price:149990, text:'The Apple iPhone 14 Pro Max is the most expensive iPhone from the company. The phone is ideal for those who want to experience the best of Apple features. The latest iPhone is equipped with a large 6.7-inch display that makes it a great device to watch videos and play graphics-intensive games. The model is powered by the ultra-fast Apple A16 Bionic CPU, which is one of the best chipsets in the industry. '},
             ];
+
+  prices2 = [
+            {im:'rog1',n:'Asus ROG Phone 6 Pro 5G', price:89999, text:'Asus ROG Phone 6 Pro is a gaming smartphone loaded with inciting specs and features like a robust Snapdragon 8+ Gen1 chipset, a big 6,000mAh battery supported by a 65W fast charger, a 6.7-inch touchscreen AMOLED panel with 165Hz refresh rate, and it has got a 50MP triple-rear & a 12MP front camera. Lets read more about the smartphone in detail and see what more it has to offer.'},
+
+
+             ]
   
-
-  constructor() { }
-  
-
-  keytransfer() {
-
-  }
-
 
 
   changeView() {
@@ -55,6 +58,16 @@ export class SMenuComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    this.key = this.route.snapshot.paramMap.get("id")
+
+    if (this.key == 1) {
+      this.sel = this.prices;
+    } else if (this.key == 2) {
+      this.sel = this.prices1;
+    } 
+    else if (this.key == 3) {
+      this.sel = this.prices2;
+    } 
     
   }
 

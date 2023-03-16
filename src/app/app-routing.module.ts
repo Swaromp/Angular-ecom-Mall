@@ -7,7 +7,7 @@ import { Vivo1Component } from './vivo1/vivo1.component';
 
 const routes: Routes = [
   { path: '', component: CarouselComponent},
-  {path:'smenu', component: SMenuComponent},
+  {path:'smenu/:id', component: SMenuComponent},
   { path: 'vivo1', component: Vivo1Component}
 ];
 

@@ -232,10 +232,9 @@
 
 
 <div class="scrollmain">
-    <section *ngFor="let list of sections" >
+    <section *ngFor="let list of sections" (click)="goToSmenu(list.id)">
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item">
-            <a [routerLink]="['/smenu']" routerLinkActive="router-link-active" >
           <div>
             <div>
               <span>{{ list.title }}</span>
@@ -245,14 +244,13 @@
                 </button>
               </span>
             </div>
-  
+            
             <div class="wrapper">
               <div *ngFor="let image of list.images">
                 <img src="{{ image }}">
               </div>
             </div>
           </div>
-        </a>
         </li>
       </ul>
     </section>

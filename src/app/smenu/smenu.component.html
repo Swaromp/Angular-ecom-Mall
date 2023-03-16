@@ -68,8 +68,8 @@
 
       <!-- *****LIST VIEW***** -->
       <div class="mview1" *ngIf="lview">
-          <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of prices1 | pricefilter:h :l; let i = index" click>
-            <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" onclick="keytransfer()" class="a">
+          <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l;" >
+            <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" class="a">
             <!-- {{'#id : '+x.im}} -->
             <div class="row g-0">
               <div class="col-md-4">
