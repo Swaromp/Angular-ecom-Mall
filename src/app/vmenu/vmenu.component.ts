@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/forms';
+import { FetchService } from '../services/fetch.service';
 // import { ShareService } from '../share.service';
 
 
@@ -13,11 +14,12 @@ import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/form
 export class VmenuComponent implements OnInit {
 
   f1!: FormGroup;
+  minValue: any;
+  maxValue: any;
   sliderValue: any;
-  sliderValue1: any;
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private fetch1: FetchService) {
     this.createForm();
   }
 
@@ -25,7 +27,9 @@ export class VmenuComponent implements OnInit {
     this.f1 = this.fb.group({
        fa1: [''],
        fa2: [''],
-       fa3: ['']
+       fa3: [''],
+       fa4: [''],
+       fa5: ['']
     });
   }
 
@@ -42,9 +46,25 @@ export class VmenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   
   }
 
-  
+  updateMinMaxValues(minValue: number, maxValue: number): [number, number] {
+    if (minValue > maxValue) {
+      return [maxValue, minValue];
+    } else {
+      return [minValue, maxValue];
+    }
+  }
+  onMinValueChange() {
+    [this.minValue, this.maxValue] = this.updateMinMaxValues(this.minValue, this.maxValue);
+    this.fetch1.subject.next(this.f1.controls['fa1'].value);
+  }
 
-
+  onMaxValueChange() {
+    [this.minValue, this.maxValue] = this.updateMinMaxValues(this.minValue, this.maxValue);
+    this.fetch1.subject1.next(this.f1.controls['fa2'].value);
+  }
 }
+
+

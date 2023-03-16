@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FetchService } from '../services/fetch.service';
 
 // import { ShareService } from '../share.service';
 
@@ -16,10 +17,10 @@ export class SMenuComponent implements OnInit {
 
   key: any;
   sel: any[] = [];
-  h: any= 200000;
-  l: any = 0;
+  h: any
+  l: any
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,private fetch1: FetchService) { }
 
           prices =  [
             {im:'vivo2',n:'Vivo V23 5G', price:24999, text:'The Vivo V23 5G runs Funtouch OS 12 is based on Android 12 and packs 128GB, 256GB of inbuilt storage. The Vivo V23 5G is a dual-SIM (GSM and GSM) mobile that accepts Nano-SIM and Nano-SIM cards. The Vivo V23 5G measures 157.20 x 72.42 x 7.39mm (height x width x thickness) and weighs 179.00 grams. '},
@@ -57,6 +58,14 @@ export class SMenuComponent implements OnInit {
   }
   
   ngOnInit(): void {
+
+    this.fetch1.subject.subscribe((data:any)=>{
+      this.l=data
+    })
+    this.fetch1.subject1.subscribe((data:any)=>{
+      this.h=data
+    })
+
     this.key = this.route.snapshot.paramMap.get("id")
 
     if (this.key == 1) {
