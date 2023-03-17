@@ -87,8 +87,8 @@
                 </div>
                 <br>
                 <div class="row g-1">
-                  <input type="range" formControlName="fa5" max="200000" min="1000" [(ngModel)]="minValue" (ngModelChange)="onMinValueChange()">
-                  <input type="range" formControlName="fa4" max="200000" min="1000" [(ngModel)]="maxValue" (ngModelChange)="onMaxValueChange()">
+                  <input type="range" formControlName="fa5" max="200000" min="1000"  step="500" [(ngModel)]="minValue" (ngModelChange)="onMinValueChange()">
+                  <input type="range" formControlName="fa4" max="200000" min="1000" step="500" [(ngModel)]="maxValue" (ngModelChange)="onMaxValueChange()">
                   <div class="col-md-6">
                     <label class="checkpad">20,000</label>
                   </div>
