@@ -33,12 +33,6 @@ export class VmenuComponent implements OnInit {
     });
   }
 
-  // setValue() {
-  //   this.shareService.Higher = this.f1.value.fa1;
-  //   this.shareService.Lower = this.f1.value.fa2;
-  //   console.log(this.shareService.Higher)
-  //   console.log(this.shareService.Lower)
-  // }
 
 
   clear() {

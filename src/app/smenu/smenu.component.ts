@@ -79,6 +79,13 @@ export class SMenuComponent implements OnInit {
     
   }
 
+  sortA() {
+    this.sel=this.sel.reverse()
+  }
+
+  sortB() {
+    this.sel.reverse()
+  }
 }
 
 

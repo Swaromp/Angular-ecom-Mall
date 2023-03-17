@@ -18,11 +18,11 @@ import { VmenuComponent } from './vmenu/vmenu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
+import { SortByPropertyPipe } from './pipes/sortby.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     PricefilterPipe,
     SMenuComponent,
     VmenuComponent,
@@ -36,8 +36,8 @@ import { Vivo1Component } from './vivo1/vivo1.component';
     ProductgridComponent,
     CarouselInternalComponent,
     Card1Component,
-    Vivo1Component
-
+    Vivo1Component,
+    SortByPropertyPipe
   ],
   imports: [
     BrowserModule,

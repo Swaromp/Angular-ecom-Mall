@@ -4,7 +4,7 @@
         <div class="col-md-9">
           <p class="smphone" class="text-muted"><b>category:</b> smartphones </p>
         </div>
-        <div class="col-md-3" style="color:red;">
+        <div class="col-md-3" style="color:red; cursor: pointer;">
             <a (click)="clear()">
                 <p>clear all</p>
             </a>
@@ -25,22 +25,23 @@
             <div class="accordion-body">
                 <div class="row g-1">
                     <div class="col-md-6">
-                        <input type="text" formControlName="fa3" size="12" class="in" [(ngModel)]="sliderValue">
+                      <input type="text" formControlName="fa1" size="12" class="in" [(ngModel)]="minValue" (ngModelChange)="onMinValueChange()">
                     </div>
-                    <!-- <div class="col-md-6">
-                        <input type="text" formControlName="fa2" size="12" class="in" style="float: right;">
-                    </div> -->
-                </div>
-                <br>
-                <div class="row g-1">
-                    <input type="range" formControlName="fa3" max="10000" min="1000" [(ngModel)]="sliderValue">
-                <div class="col-md-6">
-                    <label class="checkpad">1000</label>
-                </div>
-                <div class="col-md-6">
-                    <label class="checkpad" style="float: right;">10000</label>
-                </div>
-                </div>
+                    <div class="col-md-6">
+                      <input type="text" formControlName="fa2" size="12" class="in" style="float: right;" [(ngModel)]="maxValue" (ngModelChange)="onMaxValueChange()">
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row g-1">
+                    <input type="range" formControlName="fa5" max="200000" min="1000" [(ngModel)]="minValue" (ngModelChange)="onMinValueChange()">
+                    <input type="range" formControlName="fa4" max="200000" min="1000" [(ngModel)]="maxValue" (ngModelChange)="onMaxValueChange()">
+                    <div class="col-md-6">
+                      <label class="checkpad">20,000</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="checkpad" style="float: right;">60,000</label>
+                    </div>
+                  </div>
             </div>
         </div>
         </div>
@@ -54,28 +55,7 @@
             </button>
         </h2>
         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <!-- <div class="accordion-body">
-                <div class="row g-1">
-                    <div class="col-md-6">
-                        <input type="text" formControlName="fa1" size="12" class="in" [(ngModel)]="minValue" >
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" formControlName="fa2" size="12" class="in" style="float: right;"  [(ngModel)]="maxValue">
-                    </div>
-                </div>
-                <br>
-                <div class="row g-1">
-                    <input type="range" formControlName="fa5" max="10000" min="1000" [(ngModel)]="minValue">
-                    <input type="range" formControlName="fa4" max="10000" min="1000" [(ngModel)]="maxValue">
-                    <div class="col-md-6">
-                        <label class="checkpad">20,000</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="checkpad" style="float: right;">60,000</label>
-                    </div>
-                </div>
-            </div> -->
-
+            
             <div class="accordion-body">
                 <div class="row g-1">
                   <div class="col-md-6">
@@ -97,6 +77,7 @@
                   </div>
                 </div>
               </div>
+              
         </div>
         </div>
 

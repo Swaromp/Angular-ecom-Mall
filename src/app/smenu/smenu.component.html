@@ -29,9 +29,9 @@
         <div class="col-md-9">
           <ul class="sort">
             <li class="sort1"><a>sort by</a></li>
-            <li class="sort1"><a href="#">relevance</a></li>
-            <li class="sort1"><a href="#">price high to low</a></li>
-            <li class="sort1"><a href="#">price low to high</a></li>
+            <li class="sort1"><a href="">relevance</a></li>
+            <li class="sort1"><a (click)="sortA()">price high to low</a></li>
+            <li class="sort1"><a (click)="sortB()">price low to high</a></li>
           </ul>
         </div>
         <div class="col-md-3">
@@ -68,7 +68,7 @@
 
       <!-- *****LIST VIEW***** -->
       <div class="mview1" *ngIf="lview">
-          <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l;" >
+          <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l" >
             <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" class="a">
             <!-- {{'#id : '+x.im}} -->
             <div class="row g-0">
@@ -136,7 +136,7 @@
         <div class="card mb-3 " style="max-width: 70rem; background-color: #daf6e4;">
           <div class="row g-0">
             <div class="col-md-2">
-              <span class="wave green-hand-img ">👋</span>
+              <span class="wave green-hand-img"><img src="https://cdn-icons-png.flaticon.com/128/9437/9437514.png" width="40px" height="40px"></span>
             </div>
             <div class="col-md-7">
               <p class="msg"><b>Hello! Login to get assured cashback of up to ₹5,000 on purchase</b></p>
@@ -164,7 +164,7 @@
 
       <!-- *****GRID VIEW***** -->
       <div class="mview1" *ngIf="gview">
-              <!-- <div class="row g-1">
+              <div class="row g-1">
               <div class="col-md-3">
                 <a href="https://www.bajajmall.in/emi-store/vivo-y21g-64-gb-storage-diamond-glow-4-gb-ram-smartphone.html" class="a">
                   <div class="card mb-3" style="max-width: 70rem;">
@@ -263,7 +263,7 @@
                     </a>
                 </div>
 
-              </div> -->
+              </div>
 
               <div class="card mb-3" style="max-width: 70rem; background-color: #daf6e4;">
                 <div class="row g-0">
