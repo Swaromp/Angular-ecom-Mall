@@ -25,8 +25,8 @@ export class VmenuComponent implements OnInit {
 
    createForm() {
     this.f1 = this.fb.group({
-       fa1: [''],
-       fa2: [''],
+       fa1: ['1000'],
+       fa2: ['200000'],
        fa3: [''],
        fa4: [''],
        fa5: ['']
@@ -51,6 +51,7 @@ export class VmenuComponent implements OnInit {
     }
   }
   onMinValueChange() {
+    
     [this.minValue, this.maxValue] = this.updateMinMaxValues(this.minValue, this.maxValue);
     this.fetch1.subject.next(this.f1.controls['fa1'].value);
   }

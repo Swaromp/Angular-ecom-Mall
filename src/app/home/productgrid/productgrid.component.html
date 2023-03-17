@@ -1,0 +1,19 @@
+
+
+ <div class="container-fluid griddiv ">
+    <div class="row justify-content-between p-2">
+        <span class="col-8" >
+            <h3> Latest Smartphones</h3>
+        </span>
+        <span class="col-4">
+            <button class="btn btn-warning btn-sm float-end">View All</button>
+        </span>
+    </div>
+    <div>
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 p-2">
+            <div *ngFor="let phone of smartphones" class="col">
+              <img [src]="phone.image">
+            </div>
+        </div>
+    </div>
+  </div>

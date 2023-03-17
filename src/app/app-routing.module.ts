@@ -1,6 +1,6 @@
 import { SMenuComponent } from './smenu/smenu.component';
 // import { FooterComponent } from './footer/footer.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Vivo1Component } from './vivo1/vivo1.component';

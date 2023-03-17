@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-vivo1',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vivo1.component.css']
 })
 export class Vivo1Component implements OnInit {
-
+  key1:any
+  device:any
+  photos:any[]=[]
+  constructor(private route:ActivatedRoute){ }
 
   name = 'Angular';
   showMore = false;
@@ -31,27 +34,150 @@ export class Vivo1Component implements OnInit {
 
 
   images = [
-    'https://www.bajajmall.in/emistore/media/catalog/product/4/_/4_89.jpeg',
-    'https://www.bajajmall.in/emistore/media/catalog/product/5/_/5_67.jpeg',
-    'https://www.bajajmall.in/emistore/media/catalog/product/6/_/6_51_1.jpeg',
-    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy21gdiamondglow_add1.jpeg',
-    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy21gdiamondglow_add2.jpeg',
-    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy21gdiamondglow_add3.jpeg',
-    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy21gdiamondglow_add4.jpeg'
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gsunshinegold_base.jpeg',
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gsunshinegold_add1.jpeg',
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gsunshinegold_add2.jpeg',
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gsunshinegold_add3.jpeg',
 
   ];
-  selectedImage: string = this.images[0];
+  images1 =[
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy75moonlightshadow_base.jpg',
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy75moonlightshadow_additional1.jpg',
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy75moonlightshadow_additional5.jpg'
+  ];
+  images2 =[
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov255gsurfingblue_base.jpeg',
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov255gsurfingblue_additional6.jpeg'
+
+  ];
+  images3 =[
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivot1pro5g6128gturbocyan_base.jpeg'
+
+  ];
+  images4 =[
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_base.jpeg',
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_additional1.jpeg',
+
+    'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_additional3.jpeg'
+
+  ];
+  images5=[
+    'https://www.91-img.com/gallery_images_uploads/e/8/e8c547cf4a99cbf2af7232f01cb5647357e70a29.jpg?w=0&h=901&q=80&c=1',
+    'https://www.91-img.com/gallery_images_uploads/7/5/7571704db264a0a1dfab249a5796c0ba3886f497.jpg?w=0&h=901&q=80&c=1'
+
+  ];
+  images6=[
+    'https://www.91-img.com/gallery_images_uploads/9/f/9fd14c14db787b8c35b8e9b1cf52639f3d4ed133.jpg?tr=h-550,w-0,c-at_max',
+    'https://www.91-img.com/gallery_images_uploads/4/1/41364101e71d4fe380d2e83eb6fd7151f3053344.jpg?tr=h-550,w-0,c-at_max',
+    'https://www.91-img.com/gallery_images_uploads/e/3/e3265ab7fb3f9b3bb2d8ff5f68d506075cd2bc33.jpg?tr=h-550,w-0,c-at_max',
+    'https://www.91-img.com/gallery_images_uploads/0/7/0700e4a75a428248847bf93c8dd50c2da4e13673.jpg?tr=h-550,w-0,c-at_max'
+
+  ];
+  images7=[
+    'https://www.phonebunch.com/phone-pictures/apple_iphone_12_pro_max-3843%20(1).jpg',
+    'https://www.phonebunch.com/phone-pictures/apple_iphone_12_pro_max-3843%20(2).jpg'
+
+  ];
+  images8=[
+    'https://www.91-img.com/gallery_images_uploads/f/a/fa2ec7e1dc36b202031a0240b2ddb8583dab4ff9.jpg?tr=h-550,w-0,c-at_max',
+    'https://www.91-img.com/gallery_images_uploads/c/3/c3828acb46e4c776dc70e0e13b9d48bace15ee68.jpg?tr=h-550,w-0,c-at_max',
+    'https://www.91-img.com/gallery_images_uploads/1/7/1702ab7260d64369108dc5b4ace522b282853ca8.jpg?tr=h-550,w-0,c-at_max',
+
+  ];
+  images9=[
+    'https://static.toiimg.com/thumb/resizemode-4,msid-80635321,imgsize-200,width-600,imgv-2/80635321.jpg',
+    'https://static.toiimg.com/thumb/resizemode-4,msid-94062364,imgsize-200,width-600,imgv-2/94062364.jpg',
+    'https://static.toiimg.com/thumb/resizemode-4,msid-94062365,imgsize-200,width-600,imgv-2/94062365.jpg'
+
+  ];
+  images10=[
+    'https://cdn1.smartprix.com/rx-iy7cT7S94-w420-h420/asus-rog-phone-6.webp',
+    'https://www.smartprix.com/ui/img/specs/pd1y1l8de59?v=1rejt0p',
+
+    'https://cdn1.smartprix.com/rx-ieUXUthmn-w420-h420/asus-rog-phone-6.webp'
+
+  ];
+
+
+
+  selectedImage: any = this.photos[0];
   title: any;
 
-  selectImage(image: string) {
-    this.selectedImage = image;
+  selectImage(photo: string) {
+    this.selectedImage = photo;
   }
+
+
 
   ngOnInit(): void {
 
+    this.key1=this.route.snapshot.paramMap.get("id1")
+    console.log('this is aryan',this.key1)
+    if(this.key1==1){
+      this.device=this.device_id[0]
+      this.photos=this.images
+    }
+    else if(this.key1==2){
+      this.device=this.device_id[1]
+      this.photos=this.images1
+    }
+    else if(this.key1==3){
+      this.device=this.device_id[2]
+      this.photos=this.images2
+    }
+    else if(this.key1==4){
+      this.device=this.device_id[3]
+      this.photos=this.images3
+    }
+    else if(this.key1==5){
+      this.device=this.device_id[4]
+      this.photos=this.images4
+    }
+    else if(this.key1==6){
+      this.device=this.device_id[5]
+      this.photos=this.images5
+    }
+    else if(this.key1==7){
+      this.device=this.device_id[6]
+      this.photos=this.images6
+    }
+    else if(this.key1==8){
+      this.device=this.device_id[7]
+      this.photos=this.images7
+    }
+    else if(this.key1==9){
+      this.device=this.device_id[8]
+      this.photos=this.images8
+    }
+    else if(this.key1==10){
+      this.device=this.device_id[9]
+      this.photos=this.images9
+    }
+    else if(this.key1==11){
+      this.device=this.device_id[10]
+      this.photos=this.images10
+    }
+    this.selectedImage = this.photos[0];
   }
 
-  device_id=[{name:'Vivo V23 5G',price:24999,storage1:'128',storage2:'256',processor:'Qualcomm snapdragon 680',camera1:'64 MP + 2 MP + 2 MP', camera2:'32 MP', Display:'6.43 inch',battery:'4500 mAh'}]
+
+  device_id=[{img:this.images,name:'Vvivo V23 5G 128 GB Storage Sunshine Gold (8 GB RAM)',price:29990,storage1:'128',storage2:'256',processor:'Mediatek Dimensity 920',camera1:'64 MP + 8 MP + 2 MP', camera2:'50 MP + 8 MP', Display:'6.43 inch',battery:'4500 mAh'},
+             {name:'vivo Y75 (4G) 128 GB Storage Moonlight Shadow (8 GB RAM)',price:19999,storage1:'128',storage2:'256',processor:'MediaTek Helio G96 Octa Core',camera1:'50 MP + 8 MP + 2 MP', camera2:'44 MP', Display:'6.43 inch',battery:'4500 mAh'},
+             {name:'vivo X80 128 GB Storage Cosmic Black (8 GB RAM)',price:54999,storage1:'128',storage2:'256',processor:'MediaTek Dimensity 9000',camera1:'50 MP + 12 MP + 12 MP', camera2:'32 MP', Display:'6.78 inch',battery:'4500 mAh'},
+             {name:'vivo T1 Pro 5G 128 GB Storage Turbo Cyan (8 GB RAM)',price:24999,storage1:'128',storage2:'256',processor:'Snapdragon 695',camera1:'50 MP + 2 MP + 2 MP', camera2:'16 MP', Display:'6.43 inch',battery:'4700 mAh'},
+             {name:'vivo Y01 32 GB Storage Sapphire Blue (2 GB RAM)',price:12999,storage1:'128',storage2:'256',processor:'Mediatek Helio P35',camera1:'8 MP', camera2:'5 MP', Display:'6.43 inch',battery:'4500 mAh'},
+             {name:'i phone 13',price:62790,storage1:'128',storage2:'256',processor:'Apple A15 Bionic (5 nm)',camera1:'12 MP f/1.6 26mm (wide)', camera2:'12 MP', Display:'6.1 inches',battery:'3240 mAh'},
+             {name:'i phone 14',price:72999,storage1:'128',storage2:'256',processor:'Apple A15 Bionic',camera1:'12 MP f/1.6 26mm (wide)', camera2:'12 MP', Display:'6.1 inches',battery:'3279 mAh'},
+             {name:'i phone 12 pro max',price:113990,storage1:'128',storage2:'256',processor:'Apple A14 Bionic (5 nm)',camera1:'64 MP + 2 MP + 2 MP', camera2:'12 MP', Display:'6.43 inch',battery:'4500 mAh'},
+             {name:'i phone 13 pro max',price:113990,storage1:'128',storage2:'256',processor:'Apple A15 Bionic (5 nm)',camera1:'64 MP + 2 MP + 2 MP', camera2:'12 MP', Display:'6.43 inch',battery:'4500 mAh'},
+             {name:'i phone 14 pro max',price:136590,storage1:'128',storage2:'256',processor:'Apple A16 Bionic (5 nm)',camera1:'64 MP + 2 MP + 2 MP', camera2:'12 MP', Display:'6.43 inch',battery:'4500 mAh'},
+             {name:'ASUS rog phone 6 pro 5G',price:89990,storage1:'128',storage2:'256',processor:'snapdragon 8gen1',camera1:'64 MP + 2 MP + 2 MP', camera2:'34 MP', Display:'6.43 inch',battery:'4500 mAh'},
+
+            ]
+
+
+
 }
+
 
 
