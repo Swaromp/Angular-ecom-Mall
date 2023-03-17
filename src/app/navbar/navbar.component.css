@@ -5,10 +5,7 @@
     /* position: relative;
     left: -5vw;
     z-index: 100; */
-
 }
-  
-  
 
 nav{
     background: linear-gradient(280deg,#1a1004 -190.68%,#2099f1 296.61%,#0074c9 296.61%);
@@ -19,7 +16,7 @@ nav{
     width: 100%;
     align-items:stretch;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 3%;
 }
 .d2{
     align-items: stretch;
