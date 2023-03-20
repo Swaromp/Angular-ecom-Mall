@@ -2,10 +2,11 @@
 
   <div class="col-md-1"></div>
     <div class="col-md-4 ">
+
+
       <div class="sticky-top">
         <br>
         <div class="maindisplay">
-
           <div class="displaydiv ; border shadow-lg" *ngIf="selectedImage">
             <img [src]="selectedImage" alt="Selected Image">
           </div>
@@ -14,6 +15,7 @@
               <img *ngFor="let photo of photos" [src]="photo" (click)="selectImage(photo)" class="imgd img-fluid">
             </div>
         </div>
+
         <div style=" margin: 5%;">
           <button type="button" style="margin-right:4%; width: 48%;" class="btn btn-outline-warning">Add To
             Cart</button><button type="button" style=" width: 48%;" class="btn btn-warning">Buy Now</button>
@@ -36,31 +38,32 @@
       <div>
         <div>
           <div>
+            <div>
+
+              <div>
+                <span style="color:orange; font-weight: 600;" class="fontsize">No Cost EMI<img style="margin-left:5px;"
+                    src="../assets/info.png" class="icons"></span>
+              </div>
+              <div>
+                <span class="fontsizeMRP">₹1,688/m + ₹3,376</span>
+                <h6>For 06 months</h6>
+                <h6>Down payment<img style="margin-left:5px;" src="../assets/info.png" class="icons"></h6>
+              </div>
+            </div>
+
+            <hr>
 
             <div>
-              <span style="color:orange; font-weight: 600;" class="fontsize">No Cost EMI<img style="margin-left:5px;"
-                  src="../assets/info.png" class="icons"></span>
+              <div><img style="margin-right:1%;" src="../assets/discount.png" class="icons"><span>offers for you</span></div>
+              <div class="offers-box">
+                <img src="../assets/tag.png" class="icons" style="margin-right:2%;">
+                <span class="fontsize">Offer: Get cashback worth Rs.2000 Apply Promocode HOLI atcheckout. </span>
+                <span></span>
+              </div>
             </div>
-            <div>
-              <span class="fontsizeMRP">₹1,688/m + ₹3,376</span>
-              <h6>For 06 months</h6>
-              <h6>Down payment<img style="margin-left:5px;" src="../assets/info.png" class="icons"></h6>
-            </div>
-          </div>
-
-          <hr>
-
-          <div>
-            <div><img style="margin-right:1%;" src="../assets/discount.png" class="icons"><span>offers for you</span></div>
-            <div class="offers-box">
-              <img src="../assets/tag.png" class="icons" style="margin-right:2%;">
-              <span class="fontsize">Offer: Get cashback worth Rs.2000 Apply Promocode HOLI atcheckout. </span>
-              <span></span>
-            </div>
-          </div>
 
 
-          <hr>
+            <hr>
 
 
           <div>
@@ -75,36 +78,36 @@
             <table>
               <tr class="table-ligth">
 
-                <td>
-                   <div class="flex">
-                  <div class="phone-select"><button class="phone-select ; btn btn-outline-warning"><img
-                        src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gstardustblack_base_1.jpeg"
-                        class="select-color"> Stardust Black</button></div>
-                      </div>
-                </td>
+                  <td>
+                     <div class="flex">
+                    <div class="phone-select"><button class="phone-select ; btn btn-outline-warning"><img
+                          src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gstardustblack_base_1.jpeg"
+                          class="select-color"> Stardust Black</button></div>
+                        </div>
+                  </td>
 
-                <td>
-                  <div><button class="phone-select ; btn btn-outline-warning"><img
-                        src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gsunshinegold_base.jpeg"
-                        class="select-color">Sunshine Gold</button></div>
-                </td>
-              </tr>
-            </table>
+                  <td>
+                    <div><button class="phone-select ; btn btn-outline-warning"><img
+                          src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivov235gsunshinegold_base.jpeg"
+                          class="select-color">Sunshine Gold</button></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
 
-      <hr>
+        <hr>
 
-      <div>
-        <div><img style="margin-right:1%;" src="../assets/fast-delivery.png" class="icons"><span>DELIVERY MODE &
-            SELLER</span></div><br>
+        <div>
+          <div><img style="margin-right:1%;" src="../assets/fast-delivery.png" class="icons"><span>DELIVERY MODE &
+              SELLER</span></div><br>
 
         <div class="delivery-btn">
           <button class="btn btn-outline-warning" style="margin-right: 2em;">Home Delivery</button> <button
             class="btn btn-outline-warning">Pick Up From Store</button>
         </div><br>
-        <div class="delivery-info"><img style="margin-right:1%;" src="../assets/express-delivery.png" class="icons"> Free
+        <div class="delivery-info"><img style="margin-right:1%;" src="../assets/express-delivery.png" class="icons">
           Home Delivery by 4 th
           March</div>
         <p class="fontsize" style="color: rgb(143, 143, 143);"><i>Delivery mode selection may change as per the
@@ -112,42 +115,42 @@
       </div>
 
 
-      <div class="col-md-7" style="padding: 0;">
-        <h5>CHECK AVAILABILITY</h5>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Enter Pincode">
-          <button class="btn btn-outline-warning" type="button" id="button-addon2">Button</button>
-        </div>
-      </div>
-      <div>
-        <h5>SELLER INFORMATION</h5>
-        <div class="card" style="width:58%;">
-          <div class="card-body">
-            <p class="fw-lighter; fontsize;">You are buying from:</p>
-            <h6 class="card-title">SS COMMUNICATION AND SERVICES PRIVATE LIMITED _RAJGURUNAGAR_BPES RDP_149003</h6>
-            <p class="fontsize">PUNE NASHIK HIGHWAY ROAD NEAR BUS STANDF,RAJGURUNAGAR TAL KHED,INDIA,PUNE</p>
+        <div class="col-md-7" style="padding: 0;">
+          <h5>CHECK AVAILABILITY</h5>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter Pincode">
+            <button class="btn btn-outline-warning" type="button" id="button-addon2">Button</button>
           </div>
         </div>
-      </div>
-      <p class="fontsize"><i>Product price may vary basis the selected seller</i></p>
-      <div class="col-md-7">
-        <p class="text-end" style="color: rgb(42, 42, 246);">View more sellers from ₹ 13,499</p>
-      </div>
-
-
-      <hr>
-
-      <div>
         <div>
-          <h6>CANCELLATION AND SHIPPING POLICY</h6>
+          <h5>SELLER INFORMATION</h5>
+          <div class="card">
+            <div class="card-body">
+              <p class="fw-lighter; fontsize;">You are buying from:</p>
+              <h6 class="card-title">SS COMMUNICATION AND SERVICES PRIVATE LIMITED _RAJGURUNAGAR_BPES RDP_149003</h6>
+              <p class="fontsize">PUNE NASHIK HIGHWAY ROAD NEAR BUS STANDF,RAJGURUNAGAR TAL KHED,INDIA,PUNE</p>
+            </div>
+          </div>
         </div>
-        <div class="fontsize">
-          No cancellation charges*
+        <p class="fontsize"><i>Product price may vary basis the selected seller</i></p>
+        <div class="col-md-7">
+          <p class="text-end" style="color: rgb(42, 42, 246);">View more sellers from ₹ 13,499</p>
         </div>
-        <p class="text-end" style="color: rgb(42, 42, 246);">View more details</p>
-      </div>
 
-      <hr>
+
+        <hr>
+
+        <div>
+          <div>
+            <h6>CANCELLATION AND SHIPPING POLICY</h6>
+          </div>
+          <div class="fontsize">
+            No cancellation charges*
+          </div>
+          <p class="text-end" style="color: rgb(42, 42, 246);">View more details</p>
+        </div>
+
+        <hr>
 
       <div>
         <h6>
@@ -182,12 +185,12 @@
           <div>view details</div>
         </div>
 
-        <hr>
+          <hr>
 
-        <div>
           <div>
-            <h6><span><img style="margin-right:1%;" src="../assets/processor.png" class="icons"></span>SPECIFICATIONS</h6>
-          </div>
+            <div>
+              <h6><span><img style="margin-right:1%;" src="../assets/processor.png" class="icons"></span>SPECIFICATIONS</h6>
+            </div>
 
           <div>
             <table class="table table-borderless">
@@ -269,7 +272,7 @@
           </div>
         </div>
 
-        <hr>
+          <hr>
 
 
         <div class="COMPARE-SIMILAR-PRODUCTS">
@@ -277,16 +280,16 @@
           <span><img
               src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/emi-mall-dam/sep-22/compare-product-dam/top-selling.svg" class="icons1"></span>
           <div>
-            <table class="table table-borderless">
+            <table class="table table-bordered">
               <tbody>
                 <tr>
-                  <td><span><img
+                  <td class="border-end"><span class="border-end"><img
                         src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy22starlitblue_base.jpeg"
                         class="table-img"></span></td>
-                  <td><span><img
+                  <td class="border-end"><span class="border-end"><img c
                         src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy22starlitblue_base.jpeg"
                         class="table-img"></span></td>
-                  <td><span><img
+                  <td ><span class="border-end"><img
                         src="https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy22metaversegreen_base.jpeg"
                         class="table-img"></span></td>
 
@@ -346,26 +349,26 @@
           </div>
         </div>
 
-        <!-- <div>
-    <div><img src="../assets/space.png"> INTERNAL STORAGE </div>
-    <div><button>256GB</button><button>128GB</button></div>
-  </div> -->
+          <!-- <div>
+      <div><img src="../assets/space.png"> INTERNAL STORAGE </div>
+      <div><button>256GB</button><button>128GB</button></div>
+    </div> -->
+        </div>
+
       </div>
+    <div class="col-md-1"></div>
 
     </div>
-  <div class="col-md-1"></div>
 
-  </div>
-
-  <div class="container" style="padding-bottom:1%; padding-top: 1%; ">
-    <div class="card" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">vivo Y21G Overview :</h5>
-        <p>
-          {{(showMore) ? text : text | slice:0:300}} <span *ngIf="!showMore">...</span>
-          <a href="javascript:;" *ngIf="!showMore" (click)="showMore=true">[Show More]</a>
-        </p>
+    <div class="container" style="padding-bottom:1%; padding-top: 1%; ">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">vivo Y21G Overview :</h5>
+          <p>
+            {{(showMore) ? text : text | slice:0:300}} <span *ngIf="!showMore">...</span>
+            <a href="javascript:;" *ngIf="!showMore" (click)="showMore=true">[Show More]</a>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
