@@ -20,7 +20,6 @@ export class SMenuComponent implements OnInit {
   sel: any[] = [];
   h: any
   l: any
-compared: boolean=false
 
   constructor(private route: ActivatedRoute,private fetch1: FetchService,private router: Router) { }
 
@@ -84,10 +83,7 @@ compared: boolean=false
     console.log(value)
     this.router.navigate(['/vivo1',value.id1])
   }
-  compareon() {
-    this.compared= true
-    
-    }
+
 
   sortA() {
     this.sel=this.sel.reverse()
