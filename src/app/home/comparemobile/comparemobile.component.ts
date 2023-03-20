@@ -11,12 +11,31 @@ export class ComparemobileComponent implements OnInit {
   devices: any[] = [];
 searchPrice: any;
 searchName: any;
+  // filteredDevices: any;
+  searchTerm: any;
+ 
+  selectedName: any;
+  filteredDevices: any;
 
   constructor(private comparedataService: ComparedataService) { }
 
-  ngOnInit() {
-    this.devices = this.comparedataService.device_id;
-  }
+  
+  
   
 
+  ngOnInit() {
+    this.devices = this.comparedataService.device_id;
+    // this.filterDevices();
+  }
+
+  ngOnChanges() {
+   
+    this.filteredDevices = this.devices.filter(device => device.name === this.selectedName);
+    console.log( this.filteredDevices = this.devices.filter(device => device.name === this.selectedName))
+  }
+ 
+
+
+
 }
+
