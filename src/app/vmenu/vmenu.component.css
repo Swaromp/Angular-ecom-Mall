@@ -1,3 +1,7 @@
+.outer {
+    margin-top: 0;
+}
+
 #accordionFlushExample {
     /* position: fixed; */
     padding-right: 5%;

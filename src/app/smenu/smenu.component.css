@@ -1,5 +1,5 @@
 .container {
-    margin:3%;
+    margin-top:1%;
 }
 
 .txt {
@@ -97,7 +97,6 @@
         transform: rotate(14.0deg)
     }
 
-    /* The following five values can be played with to make the waving more or less extreme */
     20% {
         transform: rotate(-8.0deg)
     }

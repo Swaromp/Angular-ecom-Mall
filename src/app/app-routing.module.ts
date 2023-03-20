@@ -7,8 +7,8 @@ import { Vivo1Component } from './vivo1/vivo1.component';
 
 const routes: Routes = [
   { path: '', component: CarouselComponent},
-  {path:'smenu/:id', component: SMenuComponent},
-  { path: 'vivo1', component: Vivo1Component}
+  { path:'smenu/:id', component: SMenuComponent},
+  { path:'vivo1/:id1', component: Vivo1Component}
 ];
 
 @NgModule({

@@ -25,7 +25,6 @@ import { FilterPipe } from './home/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-
     PricefilterPipe,
     SMenuComponent,
     VmenuComponent,
