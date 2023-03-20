@@ -98,8 +98,6 @@ export class Vivo1Component implements OnInit {
 
   ];
 
-
-
   selectedImage: any = this.photos[0];
   title: any;
 

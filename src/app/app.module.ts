@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
@@ -19,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
+import { KartComponent } from './kart/kart.component';
+import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { SortByPropertyPipe } from './pipes/sortby.pipe';
     CarouselInternalComponent,
     Card1Component,
     Vivo1Component,
-    SortByPropertyPipe
+    SortByPropertyPipe,
+    KartComponent,
+    AddToKartComponent
   ],
   imports: [
     BrowserModule,
