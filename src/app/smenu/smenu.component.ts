@@ -11,6 +11,7 @@ import { FetchService } from '../services/fetch.service';
   styleUrls: ['./smenu.component.css']
 })
 export class SMenuComponent implements OnInit {
+
   lview: boolean = true;
   gview: boolean = false;
   
@@ -19,7 +20,7 @@ export class SMenuComponent implements OnInit {
   sel: any[] = [];
   h: any
   l: any
-
+compared: boolean=false
   constructor(private route: ActivatedRoute,private fetch1: FetchService) { }
 
           prices =  [
@@ -78,7 +79,10 @@ export class SMenuComponent implements OnInit {
     } 
     
   }
-
+  compareon() {
+    this.compared= true
+    
+    }
 }
 
 
