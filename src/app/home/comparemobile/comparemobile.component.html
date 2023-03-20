@@ -1,0 +1,71 @@
+<!-- 
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Storage 1</th>
+        <th>Storage 2</th>
+        <th>Processor</th>
+        <th>Camera 1</th>
+        <th>Camera 2</th>
+        <th>Display</th>
+        <th>Battery</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let device of devices">
+        <td>{{ device.name }}</td>
+        <td>{{ device.price }}</td>
+        <td>{{ device.storage1 }}</td>
+        <td>{{ device.storage2 }}</td>
+        <td>{{ device.processor }}</td>
+        <td>{{ device.camera1 }}</td>
+        <td>{{ device.camera2 }}</td>
+        <td>{{ device.Display }}</td>
+        <td>{{ device.battery }}</td>
+      </tr>
+    </tbody>
+  </table> -->
+  
+
+  <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-3">
+        <span class="row">Name</span>
+        <span class="row">Price</span>
+        <span class="row">Storage 1</span>
+        <span class="row">Storage 2</span>
+        <span class="row">Processor</span>
+        <span class="row">Camera 1</span>
+        <span class="row">Camera 2</span>
+        <span class="row">Display</span>
+        <span class="row">Battery</span>
+    </div>
+ 
+  <div *ngFor="let device of devices" class="col-3">
+   
+        <span class="row">{{ device.name }}</span>
+        <span class="row">{{ device.price }}</span>
+        <span class="row">{{ device.storage1 }}</span>
+        <span class="row">{{ device.storage2 }}</span>
+        <span class="row">{{ device.processor }}</span>
+        <span class="row">{{ device.camera1 }}</span>
+        <span class="row">{{ device.camera2 }}</span>
+        <span class="row">{{ device.Display }}</span>
+        <span class="row">{{ device.battery }}</span>
+</div>
+  <!-- <div class="col-3">
+    <span class="row">Name</span>
+    <span class="row">Price</span>
+    <span class="row">Storage 1</span>
+    <span class="row">Storage 2</span>
+    <span class="row">Processor</span>
+    <span class="row">Camera 1</span>
+    <span class="row">Camera 2</span>
+    <span class="row">Display</span>
+    <span class="row">Battery</span>
+</div> -->
+  </div>
+  </div>
+ 

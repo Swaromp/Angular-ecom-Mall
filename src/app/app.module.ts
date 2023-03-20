@@ -18,6 +18,9 @@ import { VmenuComponent } from './vmenu/vmenu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
+import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
+import { ComparedataService } from './services/comparedata.service';
+import { FilterPipe } from './home/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { Vivo1Component } from './vivo1/vivo1.component';
     ProductgridComponent,
     CarouselInternalComponent,
     Card1Component,
-    Vivo1Component
+    Vivo1Component,
+    ComparemobileComponent,
+    FilterPipe
 
   ],
   imports: [
@@ -46,7 +51,7 @@ import { Vivo1Component } from './vivo1/vivo1.component';
     ReactiveFormsModule,
     // FontAwesomeModule
   ],
-  providers: [],
+  providers: [ComparedataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
