@@ -10,7 +10,7 @@ import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 const routes: Routes = [
   { path: '', component: CarouselComponent},
   { path:'smenu/:id', component: SMenuComponent},
-  { path:'vivo1/:id', component: Vivo1Component},
+  { path:'vivo1/:id1', component: Vivo1Component},
   { path: 'kart', component:KartComponent},
   { path: 'add-to-kart', component:AddToKartComponent}
 ];

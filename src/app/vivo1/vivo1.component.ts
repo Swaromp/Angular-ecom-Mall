@@ -57,7 +57,6 @@ export class Vivo1Component implements OnInit {
   images4 =[
     'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_base.jpeg',
     'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_additional1.jpeg',
-
     'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_additional3.jpeg'
 
   ];
@@ -93,7 +92,6 @@ export class Vivo1Component implements OnInit {
   images10=[
     'https://cdn1.smartprix.com/rx-iy7cT7S94-w420-h420/asus-rog-phone-6.webp',
     'https://www.smartprix.com/ui/img/specs/pd1y1l8de59?v=1rejt0p',
-
     'https://cdn1.smartprix.com/rx-ieUXUthmn-w420-h420/asus-rog-phone-6.webp'
 
   ];
@@ -171,9 +169,6 @@ export class Vivo1Component implements OnInit {
              {name:'i phone 14 pro max',price:136590,storage1:'128',storage2:'256',processor:'Apple A16 Bionic (5 nm)',camera1:'64 MP + 2 MP + 2 MP', camera2:'12 MP', Display:'6.43 inch',battery:'4500 mAh'},
              {name:'ASUS rog phone 6 pro 5G',price:89990,storage1:'128',storage2:'256',processor:'snapdragon 8gen1',camera1:'64 MP + 2 MP + 2 MP', camera2:'34 MP', Display:'6.43 inch',battery:'4500 mAh'},
             ]
-
-
-
 }
 
 
