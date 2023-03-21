@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SortByPropertyPipe } from './pipes/sortby.pipe';
     CarouselInternalComponent,
     Card1Component,
     Vivo1Component,
-    SortByPropertyPipe
+    SortByPropertyPipe,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

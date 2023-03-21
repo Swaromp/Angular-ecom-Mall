@@ -125,3 +125,7 @@
     height: 42px;
     margin-right: 20px;
 }
+
+.favbutton {
+    cursor: pointer;
+}
