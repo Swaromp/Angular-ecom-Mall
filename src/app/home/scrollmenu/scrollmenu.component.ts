@@ -15,20 +15,21 @@ export class ScrollmenuComponent implements OnInit {
     id: 1,
     title: "Budget Phones", 
     images: [
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg", 
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg", 
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg", 
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg"
-    ]
+      "../assets/vivo2.jpeg", 
+      "../assets/vivo4.jpeg", 
+      "../assets/vivo6.jpeg", 
+      "../assets/vivo8.jpeg", 
+
+     ]
   },
   {
     id: 2,
     title: "Premium Phones",
     images: [
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg",
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg",
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg",
-      "https://www.bajajmall.in/content/dam/emistoremarketplace/index/28-02-23/1/2by2/1/HP_Carousel_1a_MOB_Smartphones_PLP_B2B.jpg"
+      "../assets/iphone13.jpeg", 
+      "../assets/iphone14.jpeg", 
+      "../assets/iphone13promax.jpeg", 
+      "../assets/iphone14promax.jpeg", 
     ]
   },
   {
