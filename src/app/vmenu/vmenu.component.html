@@ -91,9 +91,9 @@
         </h2>
         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-                <input type="checkbox">
+                <input type="checkbox" formControlName="fa7" (ngModelChange)="onDpchange()">
                 <label class="txt" class="checkpad">Zero Downpayment</label><br>
-                <input type="checkbox">
+                <input type="checkbox" formControlName="fa6" (ngModelChange)="onOfferchange()">
                 <label class="txt" class="checkpad">Offers</label>
             </div>
         </div>

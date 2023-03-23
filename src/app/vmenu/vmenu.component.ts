@@ -29,7 +29,9 @@ export class VmenuComponent implements OnInit {
        fa2: ['200000'],
        fa3: [''],
        fa4: [''],
-       fa5: ['']
+       fa5: [''],
+       fa6: [''],
+       fa7: ['']
     });
   }
 
@@ -59,6 +61,14 @@ export class VmenuComponent implements OnInit {
   onMaxValueChange() {
     [this.minValue, this.maxValue] = this.updateMinMaxValues(this.minValue, this.maxValue);
     this.fetch1.subject1.next(this.f1.controls['fa2'].value);
+  }
+
+  onOfferchange() {
+    this.fetch1.subject2.next(this.f1.controls['fa6'].value)
+  }
+
+  onDpchange() {
+    this.fetch1.subject3.next(this.f1.controls['fa7'].value)
   }
 }
 

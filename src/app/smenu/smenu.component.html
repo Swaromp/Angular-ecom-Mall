@@ -68,12 +68,12 @@
 
       <!-- *****LIST VIEW***** -->
       <div class="mview1" *ngIf="lview">
-        <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l;">
+        <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l | offer: o | down: d">
           <div class="row g-0">
             <div class="col-md-4">
             </div>
             <div class="col-md-4">
-              <img src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/april-22/plp-header/Zero-DP.svg" style="padding-top: 5%; padding-left: 5%;">
+              <img src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/april-22/plp-header/Zero-DP.svg" *ngIf="x.dp" style="padding-top: 5%; padding-left: 5%;">
             </div>
             <div class="col-md-4">
               <img src="../assets/fav.svg" width="20px" height="20px" style="float: right; margin: 5px; z-index: 10;" *ngIf="!x.fav" class="favbutton" (click)="wishlist(x)">
@@ -122,6 +122,7 @@
               <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);">
                 Delivery in 4-5 days
               </div>
+              <div class="card-body row g-1 txt" style="color:red" *ngIf="x.offer">Exciting Bank Offers ahead</div>
             </div>
           </div>
 

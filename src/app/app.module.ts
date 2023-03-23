@@ -29,6 +29,8 @@ import { ComparemobileComponent } from './home/comparemobile/comparemobile.compo
 import { ComparedataService } from './services/comparedata.service';
 import { FilterPipe } from './home/filter.pipe';
 import { ShortenPipe } from './pipes/shorten.pipe';
+import { OfferPipe } from './pipes/offer.pipe';
+import { DownPipe } from './pipes/down.pipe';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     WishlistComponent,
     ComparemobileComponent,
     FilterPipe,
-    ShortenPipe
+    ShortenPipe,
+    OfferPipe,
+    DownPipe
   ],
   imports: [
     BrowserModule,

@@ -8,5 +8,8 @@ import { BehaviorSubject } from 'rxjs';
 export class FetchService {
   subject= new BehaviorSubject('');
   subject1=new BehaviorSubject('');
+  subject2=new BehaviorSubject('');
+  subject3=new BehaviorSubject('');
+
   constructor() { }
 }
