@@ -1,63 +1,178 @@
- 
-  <!-- <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-3">
-        <span class="row">Name</span>
-        <span class="row">Price</span>
-        <span class="row">Storage 1</span>
-        <span class="row">Storage 2</span>
-        <span class="row">Processor</span>
-        <span class="row">Camera 1</span>
-        <span class="row">Camera 2</span>
-        <span class="row">Display</span>
-        <span class="row">Battery</span>
+<!-- 
+  <div class="container">
+    <div class="row">
+      <div class="col-2" ></div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="mobilename">Device 1</label>
+          <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
+          <datalist id="mobilename">
+            <option *ngFor="let device of searchResults">{{device.name}}</option>
+          </datalist>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="mobilename2">Device 2</label>
+          <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
+          <datalist id="mobilename2">
+            <option *ngFor="let device of searchResults2">{{device.name}}</option>
+          </datalist>
+        </div>
+      </div>
     </div>
- 
-  <div *ngFor="let device of devices" class="col-3">
-   
-        <span class="row">{{ device[0].name }}</span>
-        <span class="row">{{ device[0].price }}</span>
-        <span class="row">{{ device[0].storage1 }}</span>
-        <span class="row">{{ device[0].storage2 }}</span>
-        <span class="row">{{ device[0].processor }}</span>
-        <span class="row">{{ device[0].camera1 }}</span>
-        <span class="row">{{ device[0].camera2 }}</span>
-        <span class="row">{{ device[0].Display }}</span>
-        <span class="row">{{ device[0].battery }}</span>
-</div>
-    </div>
-  </div> -->
-<div class="container">
-  <select [(ngModel)]="selectedName">
-    <option value="">Select a name</option>
-    <option *ngFor="let device of devices" [value]="device.name">{{ device.name }}</option>
-  </select>
-  <div class="row justify-content-center">
-    <div class="col-3">
-        <span class="row">Name</span>
-        <span class="row">Price</span>
-        <span class="row">Storage 1</span>
-        <span class="row">Storage 2</span>
-        <span class="row">Processor</span>
-        <span class="row">Camera 1</span>
-        <span class="row">Camera 2</span>
-        <span class="row">Display</span>
-        <span class="row">Battery</span>
-    </div>
-  <div *ngFor="let device of filteredDevices" class="col-3">
-    <span class="row">{{ device.name }}</span>
-    <span class="row">{{ device.price }}</span>
-    <span class="row">{{ device.storage1 }}</span>
-    <span class="row">{{ device.storage2 }}</span>
-    <span class="row">{{ device.processor }}</span>
-    <span class="row">{{ device.camera1 }}</span>
-    <span class="row">{{ device.camera2 }}</span>
-    <span class="row">{{ device.Display }}</span>
-    <span class="row">{{ device.battery }}</span>
-  </div>
-  </div>
-</div>
   
+    <div class="row content-div" *ngIf="searchResults || searchResults2">
+      <div class="col-2">
+        <div class="card">
+          <div class="compare-image">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Name :</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Price :</li >
+                <li class="list-group-item" >Storage 1 :</li >
+                <li class="list-group-item">Storage 2 :</li >
+                <li class="list-group-item" >Processor :</li >
+                <li class="list-group-item" >Camera 1 :</li >
+                <li class="list-group-item">Camera 2 :</li >
+                <li class="list-group-item" >Display :</li >
+                <li class="list-group-item" >Battery :</li >
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4" *ngIf="searchResults">
+        <div class="card">
+          <div class="compare-image">
+          <img src="{{ searchResults[0].img }}" alt="Device 1" >
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ searchResults[0].name |shorten }}</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{ searchResults[0].price }}</li>
+              <li class="list-group-item">{{ searchResults[0].storage1 }}</li>
+              <li class="list-group-item">{{ searchResults[0].storage2 }}</li>
+              <li class="list-group-item">{{ searchResults[0].processor }}</li>
+              <li class="list-group-item">{{ searchResults[0].camera1 }}</li>
+              <li class="list-group-item">{{ searchResults[0].camera2 }}</li>
+              <li class="list-group-item">{{ searchResults[0].display }}</li>
+              <li class="list-group-item">{{ searchResults[0].battery }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4" *ngIf="searchResults2">
+        <div class="card">
+          <div class="compare-image">
+          <img src="{{ searchResults2[0].img }}" alt="Device 2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ searchResults2[0].name | shorten}}</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{ searchResults2[0].price }}</li>
+              <li class="list-group-item">{{ searchResults2[0].storage1 }}</li>
+              <li class="list-group-item">{{ searchResults2[0].storage2 }}</li>
+              <li class="list-group-item">{{ searchResults2[0].processor }}</li>
+              <li class="list-group-item">{{ searchResults2[0].camera1 }}</li>
+              <li class="list-group-item">{{ searchResults2[0].camera2 }}</li>
+              <li class="list-group-item">{{ searchResults2[0].display }}</li>
+              <li class="list-group-item">{{ searchResults2[0].battery }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
 
- 
- 
+<div class =fullpage>
+   <div class="container-fluid ">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="mobilename">Device 1</label>
+          <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
+          <datalist id="mobilename">
+            <option *ngFor="let device of searchResults">{{device.name}}</option>
+          </datalist>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="mobilename2">Device 2</label>
+          <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
+          <datalist id="mobilename2">
+            <option *ngFor="let device of searchResults2">{{device.name}}</option>
+          </datalist>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+    <div class="table-responsive" *ngIf="searchResults && searchResults2">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th> <div class="compare-image">
+              <img src="{{ searchResults[0].img }}" alt="Device 2">
+              </div></th>
+            <th> <div class="compare-image">
+              <img src="{{ searchResults2[0].img }}" alt="Device 2">
+              </div></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>{{ searchResults[0].name | shorten }}</th>
+            <th>{{ searchResults2[0].name | shorten }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Price</td>
+            <td class="resultcell">{{ searchResults[0].price }}</td>
+            <td class="resultcell">{{ searchResults2[0].price }}</td>
+          </tr>
+          <tr>
+            <td>Storage 1</td>
+            <td class="resultcell">{{ searchResults[0].storage1 }}</td>
+            <td class="resultcell">{{ searchResults2[0].storage1 }}</td>
+          </tr>
+          <tr>
+            <td>Storage 2</td>
+            <td class="resultcell">{{ searchResults[0].storage2 }}</td>
+            <td class="resultcell">{{ searchResults2[0].storage2 }}</td>
+          </tr>
+          <tr>
+            <td >Processor</td>
+            <td class="resultcell">{{ searchResults[0].processor }}</td>
+            <td class="resultcell">{{ searchResults2[0].processor }}</td>
+          </tr>
+          <tr>
+            <td>Camera 1</td>
+            <td class="resultcell">{{ searchResults[0].camera1 }}</td>
+            <td class="resultcell" > {{ searchResults2[0].camera1 }}</td>
+          </tr>
+          <tr>
+            <td>Camera 2</td>
+            <td class="resultcell" >{{ searchResults[0].camera2 }}</td>
+            <td class="resultcell">{{ searchResults2[0].camera2 }}</td>
+          </tr>
+          <tr>
+            <td>Display</td>
+            <td class="resultcell">{{ searchResults[0].display }}</td>
+            <td class="resultcell">{{ searchResults2[0].display }}</td>
+          </tr>
+          <tr>
+            <td>Battery</td>
+            <td class="resultcell">{{ searchResults[0].battery }}</td>
+            <td class="resultcell"> {{ searchResults2[0].battery }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   </div>    
+     
+</div>

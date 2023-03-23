@@ -8,34 +8,37 @@ import { ComparedataService } from 'src/app/services/comparedata.service';
   styleUrls: ['./comparemobile.component.css']
 })
 export class ComparemobileComponent implements OnInit {
-  devices: any[] = [];
-searchPrice: any;
-searchName: any;
-  // filteredDevices: any;
-  searchTerm: any;
- 
-  selectedName: any;
-  filteredDevices: any;
-
-  constructor(private comparedataService: ComparedataService) { }
-
   
+searchQuery: any;
+searchResults: any;
+searchResults2: any;
+searchQuery2: any;
+
+constructor(private comparedataService: ComparedataService) {}
+ngOnInit(): void {
   
-  
-
-  ngOnInit() {
-    this.devices = this.comparedataService.device_id;
-    // this.filterDevices();
-  }
-
-  ngOnChanges() {
-   
-    this.filteredDevices = this.devices.filter(device => device.name === this.selectedName);
-    console.log( this.filteredDevices = this.devices.filter(device => device.name === this.selectedName))
-  }
- 
-
-
-
 }
 
+
+
+searchDevices(query: string): void {
+  if (query) {
+    this.searchResults = this.comparedataService.device_id.filter(device =>
+      device.name.toLowerCase().includes(query.toLowerCase())
+    );
+  } else {
+    this.searchResults = [];
+  }
+}
+
+searchDevices2(query: string): void {
+  if (query) {
+    this.searchResults2 = this.comparedataService.device_id.filter(device =>
+      device.name.toLowerCase().includes(query.toLowerCase())
+    );
+  } else {
+    this.searchResults2 = [];
+  }
+}
+
+}

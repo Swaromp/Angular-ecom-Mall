@@ -21,6 +21,7 @@ import { Vivo1Component } from './vivo1/vivo1.component';
 import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
 import { ComparedataService } from './services/comparedata.service';
 import { FilterPipe } from './home/filter.pipe';
+import { ShortenPipe } from './pipes/shorten.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FilterPipe } from './home/filter.pipe';
     Card1Component,
     Vivo1Component,
     ComparemobileComponent,
-    FilterPipe
+    FilterPipe,
+    ShortenPipe
 
   ],
   imports: [
