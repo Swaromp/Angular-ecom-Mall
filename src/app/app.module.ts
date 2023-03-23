@@ -22,7 +22,7 @@ import { Vivo1Component } from './vivo1/vivo1.component';
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatBadgeModule } from '@angular/material/badge'
+// import { MatBadgeModule } from '@angular/material/badge'
 
 
 import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
@@ -48,10 +48,8 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     CarouselInternalComponent,
     Card1Component,
     Vivo1Component,
-
     SortByPropertyPipe,
-    WishlistComponent
-
+    WishlistComponent,
     ComparemobileComponent,
     FilterPipe,
     ShortenPipe
@@ -62,7 +60,7 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatBadgeModule,
+    // MatBadgeModule,
     // FontAwesomeModule
   ],
   providers: [ComparedataService],
