@@ -16,12 +16,12 @@ margin-right: auto;
     display:block;
     margin-right: auto;
     min-height: 20vh;
-
+    float: left;
 }
 
 .fullpage{
     min-height: 50vh;
-    padding: 2%;
+    padding: 1%;
 }
 
 

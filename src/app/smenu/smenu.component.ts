@@ -22,6 +22,7 @@ export class SMenuComponent implements OnInit {
   h: any
   l: any
   wisharray : any[]=[];
+  c : any=false
 
 
   constructor(private route: ActivatedRoute,private fetch1: FetchService,private router: Router) { }
@@ -110,6 +111,10 @@ export class SMenuComponent implements OnInit {
 
   unwishlist(value: any) {
   value.fav=false  
+  }
+
+  compare1() {
+    this.c=true
   }
 
 }
