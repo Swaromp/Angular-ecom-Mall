@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./smenu.component.css']
 })
 export class SMenuComponent implements OnInit {
+
   lview: boolean = true;
   gview: boolean = false;
 
@@ -85,6 +86,7 @@ export class SMenuComponent implements OnInit {
   redirectToDetails(value:any){
     this.router.navigate(['/vivo1',value.id1])
   }
+
 
   sortA() {
     this.sel=this.sel.reverse()

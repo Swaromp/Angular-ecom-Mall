@@ -1,0 +1,37 @@
+.compare-image{
+height: 300px;
+width: 80%;
+align-items: center;
+}
+img{
+  height: 80%;
+  display: block;
+  margin: auto;
+}
+li{
+  line-height: 30px;
+  display: block;
+}
+.resultcell{
+  width: 70rem;
+}
+td:hover{
+  color: rgb(223, 44, 44);
+}
+.content-div{
+  margin-top: 2%;
+}
+.fullpage{
+  min-height: 50vh;
+}
+@media (max-width: 776px) {
+  .compare-image{
+    height: 300px;
+    /* width: 50%; */
+    align-items: center;
+    }
+    img{
+      /* height: 80%; */
+      width: 120%;
+    }
+}
