@@ -1,0 +1,22 @@
+.but {
+    margin-top: 10%;
+    float: right;
+    margin-right: 5%;
+}
+
+.emp {
+    float: right;
+}
+
+.wcard:hover {
+    zoom: 102%;
+}
+.fullpage{
+    min-height: 50vh;
+    border: solid 5 px grey;
+    padding: 2%;
+}
+
+.wish {
+    
+}

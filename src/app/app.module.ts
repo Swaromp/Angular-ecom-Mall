@@ -20,6 +20,9 @@ import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatBadgeModule } from '@angular/material/badge'
+
 
 @NgModule({
   declarations: [
@@ -46,6 +49,8 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatBadgeModule,
     // FontAwesomeModule
   ],
   providers: [],
