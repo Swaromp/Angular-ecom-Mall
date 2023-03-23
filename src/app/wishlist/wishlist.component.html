@@ -1,42 +1,40 @@
 <div class="fullpage">
-<div class="wish">
 
-  <h4>My Wishlist
-    <img src="../assets/fav.svg" width="20px" height="20px" class="favbutton">
-  </h4><br>
-
-</div>
-
-<div class="card mb-3 wcard" style="max-width: 70rem;" *ngFor="let x of wishlist; let i=index">
-  <div class="row g-0">
-    <div class="col-md-2">
-      <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start" width="100px" height="100px">
+    <div class="wish">
+      <h4>My Wishlist</h4><br>
     </div>
-    <div class="col-md-2">
-      <div class="card-body">
-        <h5 class="card-title">{{x.n}}</h5>
-      </div>    
-    </div>
-    <div class="col-md-2">
-      <div class="card-body">
-        <h5 class="card-title">Price</h5>
-        <p class="card-text"><b>₹{{x.price}}</b></p>
-      </div>    
-    </div>
-    <div class="col-md-3">
-      <button class="btn btn-outline-warning btn-sm but" (click)="remove(x.i)">Remove</button>
-    </div>
-    <div class="col-md-3">
-      <button class="btn btn-outline-warning btn-sm but">Move to Cart</button>
-    </div>
-  </div>
 
-</div>
-<button class="btn btn-outline-warning btn-sm" >Remove</button>
+    <div class="card mb-3 wcard" style="max-width: 70rem;" *ngFor="let x of wishlist; let i=index">
+      <div class="row g-0">
+        <div class="col-md-2">
+          <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start" width="100px" height="100px">
+        </div>
+        <div class="col-md-2">
+          <div class="card-body">
+            <h5 class="card-title">{{x.n}}</h5>
+          </div>    
+        </div>
+        <div class="col-md-2">
+          <div class="card-body">
+            <h5 class="card-title">Price</h5>
+            <p class="card-text"><b>₹{{x.price}}</b></p>
+          </div>    
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-outline-warning btn-sm but" (click)="remove(x.i)">Remove</button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-outline-warning btn-sm but">Move to Cart</button>
+        </div>
+      </div>
+
+    </div><br>
+    <button class="btn btn-outline-warning btn-sm but1" *ngIf="wishlist.length">Move All to Cart</button>
 
 
 
-<div class="card mb-3" style="max-width: 70rem;" *ngIf="!wishlist.length">     
-  <img src="../assets/wishlist_empty.avif" class="emp"  width="100px" height="100px">
-</div>
+    <div class="card mb-3" style="max-width: 70rem;" *ngIf="!wishlist.length">     
+      <img src="../assets/wishlist_empty.avif" class="emp"  width="100px" height="100px">
+    </div>
+
 </div>
