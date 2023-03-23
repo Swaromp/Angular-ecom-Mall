@@ -18,10 +18,18 @@ import { VmenuComponent } from './vmenu/vmenu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
+
+import { SortByPropertyPipe } from './pipes/sortby.pipe';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatBadgeModule } from '@angular/material/badge'
+
+
 import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
 import { ComparedataService } from './services/comparedata.service';
 import { FilterPipe } from './home/filter.pipe';
 import { ShortenPipe } from './pipes/shorten.pipe';
+
 
 @NgModule({
   declarations: [
@@ -40,16 +48,21 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     CarouselInternalComponent,
     Card1Component,
     Vivo1Component,
+
+    SortByPropertyPipe,
+    WishlistComponent
+
     ComparemobileComponent,
     FilterPipe,
     ShortenPipe
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatBadgeModule,
     // FontAwesomeModule
   ],
   providers: [ComparedataService],

@@ -1,0 +1,28 @@
+.but {
+    margin-top: 10%;
+    float: right;
+    margin-right: 5%;
+}
+
+.but1 {
+margin-left: auto;
+display:block;
+margin-right: auto;
+
+}
+
+.emp {
+    margin-left: auto;
+    display:block;
+    margin-right: auto;
+    min-height: 20vh;
+
+}
+
+.fullpage{
+    min-height: 50vh;
+    padding: 2%;
+}
+
+
+
