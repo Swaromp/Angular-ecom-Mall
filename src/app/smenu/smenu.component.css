@@ -12,11 +12,17 @@
     text-decoration: none;
 
 }
-
+.activelink{
+    z-index: 1000;
+}
+.activelink:hover{
+    cursor:grab;
+}
 .sort1 {
     display: inline;
     padding-right: 5%;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .clear {
@@ -124,4 +130,12 @@
     width: 42px;
     height: 42px;
     margin-right: 20px;
+}
+
+.favbutton {
+    cursor: pointer;
+}
+
+.phone:hover {
+    zoom: 105%;
 }

@@ -17,10 +17,27 @@ import { VmenuComponent } from './vmenu/vmenu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
+
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
+
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
+
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatBadgeModule } from '@angular/material/badge'
+
+
+import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
+import { ComparedataService } from './services/comparedata.service';
+import { FilterPipe } from './home/filter.pipe';
+import { ShortenPipe } from './pipes/shorten.pipe';
+import { OfferPipe } from './pipes/offer.pipe';
+import { DownPipe } from './pipes/down.pipe';
+import { EmifilterPipe } from './pipes/emifilter.pipe';
+import { DelPipe } from './pipes/del.pipe';
+import { LoginpageComponent } from './home/loginpage/loginpage.component';
 
 @NgModule({
   declarations: [
@@ -40,18 +57,32 @@ import { TotalAmountPipe } from './pipes/total-amount.pipe';
     Card1Component,
     Vivo1Component,
     SortByPropertyPipe,
+
     KartComponent,
     AddToKartComponent,
     TotalAmountPipe
+
+    WishlistComponent,
+    ComparemobileComponent,
+    FilterPipe,
+    ShortenPipe,
+    OfferPipe,
+    DownPipe,
+    EmifilterPipe,
+    DelPipe,
+    LoginpageComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    // MatBadgeModule,
     // FontAwesomeModule
   ],
-  providers: [],
+  providers: [ComparedataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

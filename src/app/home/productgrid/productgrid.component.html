@@ -12,7 +12,31 @@
     <div>
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 p-2">
             <div *ngFor="let phone of smartphones" class="col">
-              <img [src]="phone.image">
+
+            <section class="product-section">
+                <div class="wishlist-icons">
+                    <img src="../assets/fav.svg" width="20px" height="20px"  *ngIf="!phone.fav" class="favbutton" (click)="wishlist(phone)">
+                    <img src="../assets/fav_red.png" width="20px" height="20px"  *ngIf="phone.fav" class="favbutton" (click)="unwishlist(phone)">
+                  </div>
+            <div class="mobile-image">  
+              <img class="mobile" src="../assets/{{phone.im}}-removebg-preview.png">
+            </div>
+            <div class="Details row">
+            <div class="productname col-md-6">
+               <h5>{{phone.n}}</h5>
+            </div>
+            <div class="col-md-6">
+          <div class="EMIcard row">
+        From ₹{{ phone.price/9 | number: '1.0-0'}}/month
+          </div>
+          <div class="buynow">
+            <div class="btn btn-sm ">
+                BUY NOW
+            </div>
+          </div>
+            </div>
+            </div>
+            </section>
             </div>
         </div>
     </div>

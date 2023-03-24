@@ -1,0 +1,86 @@
+
+
+<div class ="fullpage" >
+   <div class="container-fluid ">
+
+    <div class="table-responsive table1" *ngIf="searchResults && searchResults2">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th> <div class="form-group">
+              <label for="mobilename">Device 1</label>
+              <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
+              <datalist id="mobilename">
+                <option *ngFor="let device of searchResults">{{device.name}}</option>
+              </datalist>
+            </div></th>
+            <th><div class="form-group">
+              <label for="mobilename2">Device 2</label>
+              <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
+              <datalist id="mobilename2">
+                <option *ngFor="let device of searchResults2">{{device.name}}</option>
+              </datalist>
+            </div></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th> <div class="compare-image">
+              <img src="{{ searchResults[0].img }}" alt="Device 2">
+              </div></th>
+            <th> <div class="compare-image">
+              <img src="{{ searchResults2[0].img }}" alt="Device 2">
+              </div></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>{{ searchResults[0].name | shorten }}</th>
+            <th>{{ searchResults2[0].name | shorten }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Price</td>
+            <td class="resultcell">{{ searchResults[0].price }}</td>
+            <td class="resultcell">{{ searchResults2[0].price }}</td>
+          </tr>
+          <tr>
+            <td>Storage 1</td>
+            <td class="resultcell">{{ searchResults[0].storage1 }}</td>
+            <td class="resultcell">{{ searchResults2[0].storage1 }}</td>
+          </tr>
+          <tr>
+            <td>Storage 2</td>
+            <td class="resultcell">{{ searchResults[0].storage2 }}</td>
+            <td class="resultcell">{{ searchResults2[0].storage2 }}</td>
+          </tr>
+          <tr>
+            <td >Processor</td>
+            <td class="resultcell">{{ searchResults[0].processor }}</td>
+            <td class="resultcell">{{ searchResults2[0].processor }}</td>
+          </tr>
+          <tr>
+            <td>Camera 1</td>
+            <td class="resultcell">{{ searchResults[0].camera1 }}</td>
+            <td class="resultcell" > {{ searchResults2[0].camera1 }}</td>
+          </tr>
+          <tr>
+            <td>Camera 2</td>
+            <td class="resultcell" >{{ searchResults[0].camera2 }}</td>
+            <td class="resultcell">{{ searchResults2[0].camera2 }}</td>
+          </tr>
+          <tr>
+            <td>Display</td>
+            <td class="resultcell">{{ searchResults[0].display }}</td>
+            <td class="resultcell">{{ searchResults2[0].display }}</td>
+          </tr>
+          <tr>
+            <td>Battery</td>
+            <td class="resultcell">{{ searchResults[0].battery }}</td>
+            <td class="resultcell"> {{ searchResults2[0].battery }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   </div>      
+</div>
