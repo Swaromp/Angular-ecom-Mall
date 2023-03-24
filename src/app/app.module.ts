@@ -60,7 +60,7 @@ import { LoginpageComponent } from './home/loginpage/loginpage.component';
 
     KartComponent,
     AddToKartComponent,
-    TotalAmountPipe
+    TotalAmountPipe,
 
     WishlistComponent,
     ComparemobileComponent,
