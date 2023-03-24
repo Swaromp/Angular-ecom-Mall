@@ -20,6 +20,7 @@ import { Vivo1Component } from './vivo1/vivo1.component';
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
+import { TotalAmountPipe } from './pipes/total-amount.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
     Vivo1Component,
     SortByPropertyPipe,
     KartComponent,
-    AddToKartComponent
+    AddToKartComponent,
+    TotalAmountPipe
   ],
   imports: [
     BrowserModule,

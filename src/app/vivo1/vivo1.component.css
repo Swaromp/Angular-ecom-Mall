@@ -27,18 +27,18 @@
   display: flex;
   align-items: center;
   width: 100%;
-  min-width: 100%;
+  min-width: 90%;
   min-height: 25rem;
   margin-top: 10px;
   height: calc(100% - 70px);
   position: relative;
-  padding: 2%;
+  padding: 1.4%;
   justify-content: center;
 }
 
 .imgd{
   height: 66px;
-  width: 48.52px;
+  width: 60.52px;
   justify-content: center;
   padding-left: 2%;
 }
