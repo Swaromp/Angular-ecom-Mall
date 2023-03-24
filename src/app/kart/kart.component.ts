@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kart.component.css']
 })
 export class KartComponent implements OnInit {
-
-  constructor() { }
+  data:any
+  constructor() {}
 
   ngOnInit(): void {
+    this.get();
   }
-
+  get() {
+    var data=localStorage.getItem('dev_info')
+    this.data = JSON.parse(localStorage.getItem('dev_info') || '{}');
+  }
 }

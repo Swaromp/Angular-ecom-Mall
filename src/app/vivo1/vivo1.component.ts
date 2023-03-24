@@ -57,12 +57,13 @@ export class Vivo1Component implements OnInit {
   images4 =[
     'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_base.jpeg',
     'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_additional1.jpeg',
+
     'https://www.bajajmall.in/emistore/media/catalog/product/v/i/vivoy01spphireblue_additional3.jpeg'
 
   ];
   images5=[
-    'https://www.91-img.com/gallery_images_uploads/e/8/e8c547cf4a99cbf2af7232f01cb5647357e70a29.jpg?w=0&h=901&q=80&c=1',
-    'https://www.91-img.com/gallery_images_uploads/7/5/7571704db264a0a1dfab249a5796c0ba3886f497.jpg?w=0&h=901&q=80&c=1'
+    'https://www.reliancedigital.in/medias/Apple-iPhone-13-Smartphones-491997702-i-3-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyNTA3NDd8aW1hZ2UvanBlZ3xpbWFnZXMvaDI5L2hlNC85ODc4MDk0MDIwNjM4LmpwZ3xmMWNlYWNkMjU0OTEzMjEzOTc5MTExMjFjMmQ0MjBiODVhMjI4NzIwMzkwOWFiYjA4MjA0MDU2ZWQ4MTMyNzNi',
+    'https://www.reliancedigital.in/medias/Apple-iPhone-13-Smartphones-491997702-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzMDkzMTN8aW1hZ2UvanBlZ3xpbWFnZXMvaGI5L2gxMS85ODc4MTAyNjA1ODU0LmpwZ3w5NGFjNjk3MDQ1ZmU2Y2Q1YmY0ZTljZWM4N2JkMjdhNzE0ZmVlZDQxYzJhNjExNDdkZjY1MmQwYjQ2YTc0NWJm',
 
   ];
   images6=[
@@ -73,6 +74,7 @@ export class Vivo1Component implements OnInit {
 
   ];
   images7=[
+    'https://i.gadgets360cdn.com/products/large/iphone-13-1-396x800-1631648728.jpg?downsize=*:420&output-quality=80',
     'https://www.phonebunch.com/phone-pictures/apple_iphone_12_pro_max-3843%20(1).jpg',
     'https://www.phonebunch.com/phone-pictures/apple_iphone_12_pro_max-3843%20(2).jpg'
 
@@ -96,11 +98,18 @@ export class Vivo1Component implements OnInit {
 
   ];
 
+
+
   selectedImage: any = this.photos[0];
   title: any;
 
   selectImage(photo: string) {
     this.selectedImage = photo;
+  }
+
+  select(value:any){
+    value = JSON.stringify(value)
+    localStorage.setItem('dev_info',value)
   }
 
 
@@ -157,7 +166,7 @@ export class Vivo1Component implements OnInit {
   }
 
 
-  device_id=[{img:this.images,name:'Vvivo V23 5G 128 GB Storage Sunshine Gold (8 GB RAM)',price:29990,storage1:'128',storage2:'256',processor:'Mediatek Dimensity 920',camera1:'64 MP + 8 MP + 2 MP', camera2:'50 MP + 8 MP', Display:'6.43 inch',battery:'4500 mAh'},
+  device_id=[{name:'Vvivo V23 5G 128 GB Storage Sunshine Gold (8 GB RAM)',price:29990,storage1:'128',storage2:'256',processor:'Mediatek Dimensity 920',camera1:'64 MP + 8 MP + 2 MP', camera2:'50 MP + 8 MP', Display:'6.43 inch',battery:'4500 mAh'},
              {name:'vivo Y75 (4G) 128 GB Storage Moonlight Shadow (8 GB RAM)',price:19999,storage1:'128',storage2:'256',processor:'MediaTek Helio G96 Octa Core',camera1:'50 MP + 8 MP + 2 MP', camera2:'44 MP', Display:'6.43 inch',battery:'4500 mAh'},
              {name:'vivo X80 128 GB Storage Cosmic Black (8 GB RAM)',price:54999,storage1:'128',storage2:'256',processor:'MediaTek Dimensity 9000',camera1:'50 MP + 12 MP + 12 MP', camera2:'32 MP', Display:'6.78 inch',battery:'4500 mAh'},
              {name:'vivo T1 Pro 5G 128 GB Storage Turbo Cyan (8 GB RAM)',price:24999,storage1:'128',storage2:'256',processor:'Snapdragon 695',camera1:'50 MP + 2 MP + 2 MP', camera2:'16 MP', Display:'6.43 inch',battery:'4700 mAh'},
@@ -169,7 +178,11 @@ export class Vivo1Component implements OnInit {
              {name:'i phone 14 pro max',price:136590,storage1:'128',storage2:'256',processor:'Apple A16 Bionic (5 nm)',camera1:'64 MP + 2 MP + 2 MP', camera2:'12 MP', Display:'6.43 inch',battery:'4500 mAh'},
              {name:'ASUS rog phone 6 pro 5G',price:89990,storage1:'128',storage2:'256',processor:'snapdragon 8gen1',camera1:'64 MP + 2 MP + 2 MP', camera2:'34 MP', Display:'6.43 inch',battery:'4500 mAh'},
             ]
+
+
+
 }
+
 
 
 
