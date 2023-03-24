@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
@@ -20,6 +19,11 @@ import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
 
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
+
+import { KartComponent } from './kart/kart.component';
+import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
+import { TotalAmountPipe } from './pipes/total-amount.pipe';
+
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatBadgeModule } from '@angular/material/badge'
@@ -34,7 +38,6 @@ import { DownPipe } from './pipes/down.pipe';
 import { EmifilterPipe } from './pipes/emifilter.pipe';
 import { DelPipe } from './pipes/del.pipe';
 import { LoginpageComponent } from './home/loginpage/loginpage.component';
-
 
 @NgModule({
   declarations: [
@@ -54,6 +57,11 @@ import { LoginpageComponent } from './home/loginpage/loginpage.component';
     Card1Component,
     Vivo1Component,
     SortByPropertyPipe,
+
+    KartComponent,
+    AddToKartComponent,
+    TotalAmountPipe
+
     WishlistComponent,
     ComparemobileComponent,
     FilterPipe,
@@ -63,6 +71,7 @@ import { LoginpageComponent } from './home/loginpage/loginpage.component';
     EmifilterPipe,
     DelPipe,
     LoginpageComponent
+
   ],
   imports: [
     BrowserModule,
