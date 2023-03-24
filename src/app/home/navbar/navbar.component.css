@@ -60,6 +60,7 @@ float: left;
     display: inline-block;
     background-position: bottom;
     background-size: contain;
+    margin-left: -4%;
     
 }
 .icons{

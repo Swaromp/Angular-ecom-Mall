@@ -1,32 +1,28 @@
 
-<div class =fullpage>
-   <div class="container-fluid ">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label for="mobilename">Device 1</label>
-          <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
-          <datalist id="mobilename">
-            <option *ngFor="let device of searchResults">{{device.name}}</option>
-          </datalist>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label for="mobilename2">Device 2</label>
-          <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
-          <datalist id="mobilename2">
-            <option *ngFor="let device of searchResults2">{{device.name}}</option>
-          </datalist>
-        </div>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
 
-    <div class="table-responsive" *ngIf="searchResults && searchResults2">
+<div class ="fullpage" >
+   <div class="container-fluid ">
+
+    <div class="table-responsive table1" *ngIf="searchResults && searchResults2">
       <table class="table table-bordered">
         <thead>
+          <tr>
+            <th></th>
+            <th> <div class="form-group">
+              <label for="mobilename">Device 1</label>
+              <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
+              <datalist id="mobilename">
+                <option *ngFor="let device of searchResults">{{device.name}}</option>
+              </datalist>
+            </div></th>
+            <th><div class="form-group">
+              <label for="mobilename2">Device 2</label>
+              <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
+              <datalist id="mobilename2">
+                <option *ngFor="let device of searchResults2">{{device.name}}</option>
+              </datalist>
+            </div></th>
+          </tr>
           <tr>
             <th></th>
             <th> <div class="compare-image">

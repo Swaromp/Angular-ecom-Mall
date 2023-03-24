@@ -15,7 +15,7 @@ const routes: Routes = [
 
   { path:'wishlist', component: WishlistComponent},
 
-  {path: 'compare', component: ComparemobileComponent}
+  {path: 'compare/:id2', component: ComparemobileComponent}
 ];
 
 @NgModule({

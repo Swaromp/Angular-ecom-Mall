@@ -55,7 +55,8 @@
               </a>
             </div>
             <div class="col-md-4">
-              <button class="compare" routerLink="/compare" routerLinkActive="active">Compare</button>
+              <button class="compare" (click)="compare1()">Compare</button>
+              <button class="compare" (click)="redirectToCompare()">Compare ALl</button>
             </div>
           </div>
         </div>
@@ -81,8 +82,9 @@
             </div>
           </div>
           <div class="row g-0">
-            <div class="col-md-4" (click)="redirectToDetails(x)">
-              <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start">
+            <div class="col-md-4">
+              <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start" (click)="redirectToDetails(x)">
+              <button class="compare" *ngIf="c" (click)="CompareItem(x)">Compare This</button>
             </div>
             <div class="col-md-4" (click)="redirectToDetails(x)">
               <div class="card-body">
