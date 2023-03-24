@@ -10,6 +10,10 @@ export class FetchService {
   subject1=new BehaviorSubject('');
   subject2=new BehaviorSubject('');
   subject3=new BehaviorSubject('');
+  subject4=new BehaviorSubject('');
+  subject5=new BehaviorSubject('');
+  subject6=new BehaviorSubject('');
+
 
   constructor() { }
 }

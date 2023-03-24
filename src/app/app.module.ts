@@ -31,6 +31,8 @@ import { FilterPipe } from './home/filter.pipe';
 import { ShortenPipe } from './pipes/shorten.pipe';
 import { OfferPipe } from './pipes/offer.pipe';
 import { DownPipe } from './pipes/down.pipe';
+import { EmifilterPipe } from './pipes/emifilter.pipe';
+import { DelPipe } from './pipes/del.pipe';
 
 
 @NgModule({
@@ -56,7 +58,9 @@ import { DownPipe } from './pipes/down.pipe';
     FilterPipe,
     ShortenPipe,
     OfferPipe,
-    DownPipe
+    DownPipe,
+    EmifilterPipe,
+    DelPipe
   ],
   imports: [
     BrowserModule,

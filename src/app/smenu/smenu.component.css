@@ -135,3 +135,7 @@
 .favbutton {
     cursor: pointer;
 }
+
+.phone:hover {
+    zoom: 105%;
+}

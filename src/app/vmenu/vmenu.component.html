@@ -25,21 +25,21 @@
             <div class="accordion-body">
                 <div class="row g-1">
                     <div class="col-md-6">
-                      <input type="text" formControlName="fa1" size="12" class="in" [(ngModel)]="minValue" (ngModelChange)="onMinValueChange()">
+                      <input type="text" formControlName="fa8" size="12" class="in" [(ngModel)]="minValue1" (ngModelChange)="onMinEmiChange()">
                     </div>
                     <div class="col-md-6">
-                      <input type="text" formControlName="fa2" size="12" class="in" style="float: right;" [(ngModel)]="maxValue" (ngModelChange)="onMaxValueChange()">
+                      <input type="text" formControlName="fa9" size="12" class="in" style="float: right;" [(ngModel)]="maxValue1" (ngModelChange)="onMaxEmiChange()">
                     </div>
                   </div>
                   <br>
                   <div class="row g-1">
-                    <input type="range" formControlName="fa5" max="200000" min="1000" [(ngModel)]="minValue" (ngModelChange)="onMinValueChange()">
-                    <input type="range" formControlName="fa4" max="200000" min="1000" [(ngModel)]="maxValue" (ngModelChange)="onMaxValueChange()">
+                    <input type="range" formControlName="fa8" max="20000" min="1000" [(ngModel)]="minValue1" (ngModelChange)="onMinEmiChange()">
+                    <input type="range" formControlName="fa9" max="20000" min="1000" [(ngModel)]="maxValue1" (ngModelChange)="onMaxEmiChange()">
                     <div class="col-md-6">
-                      <label class="checkpad">20,000</label>
+                      <label class="checkpad">1,000</label>
                     </div>
                     <div class="col-md-6">
-                      <label class="checkpad" style="float: right;">60,000</label>
+                      <label class="checkpad" style="float: right;">20,000</label>
                     </div>
                   </div>
             </div>
@@ -70,10 +70,10 @@
                   <input type="range" formControlName="fa5" max="200000" min="1000"  step="500" [(ngModel)]="minValue" (ngModelChange)="onMinValueChange()">
                   <input type="range" formControlName="fa4" max="200000" min="1000" step="500" [(ngModel)]="maxValue" (ngModelChange)="onMaxValueChange()">
                   <div class="col-md-6">
-                    <label class="checkpad">20,000</label>
+                    <label class="checkpad">10,000</label>
                   </div>
                   <div class="col-md-6">
-                    <label class="checkpad" style="float: right;">60,000</label>
+                    <label class="checkpad" style="float: right;">2,00,000</label>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@
             </h2>
             <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-                <input type="checkbox">
+                <input type="checkbox" formControlName="fa10" (ngModelChange)="onDelchange()">
                 <label class="txt" class="checkpad">Express Delivery</label>
             </div>
             </div>

@@ -68,7 +68,7 @@
 
       <!-- *****LIST VIEW***** -->
       <div class="mview1" *ngIf="lview">
-        <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l | offer: o | down: d">
+        <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l | offer: o | down: d | emifilter: he :le | del: d_flag">
           <div class="row g-0">
             <div class="col-md-4">
             </div>
@@ -82,7 +82,7 @@
           </div>
           <div class="row g-0">
             <div class="col-md-4" (click)="redirectToDetails(x)">
-              <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start">
+              <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start phone">
             </div>
             <div class="col-md-4" (click)="redirectToDetails(x)">
               <div class="card-body">
@@ -119,8 +119,11 @@
                   </div>
                 </div>
               </div>
-              <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);">
+              <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);" *ngIf="!x.del">
                 Delivery in 4-5 days
+              </div>
+              <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);" *ngIf="x.del">
+                Delivery in 1 day
               </div>
               <div class="card-body row g-1 txt" style="color:red" *ngIf="x.offer">Exciting Bank Offers ahead</div>
             </div>

@@ -16,6 +16,8 @@ export class VmenuComponent implements OnInit {
   f1!: FormGroup;
   minValue: any;
   maxValue: any;
+  minValue1: any;
+  maxValue1: any;
   sliderValue: any;
 
 
@@ -31,7 +33,10 @@ export class VmenuComponent implements OnInit {
        fa4: [''],
        fa5: [''],
        fa6: [''],
-       fa7: ['']
+       fa7: [''],
+       fa8: [''],
+       fa9: [''],
+       fa10: ['']
     });
   }
 
@@ -70,6 +75,19 @@ export class VmenuComponent implements OnInit {
   onDpchange() {
     this.fetch1.subject3.next(this.f1.controls['fa7'].value)
   }
+
+  onMinEmiChange() {
+    this.fetch1.subject4.next(this.f1.controls['fa8'].value)
+  }
+
+  onMaxEmiChange() {
+    this.fetch1.subject5.next(this.f1.controls['fa9'].value)
+  }
+
+  onDelchange() {
+    this.fetch1.subject6.next(this.f1.controls['fa10'].value)
+  }
+
 }
 
 
