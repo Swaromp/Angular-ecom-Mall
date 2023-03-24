@@ -1,0 +1,40 @@
+<div class="formdiv">
+    <form [formGroup]="form1" (ngSubmit)="local()">
+        <div>
+            <label for="fname">First Name: </label>
+            <input type="text" id="fname" formControlName="fname" placeholder="Please enter your full name">
+            <div class="alert" *ngIf="form1.controls['fname'].invalid && (form1.controls['fname'].touched ||form1.controls['fname'].dirty)">
+               First Name Should Contain Minimum 4 character
+            </div>
+            <label for="lname">Last Name: </label>
+            <input type="text" id="lname" formControlName="lname" placeholder="Please enter your full name">
+            <div class="alert" *ngIf="form1.controls['lname'].invalid && (form1.controls['lname'].touched ||form1.controls['lname'].dirty)">
+                Last Name Should Contain Minimum 4 character
+            </div>
+        </div>
+       
+        <div>
+            <label for="Email">Email Id:</label>
+            <input type="email" id="email" formControlName="mail" placeholder="enter your email">
+            <div class="alert" *ngIf="form1.controls['mail'].invalid && (form1.controls['mail'].touched ||form1.controls['mail'].dirty)">
+                Please Enter valid Mail-ID
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="password">New Password:</label>
+                <input type="password" id="password" placeholder="enter password" formControlName="password">
+            </div>
+            <label for="cpassword">Confirm New Password:</label>
+                <input  type="password" id="cpassword" placeholder="confirm password" formControlName="cpassword">
+            <div *ngIf="pass" class="alert">
+                Passwords do not match 
+            </div>
+        </div>
+          
+        <div>
+            <button type="submit" [disabled]="!form1.valid">Submit</button>
+        </div>
+    </form>
+    </div>
+    

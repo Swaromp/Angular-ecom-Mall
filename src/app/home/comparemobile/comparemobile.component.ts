@@ -26,13 +26,13 @@ ngOnInit(): void {
   // .then(console.log);
   // debugger
   this.compareItem = this.route.snapshot.paramMap.get("id2")
-  console.log(this.compareItem)
+  // console.log(this.compareItem)
   this.compareArray = this.compareItem.split("vs")
   
-  console.log(this.compareArray)
+  // console.log(this.compareArray)
   this.compare1=parseInt(this.compareArray[0])
   this.compare2=parseInt(this.compareArray[1])
- console.log( this.comparedataService.device_id.filter(device => device.id === this.compare1))
+//  console.log( this.comparedataService.device_id.filter(device => device.id === this.compare1))
  this.searchResults = this.comparedataService.device_id.filter(device => device.id === this.compare1)
  this.searchResults2 = this.comparedataService.device_id.filter(device => device.id === this.compare2)
 
@@ -46,8 +46,8 @@ searchDevices(query: string): void {
   if (query) {
     this.searchResults = this.comparedataService.device_id.filter(device =>
       device.name.toLowerCase().includes(query.toLowerCase()))
-      console.log(this.searchResults = this.comparedataService.device_id.filter(device =>
-        device.name.toLowerCase().includes(query.toLowerCase())))
+      // console.log(this.searchResults = this.comparedataService.device_id.filter(device =>
+      //   device.name.toLowerCase().includes(query.toLowerCase())))
   } else {
     this.searchResults = this.comparedataService.device_id.filter(device => device.id === this.compare1)
   }

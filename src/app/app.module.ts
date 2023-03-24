@@ -33,6 +33,7 @@ import { OfferPipe } from './pipes/offer.pipe';
 import { DownPipe } from './pipes/down.pipe';
 import { EmifilterPipe } from './pipes/emifilter.pipe';
 import { DelPipe } from './pipes/del.pipe';
+import { LoginpageComponent } from './home/loginpage/loginpage.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { DelPipe } from './pipes/del.pipe';
     OfferPipe,
     DownPipe,
     EmifilterPipe,
-    DelPipe
+    DelPipe,
+    LoginpageComponent
   ],
   imports: [
     BrowserModule,
