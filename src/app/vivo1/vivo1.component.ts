@@ -62,8 +62,8 @@ export class Vivo1Component implements OnInit {
 
   ];
   images5=[
-    'https://www.91-img.com/gallery_images_uploads/e/8/e8c547cf4a99cbf2af7232f01cb5647357e70a29.jpg?w=0&h=901&q=80&c=1',
-    'https://www.91-img.com/gallery_images_uploads/7/5/7571704db264a0a1dfab249a5796c0ba3886f497.jpg?w=0&h=901&q=80&c=1'
+    'https://www.reliancedigital.in/medias/Apple-iPhone-13-Smartphones-491997702-i-3-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyNTA3NDd8aW1hZ2UvanBlZ3xpbWFnZXMvaDI5L2hlNC85ODc4MDk0MDIwNjM4LmpwZ3xmMWNlYWNkMjU0OTEzMjEzOTc5MTExMjFjMmQ0MjBiODVhMjI4NzIwMzkwOWFiYjA4MjA0MDU2ZWQ4MTMyNzNi',
+    'https://www.reliancedigital.in/medias/Apple-iPhone-13-Smartphones-491997702-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzMDkzMTN8aW1hZ2UvanBlZ3xpbWFnZXMvaGI5L2gxMS85ODc4MTAyNjA1ODU0LmpwZ3w5NGFjNjk3MDQ1ZmU2Y2Q1YmY0ZTljZWM4N2JkMjdhNzE0ZmVlZDQxYzJhNjExNDdkZjY1MmQwYjQ2YTc0NWJm',
 
   ];
   images6=[
@@ -74,6 +74,7 @@ export class Vivo1Component implements OnInit {
 
   ];
   images7=[
+    'https://i.gadgets360cdn.com/products/large/iphone-13-1-396x800-1631648728.jpg?downsize=*:420&output-quality=80',
     'https://www.phonebunch.com/phone-pictures/apple_iphone_12_pro_max-3843%20(1).jpg',
     'https://www.phonebunch.com/phone-pictures/apple_iphone_12_pro_max-3843%20(2).jpg'
 
@@ -93,7 +94,6 @@ export class Vivo1Component implements OnInit {
   images10=[
     'https://cdn1.smartprix.com/rx-iy7cT7S94-w420-h420/asus-rog-phone-6.webp',
     'https://www.smartprix.com/ui/img/specs/pd1y1l8de59?v=1rejt0p',
-
     'https://cdn1.smartprix.com/rx-ieUXUthmn-w420-h420/asus-rog-phone-6.webp'
 
   ];
@@ -105,6 +105,11 @@ export class Vivo1Component implements OnInit {
 
   selectImage(photo: string) {
     this.selectedImage = photo;
+  }
+
+  select(value:any){
+    value = JSON.stringify(value)
+    localStorage.setItem('dev_info',value)
   }
 
 
@@ -177,6 +182,7 @@ export class Vivo1Component implements OnInit {
 
 
 }
+
 
 
 

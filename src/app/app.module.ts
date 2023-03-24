@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
@@ -34,6 +33,9 @@ import { DownPipe } from './pipes/down.pipe';
 import { EmifilterPipe } from './pipes/emifilter.pipe';
 import { DelPipe } from './pipes/del.pipe';
 
+import { KartComponent } from './kart/kart.component';
+import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
+import { TotalAmountPipe } from './pipes/total-amount.pipe';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,10 @@ import { DelPipe } from './pipes/del.pipe';
     OfferPipe,
     DownPipe,
     EmifilterPipe,
-    DelPipe
+    DelPipe,
+    KartComponent,
+    AddToKartComponent,
+    TotalAmountPipe
   ],
   imports: [
     BrowserModule,
