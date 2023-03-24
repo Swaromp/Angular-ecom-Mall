@@ -28,6 +28,9 @@ export class SMenuComponent implements OnInit {
   d_flag:any
 
   wisharray : any[]=[];
+  c: boolean = false;
+  compareItem : any = [];
+  compareURL: any ;
 
 
   constructor(private route: ActivatedRoute,private fetch1: FetchService,private router: Router) { }
@@ -138,7 +141,20 @@ export class SMenuComponent implements OnInit {
   value.fav=false  
   }
 
+  compare1(){
+    this.c = true
+  }
 
+  CompareItem(id2:any){
+   
+    this.compareItem.push(id2.id1)
+    console.log(this.compareItem)
+  }
+  redirectToCompare(){
+    this.compareURL = this.compareItem[0] + 'vs' + this.compareItem[1]
+    console.log(this.compareURL)
+    this.router.navigate(['/compare',this.compareURL])
+  }
 }
 
 
