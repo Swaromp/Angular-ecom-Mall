@@ -1,0 +1,33 @@
+<form [formGroup]="f2" (ngSubmit)="editProd()" class="form-group">
+    <div>
+        <label>ID :</label>
+        <input type="number" formControlName="id1">
+    </div>
+    <div>
+        <label>Name :</label>
+        <input type="text" formControlName="n">
+    </div>
+    <div>
+        <label>Price :</label>
+        <input type="number" formControlName="price">
+    </div>
+    <div>
+        <label>Zero Down Payment Availability :</label>
+        <input type="checkbox" formControlName="dp">
+    </div>
+    <div>
+        <label>Applicable for Offers :</label>
+        <input type="checkbox" formControlName="offer">
+    </div>
+    <div>
+        <label>Applicable for Express Delivery :</label>
+        <input type="checkbox" formControlName="del">
+    </div>
+    <div>
+        <label>Product Description :</label>
+        <input type="text" formControlName="text">
+    </div>
+    
+    <button type="submit">Edit Product</button><br>
+
+</form>

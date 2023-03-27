@@ -36,6 +36,7 @@ import { DelPipe } from './pipes/del.pipe';
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { TotalAmountPipe } from './pipes/total-amount.pipe';
     DelPipe,
     KartComponent,
     AddToKartComponent,
-    TotalAmountPipe
+    TotalAmountPipe,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

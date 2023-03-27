@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class FetchService {
+  
   subject= new BehaviorSubject('');
   subject1=new BehaviorSubject('');
   subject2=new BehaviorSubject('');
@@ -13,6 +14,7 @@ export class FetchService {
   subject4=new BehaviorSubject('');
   subject5=new BehaviorSubject('');
   subject6=new BehaviorSubject('');
+  subject7=new BehaviorSubject('');
 
 
   constructor() { }
