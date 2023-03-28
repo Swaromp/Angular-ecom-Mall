@@ -1,145 +1,29 @@
-/* 
-
-
-
-.form{
-    padding: 2%;
-   
-    justify-content: center;
-   
-}
-.formdiv{
-    
-    border-radius: 1rem;
-    width: 60vw;
-    padding: 3%;
-    margin: 15% 15%;
-    position: absolute;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-                rgba(0, 0, 0, 0.09) 0px -3px 5px; 
-}
-.alert{
-    color: red;
-    margin: auto;
-    display: block;
+h3{
+text-align: center;
 }
 
-
-button,textarea,input{
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;}
-
-button{
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-    font-weight: bolder;
-    cursor: pointer;
-    float: right;
-    text-decoration: underline 0.1rem;
-    margin: 1rem 1rem;
-    color: rgb(22, 4, 40);
-}
-button:hover{
-    
-    font-size: 1.2rem;
-    z-index: 1;
-    
-}
-label{
-    color: rgb(203, 128, 35);
-}
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-input[type=password],
-
-textarea {
-        border:solid rgb(175, 168, 76) .1rem;
-        height: 5vh;
-        padding: .5rem 1.75rem;
-        margin-top: 0.7rem;
-        margin-bottom: 0.7rem;
-        position: relative;
-        width: 100%;
-           
-    }
-select{
-    border:solid rgb(175, 168, 76) .1rem;
-    height: 5vh;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-    position: relative;
-    width: 100%;
-
-}
-  
-
-input:hover,
-select:hover,
-textarea:hover{
-    filter: brightness(1.4);
-    background: linear-gradient(90deg, rgba(170, 101, 131, 0.442) 0%, rgba(182, 233, 148, 0.626) 100%);
-} 
-
-@media screen and (max-width: 768px) {
-    .formdiv{
-        width:70vw
-    }
-
-}
-  
-  @media screen and (max-width: 480px) {
-    .formdiv{
-        width:80vw;
-        margin: 5% 2%;
-    }
-    
-   
-  }
-  
- */
-/* Form container */
 .formdiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 60%; */
+   
     padding: 20px;
   }
+  .header{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3%;
+  }
   .nameinfo{
+    display: inline;
     display: flex;
-    flex-direction: column;
-
+   align-items: flex-start;
   }
-
-  #fname,#lname{
-    
-    /* flex-flow: column; */
-    /* width: 50%; */
-  }
-  /* Form */
   form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
     height: 100%;
     max-width: 700px;
     width: 100%;
     padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
   
-  /* Form inputs */
   input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
     padding: 10px;
     border-radius: 5px;
@@ -151,26 +35,28 @@ textarea:hover{
   
   input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus {
     outline: none;
-    border: 1px solid #4CAF50;
+    border: 1.5px solid #a2c4ad;
   }
   
-  /* Form labels */
+ 
   label {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
     color: #333;
+
   }
   
-  /* Form alerts */
+ 
   .alert {
     color: #f44336;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin: 0px;
+    margin-top: -15px;
+
   }
-  
-  /* Verify email button */
-  button[type="button"], button[type="submit"] {
+
+ .submitbtn {
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 16px;
@@ -181,43 +67,21 @@ textarea:hover{
     margin-bottom: 15px;
   }
   
-  button[type="button"]:hover, button[type="submit"]:hover {
+   .submitbtn:hover {
     background-color: #3e8e41;
   }
   
-  button[type="submit"]:disabled {
+  .submitbtn:disabled {
     background-color: #ccc;
     cursor: default;
   }
-  
-  /* Password alerts */
+
   .password-alert {
     color: #f44336;
     font-size: 14px;
     margin-top: 5px;
   }
   
-  /* Submit button */
-  .submit-button {
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    cursor: pointer;
-    margin-top: 30px;
-  }
-  
-  .submit-button:hover {
-    background-color: #3e8e41;
-  }
-  
-  .submit-button:disabled {
-    background-color: #ccc;
-    cursor: default;
-  }
-/* Form inputs container */
 .formdiv form > div {
     display: flex;
     flex-direction: column;
@@ -225,10 +89,11 @@ textarea:hover{
     justify-content: center;
     height: 100%;
   }
-  
-  /* Form input elements */
+
   .formdiv form > div > * {
     width: 100%;
     max-width: 400px;
   }
+
+
     

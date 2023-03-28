@@ -24,6 +24,8 @@
     "bootstrap-icons": "^1.10.3",
     "flaticon": "^0.1.0",
     "font-awesome": "^4.7.0",
+    "ng-otp-input": "^1.8.5",
+    "ngx-otp-input": "^0.11.4",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

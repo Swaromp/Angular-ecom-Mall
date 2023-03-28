@@ -39,6 +39,8 @@ import { EmifilterPipe } from './pipes/emifilter.pipe';
 import { DelPipe } from './pipes/del.pipe';
 import { LoginpageComponent } from './home/loginpage/loginpage.component';
 import {HttpClientModule} from '@angular/common/http'
+import { NgOtpInputModule } from  'ng-otp-input';
+
 
 @NgModule({
   declarations: [
@@ -81,8 +83,8 @@ import {HttpClientModule} from '@angular/common/http'
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    // MatBadgeModule,
-    // FontAwesomeModule
+    NgOtpInputModule,
+    
   ],
   providers: [ComparedataService],
   bootstrap: [AppComponent]

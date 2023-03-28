@@ -12,14 +12,15 @@ import { Router } from '@angular/router';
 export class LoginpageComponent implements OnInit {
 
   form1!: FormGroup; 
+  otpform!: FormGroup;
   pass: boolean = false;
   valid:boolean = true;
+  otpsend: boolean = false;
 
   private url = 'http://localhost:3000/api/send-otp';
 
-  constructor(private fb: FormBuilder, private rout: Router, private http: HttpClient){ 
-   
-    
+  constructor(private fb: FormBuilder, private rout: Router, private http: HttpClient){
+
   }
   
   ngOnInit(){
@@ -29,7 +30,10 @@ export class LoginpageComponent implements OnInit {
       email: ['', [Validators.required , Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)]], 
       password: ['', [Validators.required, Validators.minLength(6)]],
       cpassword: ['', [Validators.required, Validators.minLength(6)]],
-      otp: ['', [Validators.required, Validators.minLength(6)]]
+      
+    })
+    this.otpform = this.fb.group({
+      otp: ['']
     })
   }
   
@@ -39,14 +43,18 @@ export class LoginpageComponent implements OnInit {
     this.http.post('http://localhost:3000/api/send-otp', { email }).subscribe(
       (response) => {
         console.log(response);
+        this.otpsend=true
       },
       (error) => {
         console.log(error);
       }
     );
   }
-  verifyOtp() {
-    const otp = this.form1.controls['otp'].value;
+
+
+  
+  onOtpChange(event: any) {
+    const otp = event;
     this.http.post('http://localhost:3000/api/verify-otp', { otp }).subscribe(
       (response) => {
         console.log(response);
@@ -55,7 +63,7 @@ export class LoginpageComponent implements OnInit {
         console.log(error);
       }
     );
-  }
+   }
 
 local(){
 //   if (this.form1.controls['password'].value == this.form1.controls['cpassword'].value) {
