@@ -21,6 +21,8 @@ import { SortByPropertyPipe } from './pipes/sortby.pipe';
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
+import { AddNewDeciceComponent } from './add-new-decice/add-new-decice.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { TotalAmountPipe } from './pipes/total-amount.pipe';
     SortByPropertyPipe,
     KartComponent,
     AddToKartComponent,
-    TotalAmountPipe
+    TotalAmountPipe,
+    AddNewDeciceComponent
   ],
   imports: [
     BrowserModule,
