@@ -130,7 +130,6 @@ export class SMenuComponent implements OnInit {
   }
 
   wishlist(value: any) {
-    debugger
     this.wisharray.push(value)   
     console.log('From SMenu',this.wisharray)
     localStorage.setItem('array',JSON.stringify(this.wisharray))

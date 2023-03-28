@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
-
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,8 +15,9 @@ export class LoginpageComponent implements OnInit {
   pass: boolean = false;
   valid:boolean = true;
 
+  private url = 'http://localhost:3000/api/send-otp';
 
-  constructor(private fb: FormBuilder, private rout: Router) { 
+  constructor(private fb: FormBuilder, private rout: Router, private http: HttpClient){ 
    
     
   }
@@ -25,21 +26,43 @@ export class LoginpageComponent implements OnInit {
     this.form1= this.fb.group({
       fname:['', [Validators.required, Validators.minLength(4) ]],
       lname:['', [Validators.required, Validators.minLength(4) ]],
-      mail: ['', [Validators.required , Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)]], 
+      email: ['', [Validators.required , Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)]], 
       password: ['', [Validators.required, Validators.minLength(6)]],
-      cpassword: ['', [Validators.required, Validators.minLength(6)]]
+      cpassword: ['', [Validators.required, Validators.minLength(6)]],
+      otp: ['', [Validators.required, Validators.minLength(6)]]
     })
   }
   
 
-
+  sendotp() {
+    const email = this.form1.controls['email'].value;
+    this.http.post('http://localhost:3000/api/send-otp', { email }).subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  verifyOtp() {
+    const otp = this.form1.controls['otp'].value;
+    this.http.post('http://localhost:3000/api/verify-otp', { otp }).subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 
 local(){
-  if (this.form1.controls['password'].value == this.form1.controls['cpassword'].value) {
-   this.rout.navigate(['details']) 
-  } else {
-    this.pass=true  
-  }
+//   if (this.form1.controls['password'].value == this.form1.controls['cpassword'].value) {
+//    this.rout.navigate(['details']) 
+//   } else {
+//     this.pass=true  
+//   }
 }
  
 }

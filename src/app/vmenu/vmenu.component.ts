@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges , ChangeDetectorRef  } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/forms';
 import { FetchService } from '../services/fetch.service';
 // import { ShareService } from '../share.service';
@@ -21,7 +21,7 @@ export class VmenuComponent implements OnInit {
   sliderValue: any;
 
 
-  constructor(private fb: FormBuilder, private fetch1: FetchService) {
+  constructor(private fb: FormBuilder, private fetch1: FetchService , private cdr: ChangeDetectorRef) {
     this.createForm();
   }
 
@@ -61,11 +61,13 @@ export class VmenuComponent implements OnInit {
     
     [this.minValue, this.maxValue] = this.updateMinMaxValues(this.minValue, this.maxValue);
     this.fetch1.subject.next(this.f1.controls['fa1'].value);
+    this.cdr.detectChanges(); 
   }
 
   onMaxValueChange() {
     [this.minValue, this.maxValue] = this.updateMinMaxValues(this.minValue, this.maxValue);
     this.fetch1.subject1.next(this.f1.controls['fa2'].value);
+    this.cdr.detectChanges(); 
   }
 
   onOfferchange() {

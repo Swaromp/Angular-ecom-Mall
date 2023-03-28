@@ -38,6 +38,7 @@ import { DownPipe } from './pipes/down.pipe';
 import { EmifilterPipe } from './pipes/emifilter.pipe';
 import { DelPipe } from './pipes/del.pipe';
 import { LoginpageComponent } from './home/loginpage/loginpage.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { LoginpageComponent } from './home/loginpage/loginpage.component';
 
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
