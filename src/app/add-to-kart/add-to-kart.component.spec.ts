@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComparemobileComponent } from './comparemobile.component';
+import { AddToKartComponent } from './add-to-kart.component';
 
-describe('ComparemobileComponent', () => {
-  let component: ComparemobileComponent;
-  let fixture: ComponentFixture<ComparemobileComponent>;
+describe('AddToKartComponent', () => {
+  let component: AddToKartComponent;
+  let fixture: ComponentFixture<AddToKartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComparemobileComponent ]
+      declarations: [ AddToKartComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComparemobileComponent);
+    fixture = TestBed.createComponent(AddToKartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,119 +1,28 @@
-<!-- 
-  <div class="container">
-    <div class="row">
-      <div class="col-2" ></div>
-      <div class="col-4">
-        <div class="form-group">
-          <label for="mobilename">Device 1</label>
-          <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
-          <datalist id="mobilename">
-            <option *ngFor="let device of searchResults">{{device.name}}</option>
-          </datalist>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="form-group">
-          <label for="mobilename2">Device 2</label>
-          <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
-          <datalist id="mobilename2">
-            <option *ngFor="let device of searchResults2">{{device.name}}</option>
-          </datalist>
-        </div>
-      </div>
-    </div>
-  
-    <div class="row content-div" *ngIf="searchResults || searchResults2">
-      <div class="col-2">
-        <div class="card">
-          <div class="compare-image">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Name :</h5>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Price :</li >
-                <li class="list-group-item" >Storage 1 :</li >
-                <li class="list-group-item">Storage 2 :</li >
-                <li class="list-group-item" >Processor :</li >
-                <li class="list-group-item" >Camera 1 :</li >
-                <li class="list-group-item">Camera 2 :</li >
-                <li class="list-group-item" >Display :</li >
-                <li class="list-group-item" >Battery :</li >
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-4" *ngIf="searchResults">
-        <div class="card">
-          <div class="compare-image">
-          <img src="{{ searchResults[0].img }}" alt="Device 1" >
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{ searchResults[0].name |shorten }}</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{ searchResults[0].price }}</li>
-              <li class="list-group-item">{{ searchResults[0].storage1 }}</li>
-              <li class="list-group-item">{{ searchResults[0].storage2 }}</li>
-              <li class="list-group-item">{{ searchResults[0].processor }}</li>
-              <li class="list-group-item">{{ searchResults[0].camera1 }}</li>
-              <li class="list-group-item">{{ searchResults[0].camera2 }}</li>
-              <li class="list-group-item">{{ searchResults[0].display }}</li>
-              <li class="list-group-item">{{ searchResults[0].battery }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-4" *ngIf="searchResults2">
-        <div class="card">
-          <div class="compare-image">
-          <img src="{{ searchResults2[0].img }}" alt="Device 2">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{ searchResults2[0].name | shorten}}</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{ searchResults2[0].price }}</li>
-              <li class="list-group-item">{{ searchResults2[0].storage1 }}</li>
-              <li class="list-group-item">{{ searchResults2[0].storage2 }}</li>
-              <li class="list-group-item">{{ searchResults2[0].processor }}</li>
-              <li class="list-group-item">{{ searchResults2[0].camera1 }}</li>
-              <li class="list-group-item">{{ searchResults2[0].camera2 }}</li>
-              <li class="list-group-item">{{ searchResults2[0].display }}</li>
-              <li class="list-group-item">{{ searchResults2[0].battery }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-   -->
 
-<div class =fullpage>
+
+<div class ="fullpage" >
    <div class="container-fluid ">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label for="mobilename">Device 1</label>
-          <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
-          <datalist id="mobilename">
-            <option *ngFor="let device of searchResults">{{device.name}}</option>
-          </datalist>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label for="mobilename2">Device 2</label>
-          <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
-          <datalist id="mobilename2">
-            <option *ngFor="let device of searchResults2">{{device.name}}</option>
-          </datalist>
-        </div>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
 
-    <div class="table-responsive" *ngIf="searchResults && searchResults2">
+    <div class="table-responsive table1" *ngIf="searchResults && searchResults2">
       <table class="table table-bordered">
         <thead>
+          <tr>
+            <th></th>
+            <th> <div class="form-group">
+              <label for="mobilename">Device 1</label>
+              <input list="mobilename" [(ngModel)]="searchQuery" (ngModelChange)="searchDevices(searchQuery)" class="form-control">
+              <datalist id="mobilename">
+                <option *ngFor="let device of searchResults">{{device.name}}</option>
+              </datalist>
+            </div></th>
+            <th><div class="form-group">
+              <label for="mobilename2">Device 2</label>
+              <input list="mobilename2" [(ngModel)]="searchQuery2" (ngModelChange)="searchDevices2(searchQuery2)" class="form-control">
+              <datalist id="mobilename2">
+                <option *ngFor="let device of searchResults2">{{device.name}}</option>
+              </datalist>
+            </div></th>
+          </tr>
           <tr>
             <th></th>
             <th> <div class="compare-image">
@@ -173,6 +82,5 @@
         </tbody>
       </table>
     </div>
-   </div>    
-     
+   </div>      
 </div>

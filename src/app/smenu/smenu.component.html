@@ -30,8 +30,8 @@
           <ul class="sort">
             <li class="sort1"><a>sort by</a></li>
             <li class="sort1"><a href="">relevance</a></li>
-            <li class="sort1"><a (click)="sortA()">price high to low</a></li>
-            <li class="sort1"><a (click)="sortB()">price low to high</a></li>
+            <li class="sort1"><a (click)="sortA()" *ngIf="order1">price high to low</a></li>
+            <li class="sort1"><a (click)="sortB()" *ngIf="order">price low to high</a></li>
           </ul>
         </div>
         <div class="col-md-3">
@@ -55,7 +55,8 @@
               </a>
             </div>
             <div class="col-md-4">
-              <button class="compare" >Compare</button>
+              <button class="compare" (click)="compare1()">Compare</button>
+              <button class="compare" (click)="redirectToCompare()">Compare ALl</button>
             </div>
           </div>
         </div>
@@ -68,65 +69,68 @@
 
       <!-- *****LIST VIEW***** -->
       <div class="mview1" *ngIf="lview">
-        <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l;"  (click)="redirectToDetails(x)">
-          <!-- {{'#id : '+x.im}} -->
+        <div class="card mb-3" style="max-width: 70rem;" *ngFor="let x of sel | pricefilter:h :l | offer: o | down: d | emifilter: he :le | del: d_flag">
           <div class="row g-0">
             <div class="col-md-4">
             </div>
-            <!-- </a> -->
-            <div class="row g-0">
-              
-              <div class="col-md-4">
-                <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" class="a">
-                <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start">
-                </a>
-              </div>
-              
-              <div class="col-md-4">
-                <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" class="a">
-                <div class="card-body">
-                  <h5 class="card-title">{{x.n}}</h5>
-                  <div class="card-text" class="txt">{{x.text}}<br><br>
-                    <ul>
-                      <li>Operating System: Android 11</li>
-                      <li>Processor: Qualcomm Snapdragon 680 Processor</li>
-                      <li>Primary Camera: 64 MP + 2 MP + 2 MP</li>
-                      <li>Secondary Camera: 32 MP</li>
-                      <li>Display Size: 6.43 inch</li>
-                      <li>Battery Capacity: 4500 mAh</li>
-                    </ul>
-                  </div>
-                </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a [routerLink]="['/vivo1']" routerLinkActive="router-link-active" class="a">
-                <div class="row g-1">
-                  <div class="card-body">
-                    <h5 class="card-title">Price</h5>
-                    <p class="card-text"><b>₹{{x.price}}</b></p>
-                  </div>
-                </div>
-                <div class="row g-1">
-                  <div class="card-body">
-                    <div class="col-md-3">
-                      <p class="card-text txt">No cost EMI</p>
-                    </div>
-                    <div class="col-md-4">
-                      <p class="card-text txt" style="color:grey;">Starting from</p>
-                    </div>
-                    <div class="col-md-5">
-                      <b style="font-size: 22px;">₹{{x.price/9 | number: '1.0-0'}}</b><div class="txt">/month</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);">
-                  Delivery in 4-5 days
-                </div>
-                </a>
-              </div>
+            <div class="col-md-4">
+              <img src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/april-22/plp-header/Zero-DP.svg" *ngIf="x.dp" style="padding-top: 5%; padding-left: 5%;">
+            </div>
+            <div class="col-md-4">
+              <img src="../assets/fav.svg" width="20px" height="20px" style="float: right; margin: 5px; z-index: 10;" *ngIf="!x.fav" class="favbutton" (click)="wishlist(x)">
+              <img src="../assets/fav_red.png" width="25px" height="25px" style="float: right; margin: 3px;" *ngIf="x.fav" class="favbutton" (click)="unwishlist(x)">
             </div>
           </div>
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="../assets/{{x.im}}.jpeg" class="img-fluid rounded-start" (click)="redirectToDetails(x)">
+              <button class="compare" *ngIf="c" (click)="CompareItem(x)">Compare This</button>
+            </div>
+            <div class="col-md-4" (click)="redirectToDetails(x)">
+              <div class="card-body">
+                <h5 class="card-title">{{x.n}}</h5>
+                <div class="card-text" class="txt">{{x.text}}<br><br>
+                  <ul>
+                    <li>Operating System: Android 11</li>
+                    <li>Processor: Qualcomm Snapdragon 680 Processor</li>
+                    <li>Primary Camera: 64 MP + 2 MP + 2 MP</li>
+                    <li>Secondary Camera: 32 MP</li>
+                    <li>Display Size: 6.43 inch</li>
+                    <li>Battery Capacity: 4500 mAh</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="row g-1">
+                <div class="card-body">
+                  <h5 class="card-title">Price</h5>
+                  <p class="card-text"><b>₹{{x.price}}</b></p>
+                </div>
+              </div>
+              <div class="row g-1">
+                <div class="card-body">
+                  <div class="col-md-3">
+                    <p class="card-text txt">No cost EMI</p>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="card-text txt" style="color:grey;">Starting from</p>
+                  </div>
+                  <div class="col-md-5">
+                    <b style="font-size: 22px;">₹{{x.price/9 | number: '1.0-0'}}</b><div class="txt">/month</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);" *ngIf="!x.del">
+                Delivery in 4-5 days
+              </div>
+              <div class="card-body row g-1 txt" style="color: rgb(0, 95, 196);" *ngIf="x.del">
+                Delivery in 1 day
+              </div>
+              <div class="card-body row g-1 txt" style="color:red" *ngIf="x.offer">Exciting Bank Offers ahead</div>
+            </div>
+          </div>
+
         </div>
 
 
@@ -170,14 +174,14 @@
                   <div class="card mb-3" style="max-width: 70rem;">
 
                       <div class="row g-0">
-                          <img src="../assets/{{prices[0].im}}.jpeg" class="img-fluid rounded-start">
+                          <img src="../assets/{{sel[0].im}}.jpeg" class="img-fluid rounded-start">
                           <div class="card-body">
-                            <h5 class="card-title">{{prices[0].n}}</h5>
+                            <h5 class="card-title">{{sel[0].n}}</h5>
 
                           </div>
                           <div class="card-body">
                             <h5 class="card-title">Price</h5>
-                            <p class="card-text"><b>₹{{prices[0].price}}</b></p>
+                            <p class="card-text"><b>₹{{sel[0].price}}</b></p>
                           </div>
                       </div>
                     </div>
@@ -190,14 +194,14 @@
                   <div class="card mb-3" style="max-width: 70rem;">
 
                       <div class="row g-0">
-                          <img src="../assets/{{prices[1].im}}.jpeg" class="img-fluid rounded-start">
+                          <img src="../assets/{{sel[1].im}}.jpeg" class="img-fluid rounded-start">
                           <div class="card-body">
-                            <h5 class="card-title">{{prices[1].n}}</h5>
+                            <h5 class="card-title">{{sel[1].n}}</h5>
 
                           </div>
                           <div class="card-body">
                             <h5 class="card-title">Price</h5>
-                            <p class="card-text"><b>₹{{prices[1].price}}</b></p>
+                            <p class="card-text"><b>₹{{sel[1].price}}</b></p>
                           </div>
                       </div>
                     </div>
@@ -209,14 +213,14 @@
                   <div class="card mb-3" style="max-width: 70rem;">
 
                       <div class="row g-0">
-                          <img src="../assets/{{prices[2].im}}.jpeg" class="img-fluid rounded-start">
+                          <img src="../assets/{{sel[2].im}}.jpeg" class="img-fluid rounded-start">
                           <div class="card-body">
-                            <h5 class="card-title">{{prices[2].n}}</h5>
+                            <h5 class="card-title">{{sel[2].n}}</h5>
 
                           </div>
                           <div class="card-body">
                             <h5 class="card-title">Price</h5>
-                            <p class="card-text"><b>₹{{prices[2].price}}</b></p>
+                            <p class="card-text"><b>₹{{sel[2].price}}</b></p>
                           </div>
                       </div>
                     </div>
@@ -228,14 +232,14 @@
                   <div class="card mb-3" style="max-width: 70rem;">
 
                       <div class="row g-0">
-                          <img src="../assets/{{prices[3].im}}.jpeg" class="img-fluid rounded-start">
+                          <img src="../assets/{{sel[3].im}}.jpeg" class="img-fluid rounded-start">
                           <div class="card-body">
-                            <h5 class="card-title">{{prices[3].n}}</h5>
+                            <h5 class="card-title">{{sel[3].n}}</h5>
 
                           </div>
                           <div class="card-body">
                             <h5 class="card-title">Price</h5>
-                            <p class="card-text"><b>₹{{prices[3].price}}</b></p>
+                            <p class="card-text"><b>₹{{sel[3].price}}</b></p>
                           </div>
                       </div>
                     </div>
@@ -249,14 +253,14 @@
                     <div class="card mb-3" style="max-width: 70rem;">
 
                         <div class="row g-0">
-                            <img src="../assets/{{prices[4].im}}.jpeg" class="img-fluid rounded-start">
+                            <img src="../assets/{{sel[4].im}}.jpeg" class="img-fluid rounded-start">
                             <div class="card-body">
-                              <h5 class="card-title">{{prices[4].n}}</h5>
+                              <h5 class="card-title">{{sel[4].n}}</h5>
 
                             </div>
                             <div class="card-body">
                               <h5 class="card-title">Price</h5>
-                              <p class="card-text"><b>₹{{prices[4].price}}</b></p>
+                              <p class="card-text"><b>₹{{sel[4].price}}</b></p>
                             </div>
                         </div>
                       </div>

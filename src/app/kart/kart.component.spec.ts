@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ScrollmenuComponent } from './scrollmenu.component';
+import { KartComponent } from './kart.component';
 
-describe('ScrollmenuComponent', () => {
-  let component: ScrollmenuComponent;
-  let fixture: ComponentFixture<ScrollmenuComponent>;
+describe('KartComponent', () => {
+  let component: KartComponent;
+  let fixture: ComponentFixture<KartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScrollmenuComponent ]
+      declarations: [ KartComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ScrollmenuComponent);
+    fixture = TestBed.createComponent(KartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
