@@ -22,6 +22,9 @@ import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
 import { AddNewDeciceComponent } from './add-new-decice/add-new-decice.component';
+import { HttpClientModule } from  '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -45,13 +48,19 @@ import { AddNewDeciceComponent } from './add-new-decice/add-new-decice.component
     KartComponent,
     AddToKartComponent,
     TotalAmountPipe,
-    AddNewDeciceComponent
+    AddNewDeciceComponent,
+
   ],
+
+
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     // FontAwesomeModule
   ],
   providers: [],
