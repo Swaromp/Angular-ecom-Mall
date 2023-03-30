@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -9,20 +8,19 @@ import { Router } from '@angular/router';
   templateUrl: './loginpage.component.html',
   styleUrls: ['./loginpage.component.css']
 })
-export class LoginpageComponent implements OnInit {
+export class LoginpageComponent implements OnInit  {
 
   form1!: FormGroup; 
   otpform!: FormGroup;
   pass: boolean = false;
   valid:boolean = true;
   otpsend: boolean = false;
-
+  otpvalidate: boolean = false;
+  button: boolean = false;
   private url = 'http://localhost:3000/api/send-otp';
-
-  constructor(private fb: FormBuilder, private rout: Router, private http: HttpClient){
-
-  }
-  
+  name: any;
+  username: any;
+  constructor(private fb: FormBuilder, private rout: Router, private http: HttpClient){}
   ngOnInit(){
     this.form1= this.fb.group({
       fname:['', [Validators.required, Validators.minLength(4) ]],
@@ -35,12 +33,19 @@ export class LoginpageComponent implements OnInit {
     this.otpform = this.fb.group({
       otp: ['']
     })
+    
+    this.name=this.form1.controls['fname'].value
+    this.username = localStorage.getItem('name')
+    this.username=JSON.parse(this.username)
+if(!localStorage){
+  this.otpvalidate=false
+}
   }
-  
 
   sendotp() {
+  
     const email = this.form1.controls['email'].value;
-    this.http.post('http://localhost:3000/api/send-otp', { email }).subscribe(
+    this.http.post('http://localhost:4321/api/send-otp', { email }).subscribe(
       (response) => {
         console.log(response);
         this.otpsend=true
@@ -50,27 +55,25 @@ export class LoginpageComponent implements OnInit {
       }
     );
   }
-
-
-  
+ 
   onOtpChange(event: any) {
     const otp = event;
-    this.http.post('http://localhost:3000/api/verify-otp', { otp }).subscribe(
+    this.http.post('http://localhost:4321/api/verify-otp', { otp }).subscribe(
       (response) => {
         console.log(response);
+        this.otpvalidate=true
+        this.http.post("http://localhost:3000/userdata" , this.form1.value).subscribe((response1)=>{
+      console.log(response1);
+      localStorage.setItem('name', JSON.stringify(this.form1.controls['fname'].value))
+    })
       },
       (error) => {
         console.log(error);
       }
     );
    }
-
-local(){
-//   if (this.form1.controls['password'].value == this.form1.controls['cpassword'].value) {
-//    this.rout.navigate(['details']) 
-//   } else {
-//     this.pass=true  
-//   }
-}
- 
+ clear(){
+  localStorage.clear()
+  this.otpvalidate=false
+ }
 }

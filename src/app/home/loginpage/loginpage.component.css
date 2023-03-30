@@ -1,7 +1,9 @@
 h3{
 text-align: center;
 }
-
+::ng-deep .modal-backdrop{
+  z-index: -1 !important;
+}
 .formdiv {
    
     padding: 20px;
@@ -55,7 +57,9 @@ text-align: center;
     margin-top: -15px;
 
   }
-
+.otpvalidation{
+  text-align: center;
+}
  .submitbtn {
     padding: 10px 15px;
     border-radius: 5px;
