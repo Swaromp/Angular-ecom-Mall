@@ -82,23 +82,30 @@ export class Vivo1Component implements OnInit {
 
   ];
   images8=[
-    'https://www.91-img.com/gallery_images_uploads/f/a/fa2ec7e1dc36b202031a0240b2ddb8583dab4ff9.jpg?tr=h-550,w-0,c-at_max',
+    'https://www.91-img.com/gallery_images_uploads/f/a/fa2ec7e1dc36b202031a0240b2ddb8583dab4ff9.jpg?tr=h-550,w-0,-at_max',
     'https://www.91-img.com/gallery_images_uploads/c/3/c3828acb46e4c776dc70e0e13b9d48bace15ee68.jpg?tr=h-550,w-0,c-at_max',
     'https://www.91-img.com/gallery_images_uploads/1/7/1702ab7260d64369108dc5b4ace522b282853ca8.jpg?tr=h-550,w-0,c-at_max',
 
   ];
   images9=[
-    'https://static.toiimg.com/thumb/resizemode-4,msid-80635321,imgsize-200,width-600,imgv-2/80635321.jpg',
-    'https://static.toiimg.com/thumb/resizemode-4,msid-94062364,imgsize-200,width-600,imgv-2/94062364.jpg',
-    'https://static.toiimg.com/thumb/resizemode-4,msid-94062365,imgsize-200,width-600,imgv-2/94062365.jpg'
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/17235-153-4.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/17235-153-5.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/18376-48-1.jpg'
 
   ];
   images10=[
-    'https://cdn1.smartprix.com/rx-iy7cT7S94-w420-h420/asus-rog-phone-6.webp',
-    'https://www.smartprix.com/ui/img/specs/pd1y1l8de59?v=1rejt0p',
-    'https://cdn1.smartprix.com/rx-ieUXUthmn-w420-h420/asus-rog-phone-6.webp'
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/17661-206-1.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/17661-206-2.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/17661-206-3.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/17661-206-4.jpg',
 
   ];
+  images11=[
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/21302-43-1.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/21302-43-2.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/21302-43-3.jpg',
+    'https://assets.mspimages.in/c/tr:w-600,h-470,c-at_max/21302-43-5.jpg',
+  ]
 
 
 
@@ -184,6 +191,10 @@ export class Vivo1Component implements OnInit {
       this.device=this.device_id[10]
       this.photos=this.images10
     }
+    else if (this.key1==12){
+      this.device=this.device_id[11]
+      this.photos=this.images11
+    }
     this.selectedImage = this.photos[0];
   }
 
@@ -199,6 +210,7 @@ export class Vivo1Component implements OnInit {
              {im:'iphone13promax',name:'i phone 13 pro max',price:113990,storage1:'128',storage2:'256',processor:'Apple A15 Bionic (5 nm)',camera1:'64 MP + 2 MP + 2 MP', camera2:'12 MP', Display:'6.43 inch',battery:'4500 mAh'},
              {im:'iphone14promax',name:'i phone 14 pro max',price:136590,storage1:'128',storage2:'256',processor:'Apple A16 Bionic (5 nm)',camera1:'64 MP + 2 MP + 2 MP', camera2:'12 MP', Display:'6.43 inch',battery:'4500 mAh'},
              {im:'rog1',name:'ASUS rog phone 6 pro 5G',price:89990,storage1:'128',storage2:'256',processor:'snapdragon 8gen1',camera1:'64 MP + 2 MP + 2 MP', camera2:'34 MP', Display:'6.43 inch',battery:'4500 mAh'},
+             {im:'iqoo1',name:'iQOO Neo 7',price:89990,storage1:'128',storage2:'256',processor:'snapdragon 8gen1',camera1:'64 MP + 2 MP + 2 MP', camera2:'34 MP', Display:'6.43 inch',battery:'4500 mAh'},
             ]
 
 
