@@ -19,11 +19,6 @@ import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
 
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
-
-import { KartComponent } from './kart/kart.component';
-import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
-import { TotalAmountPipe } from './pipes/total-amount.pipe';
-
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatBadgeModule } from '@angular/material/badge'
@@ -37,7 +32,9 @@ import { OfferPipe } from './pipes/offer.pipe';
 import { DownPipe } from './pipes/down.pipe';
 import { EmifilterPipe } from './pipes/emifilter.pipe';
 import { DelPipe } from './pipes/del.pipe';
-import { LoginpageComponent } from './home/loginpage/loginpage.component';
+import { KartComponent } from './kart/kart.component';
+import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
+import { TotalAmountPipe } from './pipes/total-amount.pipe';
 import {HttpClientModule} from '@angular/common/http'
 import { NgOtpInputModule } from  'ng-otp-input';
 
@@ -60,11 +57,9 @@ import { NgOtpInputModule } from  'ng-otp-input';
     Card1Component,
     Vivo1Component,
     SortByPropertyPipe,
-
     KartComponent,
     AddToKartComponent,
     TotalAmountPipe,
-
     WishlistComponent,
     ComparemobileComponent,
     FilterPipe,
@@ -73,8 +68,9 @@ import { NgOtpInputModule } from  'ng-otp-input';
     DownPipe,
     EmifilterPipe,
     DelPipe,
-    LoginpageComponent
-
+    KartComponent,
+    AddToKartComponent,
+    TotalAmountPipe,
   ],
   imports: [
     HttpClientModule,
@@ -84,7 +80,6 @@ import { NgOtpInputModule } from  'ng-otp-input';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgOtpInputModule,
-    
   ],
   providers: [ComparedataService],
   bootstrap: [AppComponent]

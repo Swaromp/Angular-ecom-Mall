@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FetchService } from '../services/fetch.service';
 import { Router } from '@angular/router';
+
 // import { ShareService } from '../share.service';
 
 
@@ -26,6 +27,7 @@ export class SMenuComponent implements OnInit {
   le: any
   he: any
   d_flag:any
+  new: any
 
   wisharray : any[]=[];
   c: boolean = false;
@@ -99,6 +101,9 @@ export class SMenuComponent implements OnInit {
       this.d_flag=data
     })
 
+   
+
+
     this.key = this.route.snapshot.paramMap.get("id")
 
     if (this.key == 1) {
@@ -110,7 +115,7 @@ export class SMenuComponent implements OnInit {
       this.sel = this.prices2;
     }
 
-
+    
   }
   redirectToDetails(value:any){
     this.router.navigate(['/vivo1',value.id1])
@@ -154,6 +159,8 @@ export class SMenuComponent implements OnInit {
     console.log(this.compareURL)
     this.router.navigate(['/compare',this.compareURL])
   }
+
+
 }
 
 

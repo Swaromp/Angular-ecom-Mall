@@ -15,13 +15,11 @@ const routes: Routes = [
   { path:'smenu/:id', component: SMenuComponent},
   { path:'vivo1/:id1', component: Vivo1Component},
 
-  { path: 'kart', component:KartComponent},
-  { path: 'add-to-kart', component:AddToKartComponent},
-
   { path:'wishlist', component: WishlistComponent},
 
-  {path: 'compare/:id2', component: ComparemobileComponent}
-
+  {path: 'compare/:id2', component: ComparemobileComponent},
+  { path: 'kart', component:KartComponent},
+  { path: 'add-to-kart', component:AddToKartComponent}
 ];
 
 @NgModule({

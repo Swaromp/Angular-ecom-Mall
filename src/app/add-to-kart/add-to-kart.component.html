@@ -16,7 +16,6 @@
     <div>
       <div><img [src]=""></div>
       <div>
-        <div><img src="../assets/{{data.im}}.jpeg"> </div>
         <div><p >Product Name: {{data.name}}</p></div>
         <div><p >Product MRP: ₹{{data.price}}</p></div>
       </div>
@@ -33,7 +32,7 @@
         <span class="card-title">Delivery charges: ₹400</span>
         <hr>
         <span class="card-text">Total Amount: ₹{{data.price | totalAmount}}</span>
-        <div><button type="button" class="btn btn-outline-warning"  style="width: 100%;" routerLink="/kart" routerLinkActive="active">BUY NOW</button></div>
+        <div><button type="button" class="btn btn-outline-warning"  style="width: 100%;">BUY NOW</button></div>
       </div>
     </div>
   </div>

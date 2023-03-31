@@ -30,8 +30,8 @@
           <ul class="sort">
             <li class="sort1"><a>sort by</a></li>
             <li class="sort1"><a href="">relevance</a></li>
-            <li class="sort1"><a (click)="sortA()" *ngIf="order1">price high to low</a></li>
-            <li class="sort1"><a (click)="sortB()" *ngIf="order">price low to high</a></li>
+            <li class="sort1" *ngIf="order1"><a (click)="sortA()">price high to low</a></li>
+            <li class="sort1"  *ngIf="order"><a (click)="sortB()">price low to high</a></li>
           </ul>
         </div>
         <div class="col-md-3">
@@ -310,6 +310,8 @@
 
     <!-- **FAQ Component** -->
     <app-faq></app-faq>
+
+
 
 
   </div>
