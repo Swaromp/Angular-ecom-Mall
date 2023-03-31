@@ -101,11 +101,8 @@ export class SMenuComponent implements OnInit {
       this.d_flag=data
     })
 
-    this.fetch1.subject7.subscribe((data: any)=>{
-      this.new=data
-    })
+   
 
-    this.prices.push(this.new)
 
     this.key = this.route.snapshot.paramMap.get("id")
 
@@ -164,9 +161,7 @@ export class SMenuComponent implements OnInit {
     this.router.navigate(['/compare',this.compareURL])
   }
 
-  remove() {
-    delete this.sel[5]
-  }
+
 }
 
 
