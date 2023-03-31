@@ -36,7 +36,7 @@ import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
 import {HttpClientModule} from '@angular/common/http'
-import { NgOtpInputModule } from  'ng-otp-input';
+import { NgOtpInputComponent, NgOtpInputModule } from 'ng-otp-input';
 
 
 @NgModule({
@@ -79,7 +79,7 @@ import { NgOtpInputModule } from  'ng-otp-input';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    NgOtpInputModule,
+    NgOtpInputModule
   ],
   providers: [ComparedataService],
   bootstrap: [AppComponent]

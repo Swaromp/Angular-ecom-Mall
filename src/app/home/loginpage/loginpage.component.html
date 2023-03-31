@@ -9,7 +9,7 @@
             <div class="">
                 <h3> Sign-Up</h3>
                 <div class="formdiv">
-                    <form  [formGroup]="form1" *ngIf="!otpsend">
+                    <form  formGroup="form1" *ngIf="!otpsend">
                         <div class="nameinfo">
                             <label for="fname">Name: </label>
                             <input type="text" id="fname" formControlName="fname" placeholder="First Name">
@@ -52,7 +52,8 @@
                     <div class="otpvalidation">
                     <div  *ngIf="otpsend && !otpvalidate">
                         <p> Hi <b>{{ this.form1.controls['fname'].value }}</b> Enter otp reviced on <b>{{ this.form1.controls['email'].value }}</b> </p>
-                    <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input>
+                    <!-- <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input> -->
+                    
                     
                     </div>
                     <div  *ngIf="otpvalidate" >
