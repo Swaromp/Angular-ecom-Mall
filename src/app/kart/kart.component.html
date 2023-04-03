@@ -2,20 +2,20 @@
   <div class="col-md-1"></div>
   <div class="col-md-7">
     <div class="font11"><img src="https://cdn-icons-png.flaticon.com/512/3737/3737151.png" width="4%">CART</div>
-
     <hr>
-
     <div>
       <div><img [src]=""></div>
       <div>
         <div><img src="../assets/{{data.im}}.jpeg"> </div>
-        <div><p >product name: {{data.name}}</p></div>
-        <div><p >product MRP: ₹{{data.price}}</p></div>
-        <!-- <div>delivery expected date</div> -->
+        <div>
+          <p>product name: {{data.name}}</p>
+        </div>
+        <div>
+          <p>product MRP: ₹{{data.price}}</p>
+        </div>
       </div>
     </div>
   </div>
-
   <div class="col-md-3">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
@@ -26,7 +26,8 @@
         <span class="card-title">Delivery charges: ₹400</span>
         <hr>
         <span class="card-text">Total Amount: ₹{{data.price | totalAmount}}</span>
-        <div><button type="button" class="btn btn-outline-warning"  style="width: 100%;" routerLink="/delivery-status" routerLinkActive="delivery-status">Check Out</button></div>
+        <div><button type="button" class="btn btn-outline-warning" style="width: 100%;" routerLink="/delivery-status"
+            routerLinkActive="delivery-status">Check Out</button></div>
       </div>
     </div>
   </div>

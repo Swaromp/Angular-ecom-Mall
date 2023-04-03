@@ -21,32 +21,19 @@
 
     <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png" width="18%" class="imgpsoiton">
     <div class='main-content'>
-      <div>
 
-      </div>
       <h5>Order Delivery Status</h5>
       <div>
         <div class="delivery-bar">
-          <div class="delivery-step active">
-            <div class="step-number">1</div>
-            <div class="step-name">Order Placed</div>
-          </div>
-          <div class="delivery-step">
-            <div class="step-number">2</div>
-            <div class="step-name">Shipped</div>
-          </div>
-          <div class="delivery-step">
-            <div class="step-number">3</div>
-            <div class="step-name">Out for Delivery</div>
-          </div>
-          <div class="delivery-step">
-            <div class="step-number">4</div>
-            <div class="step-name">Delivered</div>
+          <div class="delivery-step" *ngFor="let step of deliverySteps; let i = index"
+            [ngClass]="{ active: i === activeStep }">
+            <div class="step-number">{{i+1}}</div>
+            <div class="step-name">{{step}}</div>
           </div>
         </div>
-
+        <button (click)="goToNextStep()" class='btn2'>Next Step</button>
+        <div class='btn3' *ngIf="activeStep === deliverySteps.length - 1">Thank you for shopping!</div>
       </div>
-      <div class="btn2"> <button class='cta-btn alt-btn'>To Know More</button> </div>
     </div>
   </div>
 </div>

@@ -1,53 +1,54 @@
 <div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-10">
-  <form [formGroup]="myForm!" (ngSubmit)="onSubmit()" class="a1a">
-    <div class="a2a">
-      <label for="name">Name:</label>
-      <input type="text" id="name" formControlName="name" placeholder="device name" required minlength="1" maxlength="250" >
-    </div>
-    <div class="a3a">
-      <label for="price">price:</label>
-      <input type="text"  formControlName="price" placeholder="device peice"required minlength="1" maxlength="250">
-    </div>
-    <div class="a4a">
-      <label for="storage1">storage1:</label>
-      <input type="text" formControlName="storage1" placeholder="storage1" required minlength="1" maxlength="250">
-    </div>
-    <div class="a5a">
-      <label for="storage2">storage2:</label>
-      <input type="text" formControlName="storage2" placeholder="storage2" required minlength="1" maxlength="250">
-    </div>
-    <div class="a6a">
-      <label for="processor">processor:</label>
-      <input type="text" formControlName="processor" placeholder="processor" required minlength="1" maxlength="250">
-    </div>
-    <div class="a7a">
-      <label for="camera1">camera1:</label>
-      <input type="text" formControlName="camera1" placeholder="camera1" required minlength="1" maxlength="250">
-    </div>
-    <div class="a8a">
-      <label for="camera2">camera2:</label>
-      <input type="text" formControlName="camera2" placeholder="camera2" required minlength="1" maxlength="250">
-    </div>
-    <div class="a9a">
-      <label for="Display">Display:</label>
-      <input type="text" formControlName="Display" placeholder="dispaly" required minlength="1" maxlength="250">
-    </div>
-    <div class="a10a">
-      <label for="battery">battery:</label>
-      <input type="text" formControlName="battery" placeholder="battery" required minlength="1" maxlength="250" >
-    </div>
-    <div class="a11a">
-      <label for="image">Image:</label>
-      <input type="file" id="image" (change)="onFileSelected($event)" >
-      <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image">
-    </div>
-    <button  class="a12a" type="submit" [disabled]="!myForm.valid">Submit</button>
-  </form>
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <form [formGroup]="myForm!" (ngSubmit)="onSubmit()" class="a1a">
+      <div class="a2a">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" placeholder="device name" required minlength="1"
+          maxlength="250">
+      </div>
+      <div class="a3a">
+        <label for="price">price:</label>
+        <input type="text" formControlName="price" placeholder="device peice" required minlength="1" maxlength="250">
+      </div>
+      <div class="a4a">
+        <label for="storage1">storage1:</label>
+        <input type="text" formControlName="storage1" placeholder="storage1" required minlength="1" maxlength="250">
+      </div>
+      <div class="a5a">
+        <label for="storage2">storage2:</label>
+        <input type="text" formControlName="storage2" placeholder="storage2" required minlength="1" maxlength="250">
+      </div>
+      <div class="a6a">
+        <label for="processor">processor:</label>
+        <input type="text" formControlName="processor" placeholder="processor" required minlength="1" maxlength="250">
+      </div>
+      <div class="a7a">
+        <label for="camera1">camera1:</label>
+        <input type="text" formControlName="camera1" placeholder="camera1" required minlength="1" maxlength="250">
+      </div>
+      <div class="a8a">
+        <label for="camera2">camera2:</label>
+        <input type="text" formControlName="camera2" placeholder="camera2" required minlength="1" maxlength="250">
+      </div>
+      <div class="a9a">
+        <label for="Display">Display:</label>
+        <input type="text" formControlName="Display" placeholder="dispaly" required minlength="1" maxlength="250">
+      </div>
+      <div class="a10a">
+        <label for="battery">battery:</label>
+        <input type="text" formControlName="battery" placeholder="battery" required minlength="1" maxlength="250">
+      </div>
+      <div class="a11a">
+        <label for="image">Image:</label>
+        <input type="file" id="image" (change)="onFileSelected($event)">
+        <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image">
+      </div>
+      <button class="a12a" type="submit" [disabled]="!myForm.valid">Submit</button>
+    </form>
 
-</div>
-<div class="col-md-1"></div>
+  </div>
+  <div class="col-md-1"></div>
 </div>
 
 
