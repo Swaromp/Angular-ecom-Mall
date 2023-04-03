@@ -6,13 +6,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { Vivo1Component } from './vivo1/vivo1.component';
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
+import { DeliveryStatusComponent } from './delivery-status/delivery-status.component';
 
 const routes: Routes = [
   { path: '', component: CarouselComponent},
   { path:'smenu/:id', component: SMenuComponent},
   { path:'vivo1/:id1', component: Vivo1Component},
   { path: 'kart', component:KartComponent},
-  { path: 'add-to-kart', component:AddToKartComponent}
+  { path: 'add-to-kart', component:AddToKartComponent},
+  { path: 'delivery-status', component:DeliveryStatusComponent}
 ];
 
 @NgModule({

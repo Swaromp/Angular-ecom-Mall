@@ -23,6 +23,7 @@ import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
 import { AddNewDeciceComponent } from './add-new-decice/add-new-decice.component';
 import { HttpClientModule } from  '@angular/common/http';
+import { DeliveryStatusComponent } from './delivery-status/delivery-status.component';
 
 
 
@@ -49,6 +50,7 @@ import { HttpClientModule } from  '@angular/common/http';
     AddToKartComponent,
     TotalAmountPipe,
     AddNewDeciceComponent,
+    DeliveryStatusComponent,
 
   ],
 
