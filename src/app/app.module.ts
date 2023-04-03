@@ -72,6 +72,10 @@ import { NgOtpInputComponent, NgOtpInputModule } from 'ng-otp-input';
     AddToKartComponent,
     TotalAmountPipe,
   ],
+
+
+
+
   imports: [
     HttpClientModule,
     BrowserModule,
