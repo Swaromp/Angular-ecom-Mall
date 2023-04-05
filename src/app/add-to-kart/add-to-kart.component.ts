@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-add-to-kart',
   templateUrl: './add-to-kart.component.html',

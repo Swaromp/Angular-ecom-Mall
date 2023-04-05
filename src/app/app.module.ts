@@ -25,9 +25,6 @@ import { AddNewDeciceComponent } from './add-new-decice/add-new-decice.component
 import { HttpClientModule } from  '@angular/common/http';
 import { DeliveryStatusComponent } from './delivery-status/delivery-status.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,10 +50,7 @@ import { DeliveryStatusComponent } from './delivery-status/delivery-status.compo
     DeliveryStatusComponent,
 
   ],
-
-
-
-
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

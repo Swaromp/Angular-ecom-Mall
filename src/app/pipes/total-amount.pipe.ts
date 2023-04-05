@@ -8,5 +8,4 @@ export class TotalAmountPipe implements PipeTransform {
   transform(value:any)  {
     return value + 400 - 5000;
   }
-
 }

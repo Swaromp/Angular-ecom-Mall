@@ -212,9 +212,6 @@ export class Vivo1Component implements OnInit {
              {im:'rog1',name:'ASUS rog phone 6 pro 5G',price:89990,storage1:'128',storage2:'256',processor:'snapdragon 8gen1',camera1:'64 MP + 2 MP + 2 MP', camera2:'34 MP', Display:'6.43 inch',battery:'4500 mAh'},
              {im:'iqoo1',name:'iQOO Neo 7',price:89990,storage1:'128',storage2:'256',processor:'snapdragon 8gen1',camera1:'64 MP + 2 MP + 2 MP', camera2:'34 MP', Display:'6.43 inch',battery:'4500 mAh'},
             ]
-
-
-
 }
 
 

@@ -11,12 +11,13 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px;
+  background-color: rgba(178, 178, 178, 0);
 }
 .col-md-7 {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 40px 80px 800px rgba(0, 0, 0, 0.2);
 }
 .col-md-7 > div:first-child {
   font-size: 30px;
@@ -44,7 +45,7 @@ img {
 .card {
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 40px 40px 70px 0 rgba(0, 0, 0, 0);
 }
 .card-title {
   font-size: 18px;
@@ -53,9 +54,12 @@ img {
 .card-text {
   font-size: 22px;
   font-weight: bold;
-  color: #ff6347;
+  color: #7a7a7a;
 }
-
+.content{
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
 
 
 

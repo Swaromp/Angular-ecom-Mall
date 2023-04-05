@@ -18,14 +18,14 @@ export class DeliveryStatusComponent implements OnInit {
   ngOnInit(): void {
     this.get();
   }
-
-
   get() {
     var data=localStorage.getItem('dev_info')
 
 
     this.data = JSON.parse(localStorage.getItem('dev_info') || '{}');
   }
+
+
   setActiveStep(index: number) {
     this.activeStep = index;
   }
@@ -35,7 +35,6 @@ export class DeliveryStatusComponent implements OnInit {
       this.activeStep++;
     }
   }
-
 
 }
 
