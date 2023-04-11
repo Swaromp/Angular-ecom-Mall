@@ -1,0 +1,39 @@
+<div class='outer'>
+  <div class='wrapper wrapper2 '>
+
+    <div class='main-content'>
+      <!-- <div><img src="../assets/{{data.im}}.jpeg"> </div> -->
+      <div><img src="../assets/{{data.im}}.jpeg" width="60%" class="imgpsoiton"></div>
+      <h5>Confirmation</h5>
+      <div>
+        <p>
+          {{data.name}} <br>
+          is ready to shipped!
+        <p>
+      </div>
+      <div><img src="https://cdn-icons-png.flaticon.com/512/2143/2143150.png" width="20%" class="imgpsoiton"></div>
+      <button class='cta-btn' routerLink="/" routerLinkActive="active">Continue Shopping!</button>
+    </div>
+  </div>
+
+  <div class='wrapper wrapper2 '>
+
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png" width="18%" class="imgpsoiton">
+    <div class='main-content'>
+
+      <h5>Order Delivery Status</h5>
+      <div>
+        <div class="delivery-bar">
+          <div class="delivery-step" *ngFor="let step of deliverySteps; let i = index"
+            [ngClass]="{ active: i === activeStep }">
+            <div class="step-number">{{i+1}}</div>
+            <div class="step-name">{{step}}</div>
+          </div>
+        </div>
+        <button (click)="goToNextStep()" class='btn2'>Next Step</button>
+        <div class='btn3' *ngIf="activeStep === deliverySteps.length - 1">Thank you for shopping!</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,6 +21,11 @@ import { SortByPropertyPipe } from './pipes/sortby.pipe';
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
+
+import { AddNewDeciceComponent } from './add-new-decice/add-new-decice.component';
+import { HttpClientModule } from  '@angular/common/http';
+import { DeliveryStatusComponent } from './delivery-status/delivery-status.component';
+
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
@@ -36,6 +41,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { NgOtpInputModule } from  'ng-otp-input';
 import { LoanCalculatorComponent } from './home/loan-calculator/loan-calculator.component';
 import { CalcPipe } from './home/calc.pipe';
+
 
 @NgModule({
   declarations: [
@@ -58,6 +64,10 @@ import { CalcPipe } from './home/calc.pipe';
     KartComponent,
     AddToKartComponent,
     TotalAmountPipe,
+
+    AddNewDeciceComponent,
+    DeliveryStatusComponent,
+
     WishlistComponent,
     ComparemobileComponent,
     FilterPipe,
@@ -70,7 +80,9 @@ import { CalcPipe } from './home/calc.pipe';
     LoanCalculatorComponent,
     CalcPipe
 
+
   ],
+  
   imports: [
     HttpClientModule,
     BrowserModule,
