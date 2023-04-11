@@ -1,0 +1,28 @@
+{
+  "userdata": [
+    {
+      "fname": "Aniket",
+      "lname": "Nikhade",
+      "email": "aniketnik47@gmail.com",
+      "password": "Aniket",
+      "cpassword": "Aniket",
+      "id": 1
+    },
+    {
+      "fname": "swarom",
+      "lname": "padalkar",
+      "email": "swaromjp@gmail.com",
+      "password": "qwertyuiop",
+      "cpassword": "qwertyuiop",
+      "id": 2
+    },
+    {
+      "fname": "aryan",
+      "lname": "singh",
+      "email": "aryanjks@gmail.com",
+      "password": "12345678",
+      "cpassword": "12345678",
+      "id": 3
+    }
+  ]
+}

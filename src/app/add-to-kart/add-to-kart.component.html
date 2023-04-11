@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-7">
+    <div class="font11"><img src="https://cdn-icons-png.flaticon.com/512/3737/3737151.png" width="4%">ADD TO CART</div>
+
+    <hr>
+
+    <!-- <div class="card" *ngFor="let x of addcart">
+      <div><p >Product Name: {{x.name}}</p></div>
+      <div><p >Product MRP: ₹{{x.price}}</p></div>
+
+    </div> -->
+
+
+
+    <div>
+      <div><img [src]=""></div>
+      <div>
+        <div><img src="../assets/{{data.im}}.jpeg"> </div>
+        <div><p >Product Name: {{data.name}}</p></div>
+        <div><p >Product MRP: ₹{{data.price}}</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <span class="card-title">Price Details</span>
+        <hr>
+        <span class="card-title">Price: ₹{{data.price}}</span> <br>
+        <span class="card-title">Discount: ₹5000</span> <br>
+        <span class="card-title">Delivery charges: ₹400</span>
+        <hr>
+        <span class="card-text">Total Amount: ₹{{data.price | totalAmount}}</span>
+        <div><button type="button" class="btn btn-outline-warning"  style="width: 100%;" routerLink="/kart" routerLinkActive="active">BUY NOW</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
