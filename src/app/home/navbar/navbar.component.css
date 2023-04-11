@@ -6,7 +6,9 @@
     left: -5vw;
     z-index: 100; */
 }
-
+.popup{
+    z-index: 10000;
+}
 nav{
     background: linear-gradient(280deg,#1a1004 -190.68%,#2099f1 296.61%,#0074c9 296.61%);
 }
@@ -60,6 +62,7 @@ float: left;
     display: inline-block;
     background-position: bottom;
     background-size: contain;
+    margin-left: -4%;
     
 }
 .icons{

@@ -336,7 +336,10 @@ button{
   color: #000;
   opacity: 0.5;
 }
-
+.imgdisplay{
+  position: sticky;
+  top: 0;
+}
 /* Styling for the primary button */
 .btn-primary {
   background-color: #007bff;

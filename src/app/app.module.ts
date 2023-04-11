@@ -21,9 +21,27 @@ import { SortByPropertyPipe } from './pipes/sortby.pipe';
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
+
 import { AddNewDeciceComponent } from './add-new-decice/add-new-decice.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { DeliveryStatusComponent } from './delivery-status/delivery-status.component';
+
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
+import { ComparedataService } from './services/comparedata.service';
+import { FilterPipe } from './home/filter.pipe';
+import { ShortenPipe } from './pipes/shorten.pipe';
+import { OfferPipe } from './pipes/offer.pipe';
+import { DownPipe } from './pipes/down.pipe';
+import { EmifilterPipe } from './pipes/emifilter.pipe';
+import { DelPipe } from './pipes/del.pipe';
+import { LoginpageComponent } from './home/loginpage/loginpage.component';
+import {HttpClientModule} from '@angular/common/http'
+import { NgOtpInputModule } from  'ng-otp-input';
+import { LoanCalculatorComponent } from './home/loan-calculator/loan-calculator.component';
+import { CalcPipe } from './home/calc.pipe';
+
 
 @NgModule({
   declarations: [
@@ -46,20 +64,36 @@ import { DeliveryStatusComponent } from './delivery-status/delivery-status.compo
     KartComponent,
     AddToKartComponent,
     TotalAmountPipe,
+
     AddNewDeciceComponent,
     DeliveryStatusComponent,
+
+    WishlistComponent,
+    ComparemobileComponent,
+    FilterPipe,
+    ShortenPipe,
+    OfferPipe,
+    DownPipe,
+    EmifilterPipe,
+    DelPipe,
+    LoginpageComponent,
+    LoanCalculatorComponent,
+    CalcPipe
+
 
   ],
   
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    // FontAwesomeModule
+    BrowserAnimationsModule,
+    NgOtpInputModule,
+    
   ],
-  providers: [],
+  providers: [ComparedataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
