@@ -1,5 +1,16 @@
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" *ngIf="!otpvalidate || button">Signup</button>
-<div class="modal" id="myModal">
+
+<div *ngIf="button">
+<a  href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >
+<img 
+src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/emi-mall-dam/dec-22/header-revamp/profile-default.svg"></a>
+ <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <li><a class="dropdown-item"><button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1" >Signup</button>
+  </a></li>
+  <li><a class="dropdown-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2" >log-in</button>
+  </a></li>
+</ul>
+</div>
+<div class="modal" id="myModal1" *ngIf="!hide">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="header">
@@ -30,6 +41,9 @@
                                 *ngIf="form1.controls['email'].invalid && (form1.controls['email'].touched ||form1.controls['email'].dirty)">
                                 Please Enter valid Mail-ID
                             </div>
+                            <div class="alert" *ngIf="OldUser">
+                                User Already Exists!!!! Please log
+                            </div>
                         </div>
                         <div>
                             <label for="password">New Password:</label>
@@ -51,6 +65,8 @@
                     </form>
                     <div class="otpvalidation">
                     <div  *ngIf="otpsend && !otpvalidate">
+
+                    
                         <p> Hi <b>{{ this.form1.controls['fname'].value }}</b> Enter otp reviced on <b>{{ this.form1.controls['email'].value }}</b> </p>
                     <ng-otp-input (onInputChange)="onOtpChange($event)"
                             [config]="{length:6}" ></ng-otp-input>
@@ -65,10 +81,49 @@
         </div>
     </div>
 </div>
-
-<div *ngIf="otpvalidate">
-  <a  href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-    Hi {{ this.form1.controls['fname'].value }}!!!
+<div class="modal" id="myModal2" *ngIf="!hide">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="header">
+                <img class="closebtn" data-bs-dismiss="modal" aria-label="Close"
+                    src="https://cdn-icons-png.flaticon.com/128/9759/9759080.png" width="20px" height="20px">
+            </div>
+            <div class="">
+                <h3> Log-In</h3>
+                <div class="formdiv">
+                    <form  [formGroup]="form2" *ngIf="!otpsend">
+                        <div>
+                            <label for="Email1">Email Id:</label>
+                            <input type="email" id="email1" formControlName="email1" placeholder="enter your email">
+                            <div class="alert"
+                                *ngIf="form2.controls['email1'].invalid && (form2.controls['email1'].touched ||form2.controls['email1'].dirty)">
+                                Please Enter valid Mail-ID
+                            </div>
+                            <div class="alert"
+                            *ngIf="InvalidUser"> Email Id not Registered!! Please Sign-up </div>
+                        </div>
+                        <div class="alert"
+                            *ngIf="InvalidPassword"> Please Enter Correct Password </div>
+                        <div>
+                            <label for="password1">Password:</label>
+                            <input type="password" id="password1" placeholder="enter password"
+                                formControlName="password1">
+                                <div class="alert" *ngIf="InvalidPassword"></div>
+                        </div>
+                        <div>
+                            <button  type="submit" class="submitbtn" [disabled]="!form2.valid"
+                            (click) = "checkuser()">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="hide">
+  <a  href="#" class="userbutton"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+{{ username | uppercase}}
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <li><a class="dropdown-item" href="#">sdfdsf</a></li>
@@ -76,3 +131,6 @@
     <li><a class="btn btn-danger" (click)="clear()" href="#">log-out</a></li>
   </ul>
 </div>
+
+
+

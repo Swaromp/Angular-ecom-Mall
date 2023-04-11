@@ -17,18 +17,12 @@ import { VmenuComponent } from './vmenu/vmenu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { Vivo1Component } from './vivo1/vivo1.component';
-
 import { SortByPropertyPipe } from './pipes/sortby.pipe';
-
 import { KartComponent } from './kart/kart.component';
 import { AddToKartComponent } from './add-to-kart/add-to-kart.component';
 import { TotalAmountPipe } from './pipes/total-amount.pipe';
-
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { MatBadgeModule } from '@angular/material/badge'
-
-
 import { ComparemobileComponent } from './home/comparemobile/comparemobile.component';
 import { ComparedataService } from './services/comparedata.service';
 import { FilterPipe } from './home/filter.pipe';
@@ -40,7 +34,8 @@ import { DelPipe } from './pipes/del.pipe';
 import { LoginpageComponent } from './home/loginpage/loginpage.component';
 import {HttpClientModule} from '@angular/common/http'
 import { NgOtpInputModule } from  'ng-otp-input';
-
+import { LoanCalculatorComponent } from './home/loan-calculator/loan-calculator.component';
+import { CalcPipe } from './home/calc.pipe';
 
 @NgModule({
   declarations: [
@@ -60,11 +55,9 @@ import { NgOtpInputModule } from  'ng-otp-input';
     Card1Component,
     Vivo1Component,
     SortByPropertyPipe,
-
     KartComponent,
     AddToKartComponent,
     TotalAmountPipe,
-
     WishlistComponent,
     ComparemobileComponent,
     FilterPipe,
@@ -73,7 +66,9 @@ import { NgOtpInputModule } from  'ng-otp-input';
     DownPipe,
     EmifilterPipe,
     DelPipe,
-    LoginpageComponent
+    LoginpageComponent,
+    LoanCalculatorComponent,
+    CalcPipe
 
   ],
   imports: [
@@ -89,4 +84,4 @@ import { NgOtpInputModule } from  'ng-otp-input';
   providers: [ComparedataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

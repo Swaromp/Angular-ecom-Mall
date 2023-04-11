@@ -26,9 +26,7 @@ ngOnInit(): void {
   this.compare1=parseInt(this.compareArray[0])
   this.compare2=parseInt(this.compareArray[1])
  this.searchResults = this.comparedataService.device_id.filter(device => device.id === this.compare1)
- this.searchResults2 = this.comparedataService.device_id.filter(device => device.id === this.compare2)
-
-  
+ this.searchResults2 = this.comparedataService.device_id.filter(device => device.id === this.compare2) 
 }
 
 

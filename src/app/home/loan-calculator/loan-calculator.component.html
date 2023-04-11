@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+    <div class="col-8">
+   <form [formGroup]="eligibility">
+    <h3> Calculate Loan Eligibility </h3>
+<div class="form-group">
+      <label>Inhand Monthly Salary:</label>
+      <input type="number" formControlName="salary" class="address">
+      <label> Salary in USD (for NRIs)</label>
+      <input type="number" formControlName="NRIs" class="address">
+      <label>Total Current EMIs:</label>
+      <input type="number" formControlName="EMIs" class="address">
+
+
+<div class="tenure">
+      <label for="tick">Tenure:</label>
+      <input type="range" list="tickmarks" min="0" max="30" id="tick" name="tick" step="2"  formControlName="Tenure" (change)="pcalc($event)" >
+      <datalist id="tickmarks">   
+      </datalist>
+      <div class="range-value"> {{ this.eligibility.controls['Tenure'].value }}  years</div>
+</div>
+      <div>
+        <label for="tick1">Rate of Interest:</label>
+      <input type="range" list="tickmarks1" min="0" max="20" id="tick1" name="tick" step="0.1"  formControlName="intrest" (change)="pcalc($event)" >
+      <datalist id="tickmarks1">
+      </datalist>
+      <div class="range-value"> {{ this.eligibility.controls['intrest'].value }} 
+      </div>
+      </div>
+</div>
+</form></div>
+<div class="col-4">
+<p>
+    Eligible Loan Amount = Rs. {{this.eligibility.controls['salary'].value | calc :this.eligibility.controls['Tenure'].value:this.eligibility.controls['intrest'].value }}
+</p>
+</div>
+</div>
+</div>
+
+
+
+     
