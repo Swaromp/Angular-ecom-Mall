@@ -17,100 +17,12 @@
       "id": 2
     },
     {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qazwsx",
-      "cpassword": "qazwsx",
+      "fname": "aryan",
+      "lname": "singh",
+      "email": "aryanjks@gmail.com",
+      "password": "12345678",
+      "cpassword": "12345678",
       "id": 3
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiopQWERTYUIOP",
-      "cpassword": "qwertyuiopQWERTYUIOP",
-      "id": 4
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 5
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 6
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 7
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 8
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop[QWERTYUIOP",
-      "cpassword": "qwertyuiopQWERTYUIOP",
-      "id": 9
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 10
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 11
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 12
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiop",
-      "cpassword": "qwertyuiop",
-      "id": 13
-    },
-    {
-      "fname": "swarom",
-      "lname": "padalkar",
-      "email": "swaromjp@gmail.com",
-      "password": "qwertyuiopQWERTYUIOP",
-      "cpassword": "qwertyuiopQWERTYUIOP",
-      "id": 14
     }
   ]
 }

@@ -1,0 +1,37 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 2%;
+    /* display: block;
+    width: 100%;
+    position: relative; */
+  }
+  
+  input {
+    margin-bottom: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    border: 0.1rem solid #ccc;
+    width: 90%;
+  }
+  /* input [type="range"]{
+    border: 0.1rem solid #ccc;
+    width: 90%;
+  } */
+  select, datalist {
+    margin-bottom: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    border: 0.1rem solid #ccc;
+    width: 90%;
+  }
+  
+
+  
+ 

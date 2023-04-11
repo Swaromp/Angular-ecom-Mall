@@ -4,6 +4,7 @@ text-align: center;
 ::ng-deep .modal-backdrop{
   z-index: -1 !important;
 }
+
 .formdiv {
    
     padding: 20px;
@@ -48,8 +49,18 @@ text-align: center;
     color: #333;
 
   }
+  .userbutton{
+    /* background-color: transparent; */
+    /* border: 0; */
+    text-decoration: none;
+    color: #ccc;
+    font-size: large;
+  font-weight:400;
+  }
   
- 
+ .userbutton::before{
+  content: "👤";
+ }
   .alert {
     color: #f44336;
     font-size: 14px;
@@ -99,5 +110,5 @@ text-align: center;
     max-width: 400px;
   }
 
-
+  
     
